@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExtPilot — Browser Extensions That Just Work</title>
+  <meta name="description" content="We build fast, reliable, and affordable browser extensions.">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #0f1117;
+      color: #e1e4e8;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    /* Header */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid #21262d;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #f0f6fc;
+      letter-spacing: -0.5px;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: #f0f6fc;
+      letter-spacing: -1px;
+      margin-bottom: 16px;
+    }
+
+    .hero .tagline {
+      font-size: 20px;
+      color: #8b949e;
+      margin-bottom: 12px;
+    }
+
+    .hero .description {
+      font-size: 16px;
+      color: #8b949e;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* Extensions */
+    .extensions {
+      padding: 40px 0 80px;
+    }
+
+    .extensions h2 {
+      font-size: 14px;
+      font-weight: 600;
+      color: #8b949e;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .extension-card {
+      background-color: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 8px;
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: border-color 0.2s;
+    }
+
+    .extension-card:hover {
+      border-color: #30363d;
+    }
+
+    .extension-info h3 {
+      font-size: 18px;
+      font-weight: 600;
+      color: #f0f6fc;
+      margin-bottom: 4px;
+    }
+
+    .extension-info p {
+      font-size: 14px;
+      color: #8b949e;
+    }
+
+    .extension-links {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 24px 0;
+      border-top: 1px solid #21262d;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #484f58;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .footer-content a {
+      color: #484f58;
+    }
+
+    .footer-content a:hover {
+      color: #8b949e;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .hero {
+        padding: 48px 0 40px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero .tagline {
+        font-size: 17px;
+      }
+
+      .extension-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <span class="logo">ExtPilot</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>ExtPilot</h1>
+        <p class="tagline">Browser extensions that just work.</p>
+        <p class="description">We build fast, reliable, and affordable browser extensions for e-commerce sellers and online professionals.</p>
+      </div>
+    </section>
+
+    <section class="extensions">
+      <div class="container">
+        <h2>Our Extensions</h2>
+        <div class="extension-card">
+          <div class="extension-info">
+            <h3>Shopify Store Scraper</h3>
+            <p>Discover winning products by analyzing any Shopify store's catalog in seconds.</p>
+          </div>
+          <div class="extension-links">
+            <a href="https://chrome.google.com/webstore" target="_blank" rel="noopener">Chrome Web Store</a>
+            <a href="/privacy/shopify-spy/">Privacy</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
