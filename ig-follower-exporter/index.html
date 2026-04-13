@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IG Follower Exporter — Export Instagram Followers & Following to CSV/Excel | ExtPilot</title>
+  <meta name="description" content="Export any Instagram account's followers and following list to CSV or Excel. Quick mode for names, Detailed mode for full profiles. Free tier included.">
+  <link rel="canonical" href="https://extpilot.com/ig-follower-exporter/">
+  <meta property="og:title" content="IG Follower Exporter — Export Instagram Followers & Following">
+  <meta property="og:description" content="Export Instagram followers & following to CSV/Excel. Quick or Detailed mode. From $3.99/mo.">
+  <meta property="og:url" content="https://extpilot.com/ig-follower-exporter/">
+  <meta property="og:type" content="website">
+  <meta name="keywords" content="Instagram followers export, Instagram following export, IG follower list CSV, Instagram data export, follower analytics, Instagram scraper, IG Follower Exporter">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero h1 { font-size: 40px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 24px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .pricing-note { font-size: 14px; color: #8b949e; margin-top: 12px; }
+    .features { padding: 48px 0; }
+    .features h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
+    .how-it-works h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+    .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
+    .pricing h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .pricing-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; text-align: center; }
+    .pricing-card.featured { border-color: #1f6feb; }
+    .pricing-card h3 { font-size: 18px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .pricing-card .price { font-size: 32px; font-weight: 700; color: #f0f6fc; margin-bottom: 4px; }
+    .pricing-card .price-note { font-size: 14px; color: #8b949e; margin-bottom: 16px; }
+    .pricing-card ul { list-style: none; text-align: left; margin-bottom: 20px; }
+    .pricing-card li { font-size: 14px; color: #8b949e; padding: 6px 0; }
+    .pricing-card li::before { content: "✓ "; color: #3fb950; font-weight: 700; }
+    .pricing-card li.disabled::before { content: "— "; color: #484f58; }
+    .pricing-card li.disabled { color: #484f58; }
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+    .support { padding: 48px 0; border-top: 1px solid #21262d; text-align: center; }
+    .support h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 16px; }
+    .support p { font-size: 15px; color: #8b949e; margin-bottom: 8px; }
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 28px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="badge">Free &mdash; 50 records per export</span>
+        <h1>IG Follower Exporter</h1>
+        <p class="tagline">Export any Instagram account's followers and following list to CSV or Excel. Quick mode for names, Detailed mode for full profiles.</p>
+        <div class="cta-row">
+          <a href="https://chrome.google.com/webstore" class="btn btn-primary" id="chrome-link" target="_blank" rel="noopener">Install for Chrome</a>
+          <a href="https://microsoftedge.microsoft.com/addons" class="btn btn-secondary" id="edge-link" target="_blank" rel="noopener">Install for Edge</a>
+        </div>
+        <p class="pricing-note">Pro from $3.99/mo &mdash; unlimited exports with full profile details</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Quick Export</h3>
+            <p>Export usernames and display names in seconds. Perfect for quick analysis or building outreach lists.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Detailed Export (Pro)</h3>
+            <p>Get full profiles including bio, follower count, following count, post count, verification status, and profile picture URL.</p>
+          </div>
+          <div class="feature-card">
+            <h3>CSV & Excel</h3>
+            <p>Export to CSV for spreadsheet tools or Excel (.xlsx) for advanced filtering. Clean, structured data ready to use.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Smart Rate Limiting</h3>
+            <p>Built-in rate limiter respects Instagram's API limits. Automatically pauses and resumes to avoid blocks.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Checkpoint & Resume</h3>
+            <p>Large exports can be paused and resumed. Progress is saved automatically so you never lose data.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Privacy First</h3>
+            <p>All data is processed locally in your browser. Nothing is uploaded to any server. Your Instagram session stays private.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+              <h3>Navigate to any Instagram profile</h3>
+              <p>Open Instagram in your browser and go to any public profile page.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+              <h3>Click the export button</h3>
+              <p>The extension popup shows follower and following counts. Choose Quick or Detailed mode and click Export.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+              <h3>Download your file</h3>
+              <p>Wait for the export to complete. Download the CSV or Excel file with all the data, ready for analysis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2>Pricing</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Free</h3>
+            <div class="price">$0</div>
+            <div class="price-note">forever</div>
+            <ul>
+              <li>50 records per export</li>
+              <li>Quick mode (username + name)</li>
+              <li>CSV export</li>
+              <li class="disabled">Detailed mode (full profiles)</li>
+              <li class="disabled">Excel export</li>
+              <li class="disabled">Unlimited records</li>
+            </ul>
+          </div>
+          <div class="pricing-card featured">
+            <h3>Pro</h3>
+            <div class="price">$3.99</div>
+            <div class="price-note">per month</div>
+            <ul>
+              <li>Unlimited records</li>
+              <li>Quick mode (username + name)</li>
+              <li>Detailed mode (full profiles)</li>
+              <li>CSV & Excel export</li>
+              <li>Checkpoint & resume</li>
+              <li>Priority support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>Does this work with private accounts?</h3>
+          <p>You can only export followers/following from accounts you can already see on Instagram. For private accounts, you need to be an approved follower.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Will my Instagram account get banned?</h3>
+          <p>IG Follower Exporter uses Instagram's own API with built-in rate limiting to stay within safe usage patterns. However, excessive use of any automation tool carries some risk.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What data is collected?</h3>
+          <p>None. All processing happens locally in your browser. We do not collect, store, or transmit any Instagram data. The only network request is license key verification for Pro users.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I export more than 10,000 followers?</h3>
+          <p>Yes. Pro mode supports large exports with automatic checkpoint and resume. The export may take longer for very large accounts due to Instagram's rate limits.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support" id="support">
+      <div class="container">
+        <h2>Support</h2>
+        <p>Have questions, feedback, or need help? We'd love to hear from you.</p>
+        <p>Email: <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+        <p style="margin-top: 16px;"><a href="/privacy/ig-follower-exporter/">Privacy Policy</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
