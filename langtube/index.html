@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LangTube — Learn English with YouTube | ExtPilot</title>
+  <meta name="description" content="Watch YouTube with bilingual subtitles, click any word to look it up, build your vocabulary book, and export to Anki. The best way to learn English from videos.">
+  <link rel="canonical" href="https://extpilot.com/langtube/">
+  <meta property="og:title" content="LangTube — Learn English with YouTube">
+  <meta property="og:description" content="Bilingual subtitles + click-to-lookup + vocabulary book. Learn English while watching YouTube. From $1.9/mo.">
+  <meta property="og:url" content="https://extpilot.com/langtube/">
+  <meta property="og:type" content="website">
+  <meta name="keywords" content="YouTube bilingual subtitles, learn English YouTube, click to lookup, vocabulary book, Anki export, language learning, subtitle translator, LangTube">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+    /* Header */
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+
+    /* Hero */
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero h1 { font-size: 40px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 24px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .pricing-note { font-size: 14px; color: #8b949e; margin-top: 12px; }
+
+    /* Features */
+    .features { padding: 48px 0; }
+    .features h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+
+    /* How it works */
+    .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
+    .how-it-works h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+
+    /* Pricing */
+    .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
+    .pricing h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .pricing-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; text-align: center; }
+    .pricing-card.featured { border-color: #1f6feb; }
+    .pricing-card h3 { font-size: 18px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .pricing-card .price { font-size: 32px; font-weight: 700; color: #f0f6fc; margin-bottom: 4px; }
+    .pricing-card .price-note { font-size: 14px; color: #8b949e; margin-bottom: 16px; }
+    .pricing-card ul { list-style: none; text-align: left; margin-bottom: 20px; }
+    .pricing-card li { font-size: 14px; color: #8b949e; padding: 6px 0; }
+    .pricing-card li::before { content: "\2713 "; color: #3fb950; font-weight: 700; }
+    .pricing-card li.disabled::before { content: "\2014 "; color: #484f58; }
+    .pricing-card li.disabled { color: #484f58; }
+
+    /* Use cases */
+    .use-cases { padding: 48px 0; border-top: 1px solid #21262d; }
+    .use-cases h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .use-case-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .use-case-list li { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 16px 20px; font-size: 15px; }
+    .use-case-list strong { color: #f0f6fc; }
+
+    /* FAQ */
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+
+    /* Support */
+    .support { padding: 48px 0; border-top: 1px solid #21262d; text-align: center; }
+    .support h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 16px; }
+    .support p { font-size: 15px; color: #8b949e; margin-bottom: 8px; }
+
+    /* Footer */
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 28px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid, .pricing-grid { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <span class="badge">Free &mdash; unlimited bilingual subtitles</span>
+        <h1>LangTube</h1>
+        <p class="tagline">Learn English while watching YouTube. Bilingual subtitles, click any word to look it up, build your vocabulary book, and export to Anki.</p>
+        <div class="cta-row">
+          <a href="#" class="btn btn-primary" id="chrome-link" target="_blank" rel="noopener">Install for Chrome</a>
+          <a href="#" class="btn btn-secondary" id="edge-link" target="_blank" rel="noopener">Install for Edge</a>
+        </div>
+        <p class="pricing-note">Pro from $1.9/mo &mdash; Anki export, sentence loop, unlimited vocabulary</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Bilingual Subtitles</h3>
+            <p>See English and your native language side-by-side. Subtitles are intercepted directly from YouTube's API &mdash; no third-party translation service delays.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Click-to-Lookup</h3>
+            <p>Click any word in the subtitles to instantly see its pronunciation, part of speech, definitions, and example sentences. Audio pronunciation included.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Vocabulary Book</h3>
+            <p>Saved words are organized with full context: the sentence where you found the word, the video timestamp, phonetics, and multiple definitions.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Anki Export (Pro)</h3>
+            <p>Export your vocabulary as .apkg files ready for Anki spaced repetition. Each card includes word, pronunciation, definition, context sentence, and video link.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Sentence Loop (Pro)</h3>
+            <p>Loop any subtitle sentence for focused listening practice. Perfect for shadowing exercises and catching difficult phrases.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Flashcard Study</h3>
+            <p>Built-in flashcard mode with flip-to-reveal. Study your saved vocabulary with audio pronunciation without leaving the browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+              <h3>Open any YouTube video</h3>
+              <p>Navigate to YouTube and play a video with English subtitles. LangTube automatically detects the subtitle track.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+              <h3>Read bilingual subtitles</h3>
+              <p>The original English and your translated subtitles appear together below the video. Click any word you don't know.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+              <h3>Build your vocabulary</h3>
+              <p>Save words to your vocabulary book with one click. Review them later with flashcards, or export to Anki for spaced repetition learning.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2>Pricing</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Free</h3>
+            <div class="price">$0</div>
+            <div class="price-note">forever</div>
+            <ul>
+              <li>Bilingual subtitles</li>
+              <li>Click-to-lookup dictionary</li>
+              <li>Save up to 50 words/month</li>
+              <li>CSV vocabulary export</li>
+              <li>Flashcard study mode</li>
+              <li class="disabled">Anki .apkg export</li>
+              <li class="disabled">Sentence loop playback</li>
+              <li class="disabled">Unlimited vocabulary</li>
+            </ul>
+          </div>
+          <div class="pricing-card featured">
+            <h3>Pro</h3>
+            <div class="price">$29.9</div>
+            <div class="price-note">lifetime (or $1.9/mo, $14.9/year)</div>
+            <ul>
+              <li>Everything in Free</li>
+              <li>Unlimited vocabulary</li>
+              <li>Anki .apkg export</li>
+              <li>Sentence loop playback</li>
+              <li>Notion sync (coming soon)</li>
+              <li>Priority support</li>
+            </ul>
+            <a href="https://buy.stripe.com/bJe7sNfEb9wVffJ8ww33W0b" class="btn btn-primary" target="_blank" rel="noopener" style="width: 100%; justify-content: center;">Get Pro &mdash; $29.9 lifetime</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="use-cases">
+      <div class="container">
+        <h2>Who Is This For?</h2>
+        <ul class="use-case-list">
+          <li><strong>English Learners:</strong> Turn YouTube into your personal language classroom. Watch content you love while actively building vocabulary with real-world context.</li>
+          <li><strong>IELTS/TOEFL Prep:</strong> Practice listening comprehension with authentic English content. Loop difficult sentences and build topic-specific vocabulary lists.</li>
+          <li><strong>Anki Users:</strong> Automatically generate high-quality Anki cards from YouTube videos. Each card includes word, IPA pronunciation, definition, context sentence, and video link.</li>
+          <li><strong>Casual Viewers:</strong> Even if you're not actively studying, bilingual subtitles help you follow along and pick up new words naturally.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>Which languages are supported for translation?</h3>
+          <p>LangTube translates English subtitles into 14+ languages including Chinese (Simplified/Traditional), Japanese, Korean, Spanish, French, German, Portuguese, Russian, Arabic, Hindi, Thai, Vietnamese, and Indonesian.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does it work on all YouTube videos?</h3>
+          <p>LangTube works on any YouTube video that has English subtitles (auto-generated or manual). If a video has no English subtitle track, LangTube will show a friendly message.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How is click-to-lookup powered?</h3>
+          <p>LangTube uses the Free Dictionary API and Wiktionary as fallback sources. Definitions include IPA pronunciation, multiple parts of speech, example sentences, and audio pronunciation.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What data does LangTube collect?</h3>
+          <p>LangTube processes everything locally in your browser. Subtitle data, vocabulary, and dictionary lookups are stored on your device. The only network requests are for translation (Google Translate API) and license verification for Pro users.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How is this different from Language Reactor?</h3>
+          <p>LangTube focuses on active vocabulary building rather than passive subtitle reading. One-click word saving, built-in flashcards, Anki export, and a dedicated vocabulary book make LangTube the better choice for serious learners &mdash; at a fraction of the price.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support" id="support">
+      <div class="container">
+        <h2>Support</h2>
+        <p>Have questions, feedback, or need help? We'd love to hear from you.</p>
+        <p>Email: <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+        <p style="margin-top: 16px;"><a href="/privacy/langtube/">Privacy Policy</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
