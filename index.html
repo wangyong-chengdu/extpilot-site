@@ -121,9 +121,21 @@
       border-radius: 8px;
       padding: 24px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      gap: 16px;
       transition: border-color 0.2s;
+    }
+
+    .extension-card .ext-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .extension-card .ext-right {
+      margin-left: auto;
+      flex-shrink: 0;
     }
 
     .extension-card:hover {
@@ -223,51 +235,56 @@
       <div class="container">
         <h2>Our Extensions</h2>
         <div class="extension-card" style="margin-bottom: 16px;">
+          <img src="/langtube/icon.png" alt="LangTube" class="ext-icon">
           <div class="extension-info">
             <h3>LangTube &mdash; Learn English with YouTube</h3>
             <p>Bilingual subtitles, click-to-lookup dictionary, vocabulary book & Anki export.</p>
           </div>
-          <div class="extension-links">
+          <div class="ext-right extension-links">
             <a href="/langtube/">Details</a>
             <a href="/privacy/langtube/">Privacy</a>
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
+          <img src="/ali-image-search/icon.png" alt="AliFind" class="ext-icon">
           <div class="extension-info">
             <h3>AliFind &mdash; Image Search for AliExpress</h3>
             <p>Find any product on AliExpress instantly. Right-click any image or enter keywords to search.</p>
           </div>
-          <div class="extension-links">
+          <div class="ext-right extension-links">
             <a href="/ali-image-search/">Details</a>
             <a href="/privacy/ali-image-search/">Privacy</a>
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
+          <img src="/writetrace/icon.png" alt="WriteTrace" class="ext-icon">
           <div class="extension-info">
             <h3>WriteTrace &mdash; Google Docs Writing Replay</h3>
             <p>Replay the writing history of any Google Doc. Detect paste events and AI-generated content.</p>
           </div>
-          <div class="extension-links">
+          <div class="ext-right extension-links">
             <a href="/writetrace/">Details</a>
             <a href="/privacy/writetrace/">Privacy</a>
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
+          <img src="/ig-follower-exporter/icon.png" alt="IG Follower Exporter" class="ext-icon">
           <div class="extension-info">
             <h3>IG Follower Exporter</h3>
             <p>Export any Instagram account's followers and following list to CSV or Excel.</p>
           </div>
-          <div class="extension-links">
+          <div class="ext-right extension-links">
             <a href="/ig-follower-exporter/">Details</a>
             <a href="/privacy/ig-follower-exporter/">Privacy</a>
           </div>
         </div>
         <div class="extension-card">
+          <img src="/shopify-spy/icon.png" alt="Shopify Store Scraper" class="ext-icon">
           <div class="extension-info">
             <h3>Shopify Store Scraper</h3>
             <p>Discover winning products by analyzing any Shopify store's catalog in seconds.</p>
           </div>
-          <div class="extension-links">
+          <div class="ext-right extension-links">
             <a href="/shopify-spy/">Details</a>
             <a href="/privacy/shopify-spy/">Privacy</a>
           </div>
