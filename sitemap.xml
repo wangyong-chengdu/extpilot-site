@@ -42,7 +42,12 @@
   </url>
   <url>
     <loc>https://extpilot.com/blog/</loc>
-    <lastmod>2026-04-16</lastmod>
+    <lastmod>2026-04-21</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://extpilot.com/blog/how-to-export-google-maps-leads/</loc>
+    <lastmod>2026-04-21</lastmod>
     <priority>0.8</priority>
   </url>
   <url>

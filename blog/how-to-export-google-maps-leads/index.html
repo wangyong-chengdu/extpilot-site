@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Export Google Maps Business Data to CSV (Free Guide 2026)</title>
+  <meta name="description" content="Export business names, phones, emails, and addresses from Google Maps to CSV or Excel. Step-by-step guide with a free Chrome extension. No coding required.">
+  <link rel="canonical" href="https://extpilot.com/blog/how-to-export-google-maps-leads/">
+  <meta property="og:title" content="How to Export Google Maps Business Data to CSV (Free Guide 2026)">
+  <meta property="og:description" content="Export business contacts from Google Maps to CSV in 3 steps. Free for 50 leads/day. No coding, no API keys.">
+  <meta property="og:url" content="https://extpilot.com/blog/how-to-export-google-maps-leads/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://extpilot.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to Export Google Maps Business Data to CSV (Free Guide 2026)">
+  <meta name="twitter:description" content="Export business contacts from Google Maps to CSV in 3 steps. Free for 50 leads/day.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="how to export google maps leads, export business data from google maps, google maps to csv, google maps lead generation, download google maps business list, google maps scraper, export google maps contacts, google maps data extractor">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Export Google Maps Business Data to CSV (Free Guide 2026)",
+    "description": "Step-by-step guide to export business names, phones, emails, and addresses from Google Maps to CSV or Excel using a free Chrome extension.",
+    "author": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://extpilot.com/assets/favicon.svg"
+      }
+    },
+    "datePublished": "2026-04-21",
+    "dateModified": "2026-04-21",
+    "mainEntityOfPage": "https://extpilot.com/blog/how-to-export-google-maps-leads/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is it legal to export business data from Google Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Leads Exporter reads publicly visible information from Google Maps search results — the same data any person can see when searching on Google Maps. It does not access private data or log into your Google account. The extension is officially listed on the Chrome Web Store."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many leads can I export for free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The free plan lets you export up to 50 business leads per day from Google Maps, with 7 data fields (name, address, phone, website, rating, review count, category) in CSV format. No sign-up or credit card required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get email addresses from Google Maps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. With the Pro plan ($4.9/month), Leads Exporter automatically visits each business website and scans for publicly available email addresses. The success rate is typically 40-60%, depending on whether the business publishes an email on their site."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the exported CSV work with my CRM?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The exported CSV and Excel files use standardized column headers (Name, Address, Phone, Website, Email, etc.) compatible with HubSpot, Salesforce, Zoho, Pipedrive, Google Sheets, and most other CRMs."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.8; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+    article { padding: 48px 0 80px; }
+    article h1 { font-size: 36px; font-weight: 800; color: #f0f6fc; letter-spacing: -0.5px; margin-bottom: 12px; line-height: 1.3; }
+    .meta { font-size: 14px; color: #484f58; margin-bottom: 32px; }
+    .tldr { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; margin-bottom: 40px; font-size: 15px; line-height: 1.8; color: #8b949e; }
+    .tldr strong { color: #f0f6fc; }
+    article h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin: 40px 0 16px; }
+    article h3 { font-size: 18px; font-weight: 600; color: #f0f6fc; margin: 24px 0 12px; }
+    article p { font-size: 16px; color: #c9d1d9; margin-bottom: 16px; }
+    article ul, article ol { margin-bottom: 16px; padding-left: 24px; }
+    article li { font-size: 16px; color: #c9d1d9; margin-bottom: 8px; }
+    .cta-box { background: #238636; border-radius: 8px; padding: 20px 24px; text-align: center; margin: 24px 0; }
+    .cta-box a { color: #fff; font-weight: 600; font-size: 16px; }
+    .cta-box a:hover { text-decoration: none; opacity: 0.9; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+    .comparison-table th, .comparison-table td { padding: 10px 14px; border: 1px solid #21262d; text-align: left; }
+    .comparison-table th { background: #161b22; color: #f0f6fc; font-weight: 600; }
+    .comparison-table td { color: #c9d1d9; }
+    .comparison-table tr:nth-child(even) td { background: #161b2288; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+    .step-img { max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #21262d; margin: 16px 0 24px; }
+    .step-placeholder { max-width: 100%; height: auto; min-height: 200px; border-radius: 8px; border: 2px dashed #30363d; margin: 16px 0 24px; display: flex; align-items: center; justify-content: center; background: #161b22; color: #484f58; font-size: 14px; padding: 24px; text-align: center; }
+    .related-posts { margin-top: 48px; padding-top: 32px; border-top: 1px solid #21262d; }
+    .related-posts h2 { font-size: 20px; margin-bottom: 16px; }
+    .related-link { display: block; background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .related-link:hover { border-color: #30363d; text-decoration: none; }
+    .related-link h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .related-link p { font-size: 14px; color: #8b949e; margin: 0; }
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+    @media (max-width: 600px) {
+      article h1 { font-size: 26px; }
+      article h2 { font-size: 20px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 8px 10px; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/blog/" class="back-link">&larr; Blog</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="container">
+        <h1>How to Export Google Maps Business Data to CSV (Free Guide 2026)</h1>
+        <p class="meta">Published April 21, 2026 &middot; 7 min read</p>
+
+        <div class="tldr">
+          <strong>TL;DR:</strong> Install the free <a href="/leads-exporter/">Leads Exporter</a> extension for Chrome or Edge. Search for any business type on Google Maps (e.g., "dentist in Chicago"). Click the green "Export All Leads" button that appears above your results. The extension auto-scrolls through all listings and collects business names, addresses, phone numbers, websites, ratings, review counts, and categories. Click "Download CSV" in the popup &mdash; done in 30 seconds. The free plan gives you 50 leads per day with 7 data fields. Pro ($4.9/month) unlocks unlimited leads, automatic email extraction from business websites, social media links, and Excel export. All data stays in your browser &mdash; nothing is uploaded to any server.
+        </div>
+
+        <h2>Why Export Business Data from Google Maps?</h2>
+
+        <p>Google Maps is the largest business directory on the planet. Every local business &mdash; from plumbers and dentists to restaurants and law firms &mdash; has a listing with their name, address, phone number, website, reviews, and hours of operation. That is a goldmine of contact data sitting in plain sight.</p>
+
+        <p>The problem is that Google Maps does not have a "Download" button. If you need 100 plumbers in Denver or 200 restaurants in Miami, your options are:</p>
+
+        <ul>
+          <li><strong>Copy and paste manually</strong> &mdash; works for 5 businesses, not 500</li>
+          <li><strong>Buy a lead database</strong> &mdash; expensive ($50-200/month) and often outdated</li>
+          <li><strong>Use a scraping API</strong> &mdash; requires coding and configuration</li>
+          <li><strong>Use a browser extension</strong> &mdash; one click, no setup, free tier available</li>
+        </ul>
+
+        <p>A browser extension is the fastest option for most people. You search on Google Maps exactly like you normally would, and the extension adds an export button to the page. No API keys, no coding, no third-party accounts.</p>
+
+        <h2>Step-by-Step Guide: Export Leads with Leads Exporter</h2>
+
+        <h3>Step 1: Install the extension</h3>
+
+        <p>Add <a href="https://chromewebstore.google.com/detail/leads-exporter-for-google/knpcamhjlcefaicldefgnnliaedhnkcp" target="_blank" rel="noopener">Leads Exporter for Google Maps</a> from the Chrome Web Store (also available on <a href="https://microsoftedge.microsoft.com/addons/detail/cf59b0e9-a662-4858-85c4-92663900a575" target="_blank" rel="noopener">Edge Add-ons</a>). It installs in about 10 seconds. No account, no sign-up, no credit card.</p>
+
+        <div class="step-placeholder">Screenshot: Chrome Web Store listing for Leads Exporter &mdash; click "Add to Chrome" button</div>
+
+        <h3>Step 2: Search for businesses on Google Maps</h3>
+
+        <p>Go to <a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a> and search for any business type plus a location. For example:</p>
+
+        <ul>
+          <li>"dentist in Los Angeles"</li>
+          <li>"plumber in Chicago"</li>
+          <li>"Italian restaurant in New York"</li>
+          <li>"real estate agent in Austin TX"</li>
+        </ul>
+
+        <p>Google Maps will show a list of results on the left side. This is the data the extension will export.</p>
+
+        <div class="step-placeholder">Screenshot: Google Maps search results for "dentist in Los Angeles" showing business listings on the left panel</div>
+
+        <h3>Step 3: Click "Export All Leads"</h3>
+
+        <p>Once search results load, a green <strong>"Export All Leads"</strong> button appears above the listing panel. Click it.</p>
+
+        <p>The extension automatically scrolls through all Google Maps results, loading more businesses as it goes. A typical search yields 20 to 120 businesses depending on the area and category. You will see a progress counter as it works.</p>
+
+        <div class="step-placeholder">Screenshot: Green "Export All Leads" button above Google Maps search results, with progress indicator showing "Collecting... 47 leads found"</div>
+
+        <h3>Step 4: Preview and download your CSV</h3>
+
+        <p>When the scroll finishes, click the extension icon in your toolbar. You will see a data table with all the businesses it collected. Review the data, then click <strong>"Download CSV"</strong> to save your file.</p>
+
+        <p>Open the CSV in Google Sheets, Excel, or import it directly into your CRM. The column headers are standardized (Name, Address, Phone, Website, Rating, Reviews, Category) so most tools recognize them automatically.</p>
+
+        <div class="step-placeholder">Screenshot: Leads Exporter popup showing data preview table with 83 leads and Download CSV / Download Excel buttons</div>
+
+        <div class="cta-box">
+          <a href="https://chromewebstore.google.com/detail/leads-exporter-for-google/knpcamhjlcefaicldefgnnliaedhnkcp" target="_blank" rel="noopener">Install Leads Exporter &mdash; Free for Chrome</a>
+        </div>
+
+        <h2>What Data Can You Export?</h2>
+
+        <p>Here is every field available in the exported file:</p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Data Field</th>
+              <th>Free</th>
+              <th>Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Business Name</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Full Address</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Phone Number</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Website URL</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Google Rating (1-5)</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Review Count</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Business Category</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Email Address</td>
+              <td>&mdash;</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Contact Page URL</td>
+              <td>&mdash;</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Facebook, Instagram, LinkedIn, Twitter</td>
+              <td>&mdash;</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>All data is cleaned before export. Phone numbers are formatted consistently, addresses are standardized, and column headers follow a naming convention that CRMs like HubSpot, Salesforce, Zoho, and Pipedrive recognize out of the box.</p>
+
+        <h2>Free vs Pro: Which Plan Do You Need?</h2>
+
+        <p><strong>The free plan is enough if:</strong></p>
+        <ul>
+          <li>You need fewer than 50 leads per day</li>
+          <li>You only need basic contact info (name, phone, address, website)</li>
+          <li>CSV format works for your workflow</li>
+        </ul>
+
+        <p><strong>Upgrade to Pro ($4.9/month) if:</strong></p>
+        <ul>
+          <li>You need unlimited leads per day for large-scale prospecting</li>
+          <li>You want email addresses &mdash; Pro automatically visits each business website and extracts publicly available emails (40-60% success rate)</li>
+          <li>You want social media links (Facebook, Instagram, LinkedIn, Twitter)</li>
+          <li>You need Excel (.xlsx) export in addition to CSV</li>
+        </ul>
+
+        <p>Pro also offers an annual plan at $3.9/month (billed yearly) if you plan to use it long-term. Both plans process all data locally in your browser &mdash; nothing is sent to external servers.</p>
+
+        <h2>Tips for Better Lead Generation on Google Maps</h2>
+
+        <h3>1. Be specific with your search queries</h3>
+        <p>"Plumber" returns generic nationwide results. <strong>"Emergency plumber in Brooklyn NY"</strong> returns a focused, location-specific list. The more specific your query, the more relevant your leads.</p>
+
+        <h3>2. Use Google Maps filters</h3>
+        <p>After searching, use Google Maps' built-in filters like "Open now," rating filters, or price level. The extension exports whatever results are currently visible, so filtering first means cleaner data.</p>
+
+        <h3>3. Search multiple neighborhoods for the same city</h3>
+        <p>Google Maps caps results at roughly 120 per search. For a large city, run separate searches for each neighborhood or zip code. "Dentist in Downtown Miami" and "Dentist in Coral Gables" will give you different results with minimal overlap.</p>
+
+        <h3>4. Combine with email outreach</h3>
+        <p>Export leads with the Pro plan to get emails, then import the CSV into your email tool (Mailchimp, Lemlist, Instantly, or even Gmail mail merge). A targeted list of 100 local businesses with verified emails beats a generic purchased list of 10,000.</p>
+
+        <h3>5. Check ratings and review counts</h3>
+        <p>The exported data includes Google ratings and review counts. A business with 200+ reviews and a 4.5 rating is established and likely has budget for services. A business with 3 reviews might be brand new or a side project. Use this data to prioritize your outreach.</p>
+
+        <h2>FAQ</h2>
+
+        <div class="faq-item">
+          <h3>Is it legal to export business data from Google Maps?</h3>
+          <p>Leads Exporter reads publicly visible information from Google Maps search results &mdash; the same data any person can see by searching on Google Maps. It does not access private data or bypass any login. The extension is officially listed on the Chrome Web Store and complies with Chrome extension policies.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How many leads can I export for free?</h3>
+          <p>50 leads per day with 7 data fields (business name, address, phone, website, rating, review count, category). The daily limit resets at midnight. No sign-up or credit card required.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Can I get email addresses from Google Maps?</h3>
+          <p>Google Maps listings do not directly show email addresses. With the Pro plan, Leads Exporter automatically visits each business website and scans for publicly available emails. The success rate is typically 40-60%, depending on whether the business publishes contact information on their site. For businesses without a public email, you get a direct link to their contact page instead.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Does the exported CSV work with my CRM?</h3>
+          <p>Yes. The CSV and Excel files use standardized column headers (Name, Address, Phone, Website, Email, Rating, etc.) that are compatible with HubSpot, Salesforce, Zoho, Pipedrive, Google Sheets, Microsoft Excel, and most other CRMs and spreadsheet tools.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Will my Google account get banned?</h3>
+          <p>Leads Exporter does not log into your Google account. It reads the search results page that is already loaded in your browser. The extension uses randomized scrolling intervals to mimic natural browsing behavior. That said, running hundreds of searches per hour on Google Maps (with or without any tool) could trigger temporary CAPTCHAs. Normal usage is perfectly safe.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Does it work on Microsoft Edge?</h3>
+          <p>Yes. Leads Exporter is available on both the <a href="https://chromewebstore.google.com/detail/leads-exporter-for-google/knpcamhjlcefaicldefgnnliaedhnkcp" target="_blank" rel="noopener">Chrome Web Store</a> and <a href="https://microsoftedge.microsoft.com/addons/detail/cf59b0e9-a662-4858-85c4-92663900a575" target="_blank" rel="noopener">Microsoft Edge Add-ons</a>. Features and pricing are identical on both browsers.</p>
+        </div>
+
+        <div class="cta-box">
+          <a href="/leads-exporter/">Learn more about Leads Exporter for Google Maps &rarr;</a>
+        </div>
+
+        <div class="related-posts">
+          <h2>Related Articles</h2>
+          <a href="/blog/how-to-export-instagram-followers-csv/" class="related-link">
+            <h3>How to Export Instagram Followers to CSV (Free Guide 2026)</h3>
+            <p>Step-by-step guide to export Instagram followers to CSV or Excel. Compare browser extensions, manual methods, and API tools.</p>
+          </a>
+          <a href="/blog/ig-follower-exporter-vs-exporter-for-followers/" class="related-link">
+            <h3>IG Follower Exporter vs Exporter for Followers (2026 Comparison)</h3>
+            <p>Side-by-side comparison of price, payment methods, data fields, and features for Instagram follower export tools.</p>
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
