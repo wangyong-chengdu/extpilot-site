@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Leads Exporter for Google Maps | ExtPilot</title>
+  <meta name="description" content="Privacy policy for Leads Exporter for Google Maps Chrome and Edge extension. We do not collect, store, or transmit your personal data.">
+  <link rel="canonical" href="https://extpilot.com/leads-exporter/privacy.html">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 700px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+
+    .content { padding: 48px 0; }
+    .content h1 { font-size: 28px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; }
+    .content h2 { font-size: 20px; font-weight: 600; color: #f0f6fc; margin-top: 32px; margin-bottom: 12px; }
+    .content p { font-size: 15px; color: #c9d1d9; margin-bottom: 12px; }
+    .content ul { margin-left: 24px; margin-bottom: 12px; }
+    .content li { font-size: 15px; color: #c9d1d9; margin-bottom: 6px; }
+    .last-updated { font-size: 13px; color: #484f58; margin-bottom: 24px; }
+
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+
+    @media (max-width: 600px) {
+      .content h1 { font-size: 22px; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/leads-exporter/" class="back-link">&larr; Leads Exporter</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="container">
+      <h1>Privacy Policy &mdash; Leads Exporter for Google Maps</h1>
+      <p class="last-updated">Last updated: April 21, 2026</p>
+
+      <h2>Overview</h2>
+      <p>Leads Exporter for Google Maps ("the Extension") is committed to protecting your privacy. This policy explains what data the Extension accesses, how it is used, and what is not collected.</p>
+
+      <h2>What the Extension Does</h2>
+      <p>The Extension reads publicly visible business information from Google Maps search results (business names, addresses, phone numbers, websites, ratings, review counts, and categories) and allows you to export this data as CSV or Excel files.</p>
+      <p>The Pro version additionally visits business websites listed in Google Maps search results to find publicly available email addresses, contact page URLs, and social media links.</p>
+
+      <h2>Data We Do NOT Collect</h2>
+      <ul>
+        <li>Your browsing history</li>
+        <li>Your Google account credentials or personal information</li>
+        <li>Your search queries on Google Maps</li>
+        <li>Personally identifiable information (PII)</li>
+        <li>Cookies or tracking identifiers</li>
+      </ul>
+
+      <h2>Data Storage</h2>
+      <p>All data processed by the Extension is stored locally on your device using Chrome's built-in storage API (chrome.storage.local). No data is transmitted to our servers or any third-party services, except:</p>
+      <ul>
+        <li><strong>License verification (Pro users only):</strong> When you activate a Pro license, your license key is verified against our Stripe-powered license server. Only the license key is transmitted — no personal data or exported business data.</li>
+      </ul>
+
+      <h2>Permissions Explained</h2>
+      <ul>
+        <li><strong>activeTab:</strong> Required to read business data from the current Google Maps tab when you click the export button.</li>
+        <li><strong>storage:</strong> Required to store exported data locally, save your preferences, and track daily usage quota.</li>
+        <li><strong>scripting:</strong> Required to inject the export button into Google Maps pages.</li>
+        <li><strong>host_permissions (*://*.google.com/*):</strong> Required to inject the export functionality into Google Maps pages across all Google country domains.</li>
+        <li><strong>host_permissions (&lt;all_urls&gt;) — Pro only:</strong> Required to fetch business websites listed on Google Maps in order to find publicly available contact email addresses. The Extension only visits URLs that appear as business website links in Google Maps search results.</li>
+      </ul>
+
+      <h2>Third-Party Services</h2>
+      <ul>
+        <li><strong>Stripe:</strong> Payment processing for Pro subscriptions. Stripe handles all payment data. We never see or store your credit card information. See <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe's Privacy Policy</a>.</li>
+        <li><strong>Google Analytics:</strong> Our website (extpilot.com) uses Google Analytics to understand page visits. The Extension itself does not include any analytics or tracking code.</li>
+      </ul>
+
+      <h2>Data Retention</h2>
+      <p>Exported business data is stored in your browser's local storage until you clear it or uninstall the Extension. We retain no copy of your data on any server.</p>
+
+      <h2>Children's Privacy</h2>
+      <p>The Extension is not directed at children under 13. We do not knowingly collect information from children.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated date. Continued use of the Extension after changes constitutes acceptance of the new policy.</p>
+
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy, contact us at:</p>
+      <p>Email: <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
