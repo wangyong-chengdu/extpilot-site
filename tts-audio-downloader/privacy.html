@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy &mdash; TTS Audio Downloader | ExtPilot</title>
+  <meta name="description" content="Privacy policy for TTS Audio Downloader Chrome and Edge extension. All audio processing happens locally. We do not collect your text or audio data.">
+  <link rel="canonical" href="https://extpilot.com/tts-audio-downloader/privacy.html">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 700px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+
+    .content { padding: 48px 0; }
+    .content h1 { font-size: 28px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; }
+    .content h2 { font-size: 20px; font-weight: 600; color: #f0f6fc; margin-top: 32px; margin-bottom: 12px; }
+    .content p { font-size: 15px; color: #c9d1d9; margin-bottom: 12px; }
+    .content ul { margin-left: 24px; margin-bottom: 12px; }
+    .content li { font-size: 15px; color: #c9d1d9; margin-bottom: 6px; }
+    .last-updated { font-size: 13px; color: #484f58; margin-bottom: 24px; }
+
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+
+    @media (max-width: 600px) {
+      .content h1 { font-size: 22px; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/tts-audio-downloader/" class="back-link">&larr; TTS Audio Downloader</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="container">
+      <h1>Privacy Policy &mdash; TTS Audio Downloader</h1>
+      <p class="last-updated">Last updated: April 21, 2026</p>
+
+      <h2>Overview</h2>
+      <p>TTS Audio Downloader ("the Extension") is committed to protecting your privacy. This policy explains what data the Extension accesses, how it is used, and what is not collected.</p>
+
+      <h2>What the Extension Does</h2>
+      <p>The Extension adds download buttons to text-to-speech demo pages (Google Cloud TTS, Azure Speech Studio, and ChatGPT). When you generate audio on these pages, you can click the download button to save the audio as an MP3 or WAV file.</p>
+      <p>All audio processing &mdash; including format conversion, long-text splitting, and audio merging &mdash; happens entirely within your browser. No audio data is ever uploaded to any server.</p>
+
+      <h2>Data We Do NOT Collect</h2>
+      <ul>
+        <li>The text you type into TTS demo pages</li>
+        <li>The audio files you download</li>
+        <li>Your browsing history</li>
+        <li>Your Google, Microsoft, or OpenAI account credentials</li>
+        <li>Personally identifiable information (PII)</li>
+        <li>Cookies or tracking identifiers</li>
+      </ul>
+
+      <h2>Data Storage</h2>
+      <p>The Extension stores the following data locally on your device using Chrome's storage API (chrome.storage.local):</p>
+      <ul>
+        <li><strong>User preferences:</strong> Default audio format (MP3/WAV), onboarding completion status.</li>
+        <li><strong>Daily usage quota:</strong> Character count and bulk mode usage for the current day. Resets automatically each day.</li>
+        <li><strong>License status:</strong> Whether a Pro license key has been activated (Pro users only).</li>
+        <li><strong>Review prompt state:</strong> Whether the rating prompt has been shown or dismissed.</li>
+      </ul>
+      <p>No audio data is stored in browser storage. Audio is processed in memory and downloaded directly to your device.</p>
+
+      <h2>Network Requests</h2>
+      <p>The Extension does not make any network requests of its own, except:</p>
+      <ul>
+        <li><strong>License verification (Pro users only):</strong> When you activate a Pro license key, the key is verified against our Stripe-powered license server. Only the license key string is transmitted &mdash; no personal data, no text content, and no audio data.</li>
+      </ul>
+      <p>The Extension does not include any analytics, telemetry, or tracking code.</p>
+
+      <h2>Permissions Explained</h2>
+      <ul>
+        <li><strong>storage:</strong> Required to save your preferences (audio format, onboarding status), daily usage quota, and Pro license status locally on your device.</li>
+        <li><strong>host_permissions (*://*.gstatic.com/*):</strong> Required to inject the download button into the Google Cloud TTS demo page.</li>
+        <li><strong>host_permissions (*://*.azure.microsoft.com/*):</strong> Required to inject the download button into the Azure Speech Studio demo page.</li>
+        <li><strong>host_permissions (*://chatgpt.com/*, *://*.chatgpt.com/*):</strong> Required to inject download buttons into ChatGPT conversation pages and to capture voice audio responses.</li>
+      </ul>
+      <p>The Extension does not request <code>&lt;all_urls&gt;</code> or <code>activeTab</code> permissions. It only accesses the three specific TTS platforms listed above.</p>
+
+      <h2>Third-Party Services</h2>
+      <ul>
+        <li><strong>Stripe:</strong> Payment processing for Pro purchases. Stripe handles all payment data. We never see or store your credit card information. See <a href="https://stripe.com/privacy" target="_blank" rel="noopener">Stripe's Privacy Policy</a>.</li>
+        <li><strong>Google Analytics:</strong> Our website (extpilot.com) uses Google Analytics to understand page visits. The Extension itself does not include any analytics or tracking code.</li>
+      </ul>
+
+      <h2>Data Retention</h2>
+      <p>Preference and quota data is stored locally until you uninstall the Extension or clear your browser data. We retain no copy of any data on any server (except Pro license activation records managed by Stripe).</p>
+
+      <h2>Children's Privacy</h2>
+      <p>The Extension is not directed at children under 13. We do not knowingly collect information from children.</p>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated date. Continued use of the Extension after changes constitutes acceptance of the new policy.</p>
+
+      <h2>Contact</h2>
+      <p>If you have questions about this privacy policy, contact us at:</p>
+      <p>Email: <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

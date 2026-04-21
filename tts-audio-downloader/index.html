@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TTS Audio Downloader — Download Audio from Google TTS, Azure & ChatGPT | ExtPilot</title>
+  <meta name="description" content="Download text-to-speech audio as MP3 or WAV from Google Cloud TTS, Azure Speech Studio, and ChatGPT. 5,000 chars/day on basic plan. No ads. Chrome & Edge.">
+  <link rel="canonical" href="https://extpilot.com/tts-audio-downloader/">
+  <meta property="og:title" content="TTS Audio Downloader — Download Audio from Google TTS, Azure & ChatGPT">
+  <meta property="og:description" content="Download TTS audio as MP3 or WAV from Google Cloud TTS, Azure Speech Studio, and ChatGPT. 5,000 chars/day. No ads.">
+  <meta property="og:url" content="https://extpilot.com/tts-audio-downloader/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="TTS Audio Downloader — Download Audio from Google TTS, Azure & ChatGPT">
+  <meta name="twitter:description" content="Download TTS audio as MP3 or WAV. 5,000 chars/day. No ads. Chrome & Edge.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="TTS download, text to speech download, download TTS audio, TTS audio downloader, download Google TTS, ChatGPT voice download, Azure TTS download, TTS MP3 downloader">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "TTS Audio Downloader",
+    "alternateName": "TTS Audio Downloader - Google, Azure, ChatGPT",
+    "url": "https://extpilot.com/tts-audio-downloader/",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome, Edge",
+    "description": "Download text-to-speech audio as MP3 or WAV from Google Cloud TTS, Azure Speech Studio, and ChatGPT demo pages. Adds a download button next to the play button. All processing happens locally.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Basic",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "5,000 characters per day, MP3 and WAV export, ChatGPT Download All"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro Monthly",
+        "price": "0.99",
+        "priceCurrency": "USD",
+        "billingDuration": "P1M",
+        "description": "Unlimited characters, unlimited bulk mode, custom file naming, AAC export"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro One-Time",
+        "price": "4.99",
+        "priceCurrency": "USD",
+        "description": "Lifetime Pro access, one-time payment"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I download audio from Google TTS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Install TTS Audio Downloader, open the Google Cloud TTS demo page, type your text and click Play. A Download MP3 button appears next to the play button. Click it to save the audio file instantly. The extension handles long text automatically by splitting, synthesizing, and merging into one file."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I download ChatGPT voice messages?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. TTS Audio Downloader adds a download button next to each ChatGPT voice response. You can download individual messages or use Download All to save every voice message in a conversation. Download All is included in the basic plan at no cost."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What audio formats are supported?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The basic plan supports MP3 and WAV export. Pro users additionally get AAC export for ChatGPT (native quality, smaller file size). You can switch formats with one click in the popup or on the download button."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is TTS Audio Downloader free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The basic plan is available at no cost with 5,000 characters per day, MP3 and WAV export, and unlimited ChatGPT Download All. No sign-up or credit card required. Pro ($0.99/month or $4.99 one-time) unlocks unlimited characters, bulk mode, custom file naming, and AAC export."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the extension collect my text or audio data?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. All text processing and audio conversion happens entirely within your browser. Your text is never sent to our servers. Audio is downloaded directly from the TTS platform to your device. The extension does not include any analytics or tracking code."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work on Microsoft Edge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. TTS Audio Downloader is available on both Chrome Web Store and Microsoft Edge Add-ons. The features are identical on both browsers."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+    /* Header */
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+
+    /* Hero */
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero-icon { width: 80px; height: 80px; border-radius: 16px; margin-bottom: 24px; }
+    .hero h1 { font-size: 36px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+
+    /* GEO answer block */
+    .geo-answer { max-width: 700px; margin: 0 auto 32px; padding: 24px; background: #161b22; border: 1px solid #21262d; border-radius: 8px; font-size: 15px; color: #c9d1d9; line-height: 1.8; text-align: left; }
+
+    /* Features */
+    .features { padding: 48px 0; }
+    .features h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+
+    /* How it works */
+    .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
+    .how-it-works h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+
+    /* Screenshots */
+    .screenshots { padding: 48px 0; border-top: 1px solid #21262d; }
+    .screenshots h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .screenshot-grid { display: flex; flex-direction: column; gap: 24px; }
+    .screenshot-placeholder { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 48px 24px; text-align: center; color: #484f58; font-size: 14px; }
+
+    /* Pricing */
+    .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
+    .pricing h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .pricing-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .pricing-table th, .pricing-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #21262d; }
+    .pricing-table th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    .pricing-table td { color: #c9d1d9; }
+    .pricing-table .plan-basic { color: #58a6ff; font-weight: 600; }
+    .pricing-table .plan-pro { color: #238636; font-weight: 600; }
+
+    /* Use cases */
+    .use-cases { padding: 48px 0; border-top: 1px solid #21262d; }
+    .use-cases h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .use-case-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .use-case-list li { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 16px 20px; font-size: 15px; }
+    .use-case-list strong { color: #f0f6fc; }
+
+    /* FAQ */
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+
+    /* Support */
+    .support { padding: 48px 0; border-top: 1px solid #21262d; text-align: center; }
+    .support h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 16px; }
+    .support p { font-size: 15px; color: #8b949e; margin-bottom: 8px; }
+
+    /* Footer */
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 26px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+      .pricing-table { font-size: 13px; }
+      .pricing-table th, .pricing-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <!-- TODO: Replace with actual icon after asset creation -->
+        <img src="icon.png" alt="TTS Audio Downloader icon" class="hero-icon" width="80" height="80" style="height:auto;">
+        <span class="badge">5,000 chars/day &mdash; no sign-up</span>
+        <h1>TTS Audio Downloader</h1>
+        <p class="tagline">Download text-to-speech audio as MP3 or WAV from Google Cloud TTS, Azure Speech Studio, and ChatGPT. No ads. No server upload. One click.</p>
+        <div class="cta-row">
+          <!-- TODO: Replace with actual CWS link after publishing -->
+          <a href="#" class="btn btn-primary" target="_blank" rel="noopener">Install for Chrome</a>
+          <!-- TODO: Replace with actual Edge Add-ons link after publishing -->
+          <a href="#" class="btn btn-secondary" target="_blank" rel="noopener">Install for Edge</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="geo-answer">
+          <p>TTS Audio Downloader is a Chrome and Edge extension that adds a download button to text-to-speech demo pages. Open the Google Cloud TTS demo, Azure Speech Studio, or ChatGPT, type your text and play it, then click the download button to save the audio as MP3 or WAV &mdash; instantly, with no server upload and no sign-up required.</p>
+          <p style="margin-top: 12px;">The basic plan includes 5,000 characters per day with no per-request limit, MP3 and WAV export, and unlimited ChatGPT Download All. Pro ($0.99/month or $4.99 one-time) unlocks unlimited characters, bulk mode, custom file naming, and AAC export. The extension never shows ads or pop-up promotions.</p>
+          <p style="margin-top: 12px;">All audio processing happens locally in your browser. Your text is never sent to our servers. The extension only accesses three specific TTS platforms &mdash; no broad permissions required.</p>
+        </div>
+        <h2>Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>One-Click Download</h3>
+            <p>A download button appears right next to the play button on TTS demo pages. Click it and your MP3 or WAV file downloads instantly.</p>
+          </div>
+          <div class="feature-card">
+            <h3>3 Major TTS Platforms</h3>
+            <p>Works on Google Cloud TTS demo, Azure Speech Studio, and ChatGPT &mdash; the top 3 platforms that cover 80% of TTS use cases.</p>
+          </div>
+          <div class="feature-card">
+            <h3>ChatGPT Download All</h3>
+            <p>Download every voice message in a ChatGPT conversation at once. Included in the basic plan &mdash; no upgrade required.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Long Text Support</h3>
+            <p>Automatically splits long text into chunks, synthesizes each one, and merges them into a single audio file. No manual splitting needed.</p>
+          </div>
+          <div class="feature-card">
+            <h3>MP3 &amp; WAV Export</h3>
+            <p>Choose your format with one click. MP3 for small file size, WAV for lossless quality. Pro users also get AAC (ChatGPT native quality).</p>
+          </div>
+          <div class="feature-card">
+            <h3>No Ads. Ever.</h3>
+            <p>We will never show ads, pop-ups, or promotional overlays. Your workflow stays uninterrupted.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+              <h3>Open a TTS demo page</h3>
+              <p>Go to Google Cloud TTS demo, Azure Speech Studio, or ChatGPT. Or click one of the platform links in the extension popup.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+              <h3>Type your text and play it</h3>
+              <p>Enter the text you want to convert to speech and click the platform's play button. The TTS engine generates the audio.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+              <h3>Click Download</h3>
+              <p>A download button appears next to the play button. Click it to save your audio as MP3 or WAV. Done in under 30 seconds.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screenshots">
+      <div class="container">
+        <h2>Screenshots</h2>
+        <div class="screenshot-grid">
+          <!-- TODO: Replace placeholders with actual screenshots -->
+          <div class="screenshot-placeholder">Screenshot 1: Google TTS demo page with download button &mdash; "One-click download from Google TTS"</div>
+          <div class="screenshot-placeholder">Screenshot 2: ChatGPT page with download buttons on each message &mdash; "Download all ChatGPT voices"</div>
+          <div class="screenshot-placeholder">Screenshot 3: Popup UI showing platform list and usage &mdash; "Clean UI. No ads."</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2>Basic vs Pro</h2>
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th class="plan-basic">Basic</th>
+              <th class="plan-pro">Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Daily character limit</td>
+              <td>5,000</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>Google Cloud TTS</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Azure Speech Studio</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>ChatGPT voice download</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>ChatGPT Download All</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>MP3 &amp; WAV export</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Bulk mode</td>
+              <td>3/day</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>Custom file naming</td>
+              <td>&mdash;</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>AAC export (ChatGPT)</td>
+              <td>&mdash;</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td>$0</td>
+              <td>$0.99/mo or $4.99 one-time</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="use-cases">
+      <div class="container">
+        <h2>Who Is This For?</h2>
+        <ul class="use-case-list">
+          <li><strong>Content Creators:</strong> Need voiceover audio for YouTube videos, podcasts, or social media? Generate it on any TTS demo page and download as MP3 &mdash; no API key, no coding, no cost.</li>
+          <li><strong>Language Learners:</strong> Download pronunciation samples of words and sentences from Google TTS or Azure. Save them for offline practice and repetition.</li>
+          <li><strong>Developers &amp; Product Managers:</strong> Comparing TTS engines? Generate samples on Google, Azure, and ChatGPT side-by-side, download them all, and evaluate quality offline.</li>
+          <li><strong>Accessibility Users:</strong> Convert articles and documents to audio. Download the files and listen during your commute &mdash; no streaming or internet required.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>How do I download audio from Google TTS?</h3>
+          <p>Install TTS Audio Downloader, open the Google Cloud TTS demo page, type your text and click Play. A Download MP3 button appears next to the play button. Click it to save the audio file instantly. The extension handles long text automatically by splitting, synthesizing, and merging into one file.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I download ChatGPT voice messages?</h3>
+          <p>Yes. TTS Audio Downloader adds a download button next to each ChatGPT voice response. You can download individual messages or use Download All to save every voice message in a conversation. Download All is included in the basic plan at no cost.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What audio formats are supported?</h3>
+          <p>The basic plan supports MP3 and WAV export. Pro users additionally get AAC export for ChatGPT (native quality, smaller file size). You can switch formats with one click in the popup or on the download button.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is TTS Audio Downloader available at no cost?</h3>
+          <p>The basic plan includes 5,000 characters per day, MP3 and WAV export, and unlimited ChatGPT Download All. No sign-up or credit card required. Pro ($0.99/month or $4.99 one-time) unlocks unlimited characters, bulk mode, custom file naming, and AAC export.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does the extension collect my text or audio data?</h3>
+          <p>No. All text processing and audio conversion happens entirely within your browser. Your text is never sent to our servers. Audio is downloaded directly from the TTS platform to your device. The extension does not include any analytics or tracking code.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does it work on Microsoft Edge?</h3>
+          <p>Yes. TTS Audio Downloader is available on both Chrome Web Store and Microsoft Edge Add-ons. The features are identical on both browsers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support">
+      <div class="container">
+        <h2>Support</h2>
+        <p>Have questions or feedback? We would love to hear from you.</p>
+        <p>Email: <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+        <p style="margin-top: 16px;"><a href="privacy.html">Privacy Policy</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
