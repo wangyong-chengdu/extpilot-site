@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SubFlow &mdash; Organize YouTube Subscriptions | ExtPilot</title>
+  <meta name="description" content="Organize YouTube subscriptions into groups. Filter your feed by topic, hide watched videos. $2.99 one-time purchase. Lightweight PocketTube alternative.">
+  <link rel="canonical" href="https://extpilot.com/subflow/">
+  <meta property="og:title" content="SubFlow &mdash; YouTube Subscription Manager">
+  <meta property="og:description" content="Organize YouTube subscriptions into groups. Filter your feed by topic, hide watched videos. $2.99 one-time &mdash; no subscription.">
+  <meta property="og:url" content="https://extpilot.com/subflow/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="SubFlow &mdash; YouTube Subscription Manager">
+  <meta name="twitter:description" content="Organize YouTube subscriptions into groups. Filter your feed by topic, hide watched videos. $2.99 one-time.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="youtube subscription manager, organize youtube subscriptions, youtube channel groups, youtube subscription organizer, pockettube alternative, filter youtube feed, group youtube channels, SubFlow">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SubFlow — YouTube Subscription Manager",
+    "url": "https://extpilot.com/subflow/",
+    "applicationCategory": "BrowserExtension",
+    "operatingSystem": "Chrome, Edge",
+    "description": "Organize YouTube subscriptions into groups. Filter your feed by topic, hide watched videos, export data. Lightweight and fast.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free with 5 groups. Pro: $2.99 one-time purchase."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I organize my YouTube subscriptions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Install SubFlow (free Chrome/Edge extension), create topic-based groups like Tech, Music, Learning, then add channels to each group. Click a group name to filter your feed and only see videos from that group."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does SubFlow slow down YouTube?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. SubFlow uses lightweight DOM injection and does not intercept any network requests. YouTube loads at normal speed. SubFlow adds less than 500ms to page load."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is SubFlow better than PocketTube?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SubFlow costs $2.99 one-time vs PocketTube's $3.99/month ($48/year). SubFlow is lighter (no webRequest), includes auto-backup with 20 snapshots, and works on both Chrome and Edge from Day 1."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will I lose my subscription groups?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. SubFlow automatically saves 20 backup snapshots every time you change your groups. You can also manually export your data as JSON at any time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does SubFlow work on Microsoft Edge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. SubFlow is built and tested for both Chrome and Edge from Day 1. Install it from the Chrome Web Store or Microsoft Edge Add-ons."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+    /* Header */
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+
+    /* Hero */
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero-icon { width: 80px; height: 80px; border-radius: 16px; margin-bottom: 24px; }
+    .hero h1 { font-size: 38px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 24px; max-width: 580px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .price-note { font-size: 14px; color: #8b949e; margin-top: 12px; }
+
+    /* Video */
+    .video-section { padding: 0 0 48px; text-align: center; }
+    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; border: 1px solid #21262d; max-width: 720px; margin: 0 auto; }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+    /* Features */
+    .features { padding: 48px 0; }
+    .features h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+
+    /* Comparison */
+    .comparison { padding: 48px 0; border-top: 1px solid #21262d; }
+    .comparison h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 12px; text-align: center; }
+    .comparison .subtitle { font-size: 16px; color: #8b949e; text-align: center; margin-bottom: 24px; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 0 auto; font-size: 14px; }
+    .comparison-table th, .comparison-table td { padding: 10px 14px; border: 1px solid #21262d; text-align: left; }
+    .comparison-table th { background: #161b22; color: #f0f6fc; font-weight: 600; }
+    .comparison-table td { color: #c9d1d9; }
+    .comparison-table tr:nth-child(even) td { background: #161b2288; }
+
+    /* Pricing */
+    .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
+    .pricing h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 640px; margin: 0 auto; }
+    .pricing-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 28px 24px; text-align: center; }
+    .pricing-card.pro { border-color: #238636; }
+    .pricing-card h3 { font-size: 20px; font-weight: 700; color: #f0f6fc; margin-bottom: 8px; }
+    .pricing-card .price { font-size: 36px; font-weight: 800; color: #f0f6fc; margin-bottom: 4px; }
+    .pricing-card .price-desc { font-size: 14px; color: #8b949e; margin-bottom: 16px; }
+    .pricing-card ul { list-style: none; text-align: left; margin-bottom: 20px; }
+    .pricing-card li { font-size: 14px; color: #c9d1d9; margin-bottom: 8px; padding-left: 20px; position: relative; }
+    .pricing-card li::before { content: "\2713"; position: absolute; left: 0; color: #238636; font-weight: 700; }
+
+    /* How it works */
+    .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
+    .how-it-works h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+
+    /* FAQ */
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+
+    /* Support */
+    .support { padding: 48px 0; border-top: 1px solid #21262d; text-align: center; }
+    .support h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 16px; }
+    .support p { font-size: 15px; color: #8b949e; margin-bottom: 8px; }
+
+    /* Footer */
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 28px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 8px 10px; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img src="/subflow/icon.png" alt="SubFlow icon" class="hero-icon" width="80" height="80">
+        <span class="badge">$2.99 One-Time Purchase</span>
+        <h1>SubFlow &mdash; Organize YouTube Subscriptions into Groups</h1>
+        <p class="tagline">Create topic groups for your channels. Filter your feed by group and only see what matters. Lightweight, fast, no data collection.</p>
+        <div class="cta-row">
+          <a href="[CWS_URL]" class="btn btn-primary" id="chrome-link" target="_blank" rel="noopener">Install for Chrome</a>
+          <a href="[EDGE_URL]" class="btn btn-secondary" id="edge-link" target="_blank" rel="noopener">Install for Edge</a>
+        </div>
+        <p class="price-note">Up to 5 groups included. No sign-up required.</p>
+      </div>
+    </section>
+
+    <section class="video-section">
+      <div class="container">
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/[YOUTUBE_VIDEO_ID]" title="SubFlow — YouTube Subscription Manager demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Subscription Groups</h3>
+            <p>Create topic-based groups like Tech, Music, Learning. Drag channels into groups. One channel can belong to multiple groups.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Filter Feed by Group</h3>
+            <p>Click a group tab on your subscriptions page or homepage and instantly see only videos from that group. No more scrolling past irrelevant content.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Sidebar Navigation</h3>
+            <p>SubFlow adds a group list to YouTube's left sidebar. See all your groups with channel counts and new video indicators at a glance.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Hide Watched &amp; Shorts</h3>
+            <p>One-click toggle to hide already watched videos and YouTube Shorts from your subscription feed. Keep your feed clean.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Auto-Backup (20 Snapshots)</h3>
+            <p>Every time you change your groups, SubFlow saves a snapshot. Restore any of the last 20 versions. Your data never disappears.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Export Subscriptions to CSV</h3>
+            <p>Download your complete subscription list with channel names, URLs, and group assignments as a CSV file. Great for analysis or sharing.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Adjustable Layout</h3>
+            <p>Choose 1 to 8 videos per row to control your feed density. Wide monitor? Show 6 columns. Laptop? Stick with 3.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Minimal Permissions</h3>
+            <p>Only 3 permissions required. No webRequest, no network interception. SubFlow never reads your browsing history or slows YouTube down.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>Get Started in 30 Seconds</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+              <h3>Install SubFlow</h3>
+              <p>Add SubFlow from the Chrome Web Store or Edge Add-ons. No account, no sign-up needed.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+              <h3>Create your first group</h3>
+              <p>Open YouTube. Click "+ New Group" in the sidebar. Name it anything &mdash; "Tech", "Music", "Cooking".</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+              <h3>Add channels to groups</h3>
+              <p>Hover over any channel avatar and click "+" to assign it to a group. One channel can belong to multiple groups.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <div class="step-content">
+              <h3>Filter your feed</h3>
+              <p>Click a group name in the sidebar or tab bar. Your feed instantly shows only videos from that group.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2>Simple Pricing</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Starter</h3>
+            <div class="price">$0</div>
+            <div class="price-desc">forever</div>
+            <ul>
+              <li>Up to 5 groups</li>
+              <li>Filter feed by group</li>
+              <li>Sidebar navigation</li>
+              <li>Hide watched &amp; Shorts</li>
+              <li>CSV export</li>
+              <li>Auto-backup (20 snapshots)</li>
+              <li>JSON import/export</li>
+              <li>Adjustable layout (1-8 cols)</li>
+            </ul>
+          </div>
+          <div class="pricing-card pro">
+            <h3>Pro</h3>
+            <div class="price">$2.99</div>
+            <div class="price-desc">one-time purchase &mdash; yours forever</div>
+            <ul>
+              <li>Everything in Starter</li>
+              <li>Unlimited groups</li>
+              <li>Deck mode (multi-column view)</li>
+              <li>Batch unsubscribe inactive channels</li>
+              <li>Advanced sorting &amp; filtering</li>
+              <li>Google Drive cloud sync</li>
+              <li>Custom group icons</li>
+              <li>New video notifications</li>
+            </ul>
+            <a href="[CWS_URL]" class="btn btn-primary" style="width: 100%; justify-content: center;" target="_blank" rel="noopener">Get SubFlow Pro</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison">
+      <div class="container">
+        <h2>The $2.99 PocketTube Alternative</h2>
+        <p class="subtitle">SubFlow delivers the same core features at a fraction of the cost.</p>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>PocketTube</th>
+              <th>SubFlow</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Price</td>
+              <td>$3.99/mo ($48/yr)</td>
+              <td><strong>$2.99 once, forever</strong></td>
+            </tr>
+            <tr>
+              <td>Performance</td>
+              <td>Uses webRequest (slows YouTube)</td>
+              <td><strong>Lightweight DOM injection</strong></td>
+            </tr>
+            <tr>
+              <td>Data safety</td>
+              <td>Groups often disappear</td>
+              <td><strong>Auto-backup, 20 snapshots</strong></td>
+            </tr>
+            <tr>
+              <td>Permissions</td>
+              <td>8 permissions</td>
+              <td><strong>3 (+ 2 optional)</strong></td>
+            </tr>
+            <tr>
+              <td>Payment</td>
+              <td>Patreon redirect</td>
+              <td><strong>Stripe one-click</strong></td>
+            </tr>
+            <tr>
+              <td>Edge support</td>
+              <td>Limited</td>
+              <td><strong>Day 1 native</strong></td>
+            </tr>
+            <tr>
+              <td>Subscription groups</td>
+              <td>Yes</td>
+              <td>Yes (5 free, unlimited Pro)</td>
+            </tr>
+            <tr>
+              <td>Filter feed by group</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>CSV export</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>How do I organize my YouTube subscriptions?</h3>
+          <p>Install SubFlow, click "+ New Group" in YouTube's sidebar, name your group, then hover over any channel and click "+" to add it. Click the group name to filter your feed. It takes about 30 seconds to set up your first group.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does SubFlow slow down YouTube?</h3>
+          <p>No. SubFlow uses lightweight DOM injection and does not intercept any network requests (no webRequest permission). YouTube loads at normal speed. SubFlow adds less than 500ms to page load.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Will I lose my subscription groups?</h3>
+          <p>No. SubFlow automatically saves 20 backup snapshots every time your groups change. You can also manually export all data as JSON at any time.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does SubFlow work on Microsoft Edge?</h3>
+          <p>Yes. SubFlow is built and tested for both Chrome and Edge from Day 1. Features and pricing are identical on both browsers.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is SubFlow really $2.99 forever?</h3>
+          <p>Yes. One payment, no subscription, no recurring charges. You own the Pro license permanently. Starter (up to 5 groups) is completely free with no time limit.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I switch from PocketTube?</h3>
+          <p>SubFlow will support PocketTube backup file import (coming soon) so you can migrate your groups in one click. You can also run both extensions side by side to compare before switching.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What data does SubFlow collect?</h3>
+          <p>None. SubFlow works entirely locally on your device. It does not collect, transmit, or sell your personal data. The only network request is license key validation for Pro users. See our <a href="/subflow/privacy.html">privacy policy</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support">
+      <div class="container">
+        <h2>Support</h2>
+        <p>Have questions or feedback? We'd love to hear from you.</p>
+        <p>Email: <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+        <p style="margin-top: 16px;"><a href="/subflow/privacy.html">Privacy Policy</a> &middot; <a href="/blog/how-to-organize-youtube-subscriptions/">How-to Guide</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
