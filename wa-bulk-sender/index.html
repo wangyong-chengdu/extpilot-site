@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WhatsApp Bulk Sender for WhatsApp Web | Free Excel Import | ExtPilot</title>
+  <meta name="description" content="Bulk send WhatsApp Web messages with free Excel import, privacy blur, templates, and send history export. Pro starts at $1.9/mo.">
+  <link rel="canonical" href="https://extpilot.com/wa-bulk-sender/">
+  <meta property="og:title" content="WhatsApp Bulk Sender for WhatsApp Web | Free Excel Import">
+  <meta property="og:description" content="Bulk send WhatsApp Web messages with free Excel import, privacy blur, and templates. Pro starts at $1.9/mo.">
+  <meta property="og:url" content="https://extpilot.com/wa-bulk-sender/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="WhatsApp Bulk Sender for WhatsApp Web | Free Excel Import">
+  <meta name="twitter:description" content="Bulk send WhatsApp Web messages with free Excel import, privacy blur, and templates.">
+  <meta name="keywords" content="whatsapp bulk sender, whatsapp bulk message sender, bulk send whatsapp messages, whatsapp web bulk sender, whatsapp message sender chrome extension, whatsapp bulk sender excel import, whatsapp privacy blur">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "WhatsApp Bulk Sender & Privacy Guard",
+    "url": "https://extpilot.com/wa-bulk-sender/",
+    "applicationCategory": "BrowserExtension",
+    "operatingSystem": "Chrome, Edge",
+    "description": "Bulk send personalized messages on WhatsApp Web. Excel import FREE. Privacy blur FREE. Pro starts at $1.9/mo.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "lowPrice": "0",
+      "highPrice": "1.9",
+      "priceCurrency": "USD",
+      "offerCount": "2"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com"
+    },
+    "featureList": "Bulk send on WhatsApp Web, Excel import, CSV import, privacy blur, send history export, templates, pause and resume, retry failed",
+    "screenshot": "https://extpilot.com/wa-bulk-sender/icon.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is WhatsApp Bulk Sender & Privacy Guard?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "WhatsApp Bulk Sender & Privacy Guard is a browser extension for WhatsApp Web that lets you send personalized messages in batches from pasted numbers or Excel/CSV files. The free plan includes Excel import, privacy blur, templates, and basic send history export, while Pro starts at $1.9 per month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I import Excel contacts into WhatsApp Bulk Sender for free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Excel and CSV import are available in the free plan. That is one of the main differences versus competing WhatsApp bulk sender extensions, which usually lock spreadsheet import behind Pro."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it work on WhatsApp Web?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The extension is designed specifically for WhatsApp Web. It runs in the browser and automates the same search, chat open, message type, and send flow a user would perform manually."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes the privacy mode useful?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Privacy Protection Mode can blur chat messages, preview text, media previews, names, and contact photos. It is intended for demos, screen sharing, and working in public spaces."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+    .hero { padding: 64px 0 40px; text-align: center; }
+    .hero-icon { width: 88px; height: 88px; border-radius: 18px; margin-bottom: 20px; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    h1 { font-size: 40px; font-weight: 800; color: #f0f6fc; margin-bottom: 12px; letter-spacing: -1px; }
+    .tagline { font-size: 20px; color: #8b949e; max-width: 620px; margin: 0 auto 20px; }
+    .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-bottom: 12px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .note { font-size: 13px; color: #8b949e; }
+    .geo-answer { font-size: 15px; color: #8b949e; line-height: 1.85; max-width: 760px; margin: 28px auto 0; text-align: left; }
+    section { padding: 44px 0; border-top: 1px solid #21262d; }
+    section h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .card { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 22px; }
+    .card h3 { font-size: 16px; font-weight: 700; color: #f0f6fc; margin-bottom: 8px; }
+    .card p, .step p, .faq-item p, .support p, .pricing-card li, .card li { color: #8b949e; font-size: 14px; }
+    .steps { display: flex; flex-direction: column; gap: 20px; }
+    .step { display: flex; gap: 16px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 34px; height: 34px; border-radius: 50%; background: #1f6feb; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; }
+    .step h3 { font-size: 16px; color: #f0f6fc; margin-bottom: 4px; }
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .pricing-card { background: #161b22; border: 1px solid #21262d; border-radius: 10px; padding: 24px; }
+    .pricing-card.featured { border-color: #1f6feb; }
+    .pricing-card h3 { font-size: 18px; color: #f0f6fc; margin-bottom: 8px; }
+    .price { font-size: 32px; font-weight: 800; color: #f0f6fc; margin-bottom: 8px; }
+    .pricing-card ul { list-style: none; margin-top: 16px; }
+    .pricing-card li { padding: 6px 0; }
+    .pricing-card li::before { content: "\2713 "; color: #3fb950; font-weight: 700; }
+    .pricing-card li.disabled::before { content: "\2014 "; color: #484f58; }
+    .pricing-card li.disabled { color: #484f58; }
+    .faq-item { margin-bottom: 18px; }
+    .faq-item h3 { font-size: 16px; font-weight: 700; color: #f0f6fc; margin-bottom: 6px; }
+    .support { text-align: center; }
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+    @media (max-width: 640px) {
+      h1 { font-size: 28px; }
+      .tagline { font-size: 17px; }
+      .grid, .pricing-grid { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="border-top:none;">
+      <div class="container">
+        <img src="icon.png" alt="WhatsApp Bulk Sender & Privacy Guard icon" class="hero-icon">
+        <span class="badge">Free Excel Import + Free Privacy Blur</span>
+        <h1>WhatsApp Bulk Sender &amp; Privacy Guard</h1>
+        <p class="tagline">Bulk send personalized WhatsApp Web messages from pasted numbers or Excel files, then blur chats instantly during demos or screen sharing.</p>
+        <div class="cta-row">
+          <a href="mailto:support@extpilot.com?subject=WA%20Bulk%20Sender%20Launch" class="btn btn-primary">Get Launch Update</a>
+          <a href="/blog/how-to-send-whatsapp-bulk-messages/" class="btn btn-secondary">Read the Guide</a>
+        </div>
+        <p class="note">Store listing URLs are being finalized. This page will switch to real Chrome Web Store and Edge Add-ons links once drafts are created.</p>
+        <p class="geo-answer">WhatsApp Bulk Sender &amp; Privacy Guard is a browser extension for WhatsApp Web that helps users send personalized messages in batches without using the WhatsApp Business API. It supports manual contact paste, Excel and CSV import, random send intervals, templates, pause and resume, failed-message retry, and send history export. Unlike most competing WhatsApp bulk sender tools, it keeps Excel import free instead of locking it behind Pro. It also includes a free Privacy Protection Mode that can blur chat messages, preview text, names, media previews, and contact photos during demos or screen sharing. The free plan is designed around light daily use, while Pro starts at $1.9 per month. In real-world validation, the current build completed a two-contact batch send successfully and the privacy mode was re-verified against the latest WhatsApp Web DOM structure.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Key Features</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Free Excel / CSV Import</h3>
+            <p>Import contacts from spreadsheets in the free plan. Other tools in this category usually gate spreadsheet import behind Pro.</p>
+          </div>
+          <div class="card">
+            <h3>Free Privacy Protection Mode</h3>
+            <p>Blur chats, text previews, group names, media previews, and avatars before you share your screen or work in public.</p>
+          </div>
+          <div class="card">
+            <h3>Batch Sending on WhatsApp Web</h3>
+            <p>Run the full send flow directly on WhatsApp Web with progress tracking, pause/resume, and retry failed contacts.</p>
+          </div>
+          <div class="card">
+            <h3>Built for Price-Sensitive Teams</h3>
+            <p>Pro starts at $1.9 per month, while comparable competitors typically charge between $9 and $19.99 per month.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div>
+              <h3>Open WhatsApp Web</h3>
+              <p>Keep your existing WhatsApp account logged in on web.whatsapp.com.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div>
+              <h3>Paste numbers or import Excel</h3>
+              <p>Add contacts manually or upload an Excel / CSV file with phone numbers and variables.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div>
+              <h3>Write your message and start</h3>
+              <p>Use basic variables like <code>{name}</code>, set a safe send interval, and start the batch run.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <div>
+              <h3>Review results and export history</h3>
+              <p>See which contacts succeeded, failed, or were skipped, then export a report for follow-up.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Who Is This For</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Small Businesses</h3>
+            <p>Send updates, promos, and reminders to existing customers without paying API setup costs.</p>
+          </div>
+          <div class="card">
+            <h3>Agencies and Freelancers</h3>
+            <p>Run lightweight outreach from spreadsheets and keep on-screen conversations blurred during client demos.</p>
+          </div>
+          <div class="card">
+            <h3>Operators and Sales Reps</h3>
+            <p>Use WhatsApp Web as the working surface while preserving visibility into send progress and results.</p>
+          </div>
+          <div class="card">
+            <h3>Teams Comparing WAPlus Tools</h3>
+            <p>Switch away from activation-code workflows and higher monthly prices while keeping core bulk-send utility.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Free vs Pro</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3>Free</h3>
+            <div class="price">$0</div>
+            <p>For testing and light daily use.</p>
+            <ul>
+              <li>Manual paste sending</li>
+              <li>Excel / CSV import</li>
+              <li>Random send intervals</li>
+              <li>3 saved templates</li>
+              <li>Privacy blur mode</li>
+              <li>Basic CSV export</li>
+              <li class="disabled">Attachments</li>
+              <li class="disabled">Detailed export</li>
+            </ul>
+          </div>
+          <div class="pricing-card featured">
+            <h3>Pro</h3>
+            <div class="price">$1.9/mo</div>
+            <p>For serious outreach and repeat use.</p>
+            <ul>
+              <li>Unlimited sending</li>
+              <li>Attachments</li>
+              <li>Group member sending</li>
+              <li>Full variables</li>
+              <li>Unlimited templates</li>
+              <li>Detailed CSV export</li>
+              <li>Auto-skip invalid numbers</li>
+              <li>Brand-free signature options</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+          <h3>Can I send bulk WhatsApp messages without the API?</h3>
+          <p>Yes. This extension works on WhatsApp Web in the browser and automates the normal user flow instead of relying on the WhatsApp Business API.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is Excel import free?</h3>
+          <p>Yes. Excel and CSV import are part of the free tier, which is a deliberate difference from most competing tools in this category.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does it include privacy mode?</h3>
+          <p>Yes. Privacy Protection Mode is free and can blur messages, names, previews, avatars, and media to protect visible chats during demos and screen sharing.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Has the send flow been tested in a real scenario?</h3>
+          <p>Yes. The current build was re-validated in a real WhatsApp Web session with two live contacts, and the final batch status completed with 2 successes and 0 failures.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2>Guides and Comparisons</h2>
+        <div class="grid">
+          <div class="card">
+            <h3><a href="/blog/how-to-send-whatsapp-bulk-messages/">How to Send WhatsApp Bulk Messages from WhatsApp Web</a></h3>
+            <p>A step-by-step guide covering the basic workflow, spreadsheet import, send intervals, and export.</p>
+          </div>
+          <div class="card">
+            <h3><a href="/blog/wa-bulk-sender-vs-wawebsender/">WA Bulk Sender vs WAWebSender</a></h3>
+            <p>A comparison focused on pricing, permissions, interface style, and free-plan usefulness.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="support">
+      <div class="container">
+        <h2>Support and Launch Status</h2>
+        <p>The public store listing and video demo are being finalized. If you want the first install link, email support and ask for the launch update.</p>
+        <p><a href="mailto:support@extpilot.com?subject=WA%20Bulk%20Sender%20Launch">support@extpilot.com</a></p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
