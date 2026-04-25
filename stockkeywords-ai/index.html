@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StockKeywords AI &mdash; Auto Tag for Adobe Stock | ExtPilot</title>
+  <meta name="description" content="Generate AI keywords and title suggestions for Adobe Stock in seconds. Bring your own OpenAI or Gemini API key. Free during launch.">
+  <link rel="canonical" href="https://extpilot.com/stockkeywords-ai/">
+  <meta property="og:title" content="StockKeywords AI &mdash; Auto Tag for Adobe Stock">
+  <meta property="og:description" content="Generate AI keywords and title suggestions for Adobe Stock in seconds. Bring your own OpenAI or Gemini API key. Free during launch.">
+  <meta property="og:url" content="https://extpilot.com/stockkeywords-ai/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="StockKeywords AI &mdash; Auto Tag for Adobe Stock">
+  <meta name="twitter:description" content="Generate 49 AI keywords for Adobe Stock in 10 seconds. Bring your own OpenAI/Gemini API key.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="adobe stock keywords generator, adobe stock auto tag, ai keyword generator for adobe stock, stock photo keyword tool, automate adobe stock tagging">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "StockKeywords AI — Auto Tag for Adobe Stock",
+    "url": "https://extpilot.com/stockkeywords-ai/",
+    "applicationCategory": "BrowserExtension",
+    "operatingSystem": "Chrome, Edge",
+    "description": "Generate AI keywords and title suggestions for Adobe Stock in seconds. Bring your own OpenAI or Gemini API key. Keywords are organized into Caption, Top, Next, Other categories with one-click fill.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free during launch with unlimited generations. Paid rollout is reserved for a later phase."
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the best keyword tool for Adobe Stock contributors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "StockKeywords AI is a good choice for Adobe Stock contributors. It generates title suggestions and 49 AI keywords using your own OpenAI or Gemini API key, organizes them into categories, and fills the Adobe Stock upload form. The current launch build is free."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I auto-generate keywords for Adobe Stock photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Install StockKeywords AI, add your OpenAI or Gemini API key in the options page, open Adobe Stock contributor upload page, click 'Suggest Titles' or 'Generate Keywords', then click 'Fill All' to fill the form. The whole process takes about 10 seconds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a free AI keyword generator for stock photos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "StockKeywords AI is free during launch and uses your own API key. Gemini has a free tier, and compatible OpenAI endpoints or gateway services can also be used."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to save time tagging Adobe Stock images?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use StockKeywords AI to auto-generate 49 keywords in ~10 seconds instead of typing them manually. The extension organizes keywords into categories and can auto-fill the Adobe Stock upload form with one click."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does StockKeywords AI work on Microsoft Edge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. StockKeywords AI is built and tested for both Chrome and Edge from Day 1. Install it from the Chrome Web Store or Microsoft Edge Add-ons."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+    /* Header */
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+
+    /* Hero */
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero-icon { width: 80px; height: 80px; border-radius: 16px; margin-bottom: 24px; background: #1f6feb; display: flex; align-items: center; justify-content: center; font-size: 36px; }
+    .hero h1 { font-size: 38px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 24px; max-width: 580px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .btn-disabled { background: #2d333b; color: #8b949e; border: 1px dashed #4b5563; cursor: default; pointer-events: none; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .price-note { font-size: 14px; color: #8b949e; margin-top: 12px; }
+
+    /* Video */
+    .video-section { padding: 0 0 48px; text-align: center; }
+    .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 8px; border: 1px solid #21262d; max-width: 720px; margin: 0 auto; }
+    .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+    /* Features */
+    .features { padding: 48px 0; }
+    .features h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+
+    /* Comparison */
+    .comparison { padding: 48px 0; border-top: 1px solid #21262d; }
+    .comparison h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 12px; text-align: center; }
+    .comparison .subtitle { font-size: 16px; color: #8b949e; text-align: center; margin-bottom: 24px; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 0 auto; font-size: 14px; }
+    .comparison-table th, .comparison-table td { padding: 10px 14px; border: 1px solid #21262d; text-align: left; }
+    .comparison-table th { background: #161b22; color: #f0f6fc; font-weight: 600; }
+    .comparison-table td { color: #c9d1d9; }
+    .comparison-table tr:nth-child(even) td { background: #161b2288; }
+
+    /* Pricing */
+    .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
+    .pricing h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 640px; margin: 0 auto; }
+    .pricing-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 28px 24px; text-align: center; }
+    .pricing-card.pro { border-color: #238636; }
+    .pricing-card h3 { font-size: 20px; font-weight: 700; color: #f0f6fc; margin-bottom: 8px; }
+    .pricing-card .price { font-size: 36px; font-weight: 800; color: #f0f6fc; margin-bottom: 4px; }
+    .pricing-card .price-desc { font-size: 14px; color: #8b949e; margin-bottom: 16px; }
+    .pricing-card ul { list-style: none; text-align: left; margin-bottom: 20px; }
+    .pricing-card li { font-size: 14px; color: #c9d1d9; margin-bottom: 8px; padding-left: 20px; position: relative; }
+    .pricing-card li::before { content: "\2713"; position: absolute; left: 0; color: #238636; font-weight: 700; }
+
+    /* How it works */
+    .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
+    .how-it-works h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+
+    /* FAQ */
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+
+    /* Support */
+    .support { padding: 48px 0; border-top: 1px solid #21262d; text-align: center; }
+    .support h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 16px; }
+    .support p { font-size: 15px; color: #8b949e; margin-bottom: 8px; }
+
+    /* Footer */
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 28px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .pricing-grid { grid-template-columns: 1fr; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 8px 10px; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-icon">🔑</div>
+        <span class="badge">Bring Your Own API Key</span>
+        <h1>StockKeywords AI &mdash; Auto Tag for Adobe Stock</h1>
+        <p class="tagline">Generate Adobe Stock title suggestions and 49 AI keywords in ~10 seconds. Organized into Caption, Top, Next, Other. One-click fill into Adobe Stock.</p>
+        <div class="cta-row">
+          <a href="https://chromewebstore.google.com/detail/behenijlbhjgfekjaklpakjhafbldhbn" class="btn btn-primary" id="chrome-link" target="_blank" rel="noopener">Install for Chrome</a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/cbfbiiolfnimgeieljaekmgglcalnndc" class="btn btn-secondary" id="edge-link" target="_blank" rel="noopener">Install for Edge</a>
+        </div>
+        <p class="price-note">Free during launch. Bring your own API key and install from Chrome Web Store or Edge Add-ons.</p>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>49 AI Keywords</h3>
+            <p>Generate a full set of 49 keywords for Adobe Stock in about 10 seconds. Uses your own OpenAI or Gemini API key.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Organized Categories</h3>
+            <p>Keywords are organized into Caption, Top, Next, and Other categories to match Adobe Stock's upload form layout.</p>
+          </div>
+          <div class="feature-card">
+            <h3>One-Click Auto-Fill</h3>
+            <p>Click "Fill All" to instantly populate the Adobe Stock upload form with all generated keywords. No copy-pasting.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Title Suggestions</h3>
+            <p>Run a separate AI action to get multiple Adobe Stock title ideas, then use or copy the best one instead of overwriting the field blindly.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Multi-Provider Support</h3>
+            <p>Choose between OpenAI-compatible APIs and Google Gemini. Switch anytime without changing the Adobe workflow.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Model + Base URL Control</h3>
+            <p>Pick the exact model you want and set a custom base URL for official endpoints, cloud gateways, or compatible relay services.</p>
+          </div>
+          <div class="feature-card">
+            <h3>5-Tab Options Page</h3>
+            <p>Clean settings interface: General, AI Provider, Prompts, Usage, About. Everything in one place.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Minimal Permissions</h3>
+            <p>Only 2 permissions required. No webRequest, no data collection. Your API key stays in your browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>Get Started in 30 Seconds</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+              <h3>Install StockKeywords AI</h3>
+              <p>Add the extension from Chrome Web Store or Edge Add-ons. No ExtPilot account is required. You bring your own API key.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+              <h3>Add your API key</h3>
+              <p>Open the options page, paste your OpenAI or Gemini API key, click "Save". Gemini has a free tier.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+              <h3>Generate keywords</h3>
+              <p>Go to Adobe Stock contributor upload page, click "Generate Keywords" on any photo. Get 49 keywords in ~10 seconds.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <div class="step-content">
+              <h3>Auto-fill the form</h3>
+              <p>Click "Fill All" to populate the Adobe Stock upload form. Submit your photo and you're done!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2>Simple Pricing</h2>
+        <div class="pricing-grid">
+          <div class="pricing-card pro">
+            <h3>Launch Access</h3>
+            <div class="price">$0</div>
+            <div class="price-desc">free during launch</div>
+            <ul>
+              <li>Unlimited AI generations during launch</li>
+              <li>49 keywords per generation</li>
+              <li>Separate title suggestions</li>
+              <li>Caption + Top + Next + Other categories</li>
+              <li>One-click auto-fill</li>
+              <li>Full prompt customization</li>
+              <li>OpenAI-compatible + Gemini support</li>
+              <li>Model and base URL flexibility</li>
+              <li>5-tab options page</li>
+            </ul>
+          </div>
+          <div class="pricing-card">
+            <h3>Future Paid Rollout</h3>
+            <div class="price">Later</div>
+            <div class="price-desc">reserved, not active now</div>
+            <ul>
+              <li>License validation code is already built in</li>
+              <li>Pricing will only be enabled after usage validation</li>
+              <li>No active paid gate in the current launch build</li>
+              <li>Users continue bringing their own API keys</li>
+              <li>Product remains ready for a later pricing switch</li>
+            </ul>
+            <a href="https://chromewebstore.google.com/detail/behenijlbhjgfekjaklpakjhafbldhbn" class="btn btn-secondary" style="width: 100%; justify-content: center;" target="_blank" rel="noopener">Install launch build</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="comparison">
+      <div class="container">
+        <h2>Compare StockKeywords AI</h2>
+        <p class="subtitle">See how we stack up against the alternatives.</p>
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Easy Keywords</th>
+              <th>jKeywording</th>
+              <th>StockKeywords AI</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AI method</td>
+              <td>ChatGPT/Gemini web UI</td>
+              <td>Backend service</td>
+              <td><strong>Direct API call</strong></td>
+            </tr>
+            <tr>
+              <td>Speed</td>
+              <td>Slow (~30-60s)</td>
+              <td>Medium</td>
+              <td><strong>Fast (~10s)</strong></td>
+            </tr>
+            <tr>
+              <td>Affiliate popups</td>
+              <td>Yes (every 6h)</td>
+              <td>No</td>
+              <td><strong>No</strong></td>
+            </tr>
+            <tr>
+              <td>Prompt customization</td>
+              <td>No</td>
+              <td>Pro-only</td>
+              <td><strong>Free tier includes</strong></td>
+            </tr>
+            <tr>
+              <td>Keyword categories</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Free tier</td>
+              <td>Unlimited (with ads)</td>
+              <td>30 uses total</td>
+              <td><strong>Free during launch</strong></td>
+            </tr>
+            <tr>
+              <td>Pro price</td>
+              <td>Free (affiliate)</td>
+              <td>Not transparent</td>
+              <td><strong>Not active yet</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>What is the best keyword tool for Adobe Stock contributors?</h3>
+          <p>StockKeywords AI is a good choice. It suggests titles and generates 49 keywords in ~10 seconds using your own API key, organizes them into categories, and fills the upload form. The current launch build is free.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I auto-generate keywords for Adobe Stock photos?</h3>
+          <p>Install StockKeywords AI, add your API key in options, open Adobe Stock contributor upload page, click "Generate Keywords", then "Fill All". The whole process takes about 10 seconds.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is there a free AI keyword generator for stock photos?</h3>
+          <p>Yes. The current launch build is free, and you bring your own API key. Gemini has a free tier, and you can also point OpenAI-compatible requests at supported relay or cloud gateway URLs.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How to save time tagging Adobe Stock images?</h3>
+          <p>Use StockKeywords AI to auto-generate 49 keywords instead of typing them manually. The extension organizes keywords and fills the form with one click.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does StockKeywords AI work on Microsoft Edge?</h3>
+          <p>Yes. StockKeywords AI is built and tested for both Chrome and Edge from Day 1. The launch build is free on both browsers.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I use my own API key?</h3>
+          <p>Yes. That's the whole point! You bring your own OpenAI or Gemini API key. You control your API usage and costs directly with the provider.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What data does StockKeywords AI collect?</h3>
+          <p>None. StockKeywords AI runs in your browser and does not collect, transmit, or sell your personal data. The only network requests are direct requests from your browser to the AI endpoint you configure and optional license validation logic reserved for a later paid rollout. See our <a href="/privacy/stockkeywords-ai/">privacy policy</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support" id="support">
+      <div class="container">
+        <h2>Support</h2>
+        <p>Have questions or feedback? We'd love to hear from you.</p>
+        <p>Email: <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+        <p style="margin-top: 16px;"><a href="/privacy/stockkeywords-ai/">Privacy Policy</a> &middot; <a href="/blog/how-to-auto-generate-keywords-for-adobe-stock/">How-to Guide</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
