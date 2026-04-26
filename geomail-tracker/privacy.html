@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — GeoMail Tracker | ExtPilot</title>
+  <meta name="description" content="Privacy policy for GeoMail Tracker Chrome and Edge extension. We track only the email opens you initiate; recipient data is hashed, minimized, and never sold.">
+  <link rel="canonical" href="https://extpilot.com/geomail-tracker/privacy.html">
+  <link rel="icon" href="icon.png" type="image/png">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #a78bfa; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 720px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+    .content { padding: 48px 0; }
+    .content h1 { font-size: 28px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; }
+    .content h2 { font-size: 20px; font-weight: 600; color: #f0f6fc; margin-top: 32px; margin-bottom: 12px; }
+    .content p { font-size: 15px; color: #c9d1d9; margin-bottom: 12px; }
+    .content ul { margin-left: 24px; margin-bottom: 12px; }
+    .content li { font-size: 15px; color: #c9d1d9; margin-bottom: 6px; }
+    .last-updated { font-size: 13px; color: #484f58; margin-bottom: 24px; }
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+    @media (max-width: 600px) {
+      .content h1 { font-size: 22px; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/geomail-tracker/" class="back-link">&larr; GeoMail Tracker</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+    <div class="container">
+      <h1>Privacy Policy &mdash; GeoMail Tracker</h1>
+      <p class="last-updated">Last updated: April 27, 2026</p>
+
+      <h2>Overview</h2>
+      <p>GeoMail Tracker ("the Extension") is an email-tracking tool for Gmail. This policy explains exactly what data the Extension collects, how it is used, and what we do <em>not</em> collect. We've kept it short and concrete on purpose &mdash; tracking is a privacy-sensitive area, and you deserve to understand it before installing.</p>
+
+      <h2>How tracking works (in plain language)</h2>
+      <p>When you compose an email in Gmail with the Extension's "Track" toggle on, we inject a single invisible 1×1 pixel into the email body. When the recipient's email client renders the message, the pixel fetches a tiny image from our server (<code>https://geomail.extpilot.com</code>) over HTTPS. That fetch is what tells us the email was opened.</p>
+      <p>This is the same approach used by Mailchimp, HubSpot, Salesforce, Mailtrack, and every major email-marketing platform. We do not modify your email content beyond adding that pixel.</p>
+
+      <h2>What we collect about your emails</h2>
+      <ul>
+        <li><strong>The recipient's email address</strong>, the email subject line, and a unique tracking ID &mdash; so we can show <em>you</em> who opened what.</li>
+        <li><strong>The time of each pixel fetch</strong> (when the email was opened or previewed).</li>
+        <li><strong>Geolocation derived from the recipient's IP</strong> (city, country, region, ASN, timezone) using Cloudflare's GeoIP database.</li>
+        <li><strong>The recipient's User-Agent string</strong>, used to derive device type (desktop, mobile, tablet), operating system, and browser/email client.</li>
+        <li><strong>A SHA-256 hash of the recipient's IP address</strong> &mdash; used to deduplicate repeated opens from the same recipient. We never store the raw IP.</li>
+      </ul>
+
+      <h2>What we do NOT collect</h2>
+      <ul>
+        <li>The full text or attachments of your emails. We only see the tracking ID associated with each email, not its content.</li>
+        <li>Your Google account password or any OAuth refresh token beyond what is needed to identify you (email + Google sub).</li>
+        <li>The contents of your Gmail inbox, drafts, or other emails &mdash; only the email you yourself attached the tracking pixel to.</li>
+        <li>The recipient's raw IP address. Only the SHA-256 hash and the derived geolocation are stored.</li>
+        <li>Any third-party advertising or behavioral tracking cookies.</li>
+      </ul>
+
+      <h2>Where data is stored</h2>
+      <p>Tracking events and metadata are stored in a private Cloudflare D1 database operated by ExtPilot. The database is not shared with third parties. We do not sell, rent, or trade your tracking data.</p>
+      <p>Free-plan tracking history is retained for 30 days. Pro-plan history is retained indefinitely while your subscription is active. You can request full deletion of your data at any time via <a href="mailto:support@extpilot.com">support@extpilot.com</a>.</p>
+
+      <h2>Recipient privacy &amp; ethics</h2>
+      <p>Email open tracking is a long-standing industry practice but its legality and ethics depend on jurisdiction. In the EU (under GDPR), you generally need a legitimate-interest basis for tracking and should disclose it in your email signature or company privacy policy. In the US tracking is generally permitted, though we still recommend disclosure for trust reasons.</p>
+      <p>If you're contacting recipients in the EU/UK, we recommend adding a short notice such as: <em>"This email contains a tracking pixel for analytics. Reply 'no track' if you'd prefer not to be tracked."</em> The Extension provides a per-email "Track" toggle so you can disable tracking on a case-by-case basis.</p>
+
+      <h2>Authentication &amp; permissions</h2>
+      <p>The Extension uses Chrome's built-in <code>chrome.identity</code> API to sign you in with Google. We request only the <code>openid</code>, <code>email</code>, and <code>profile</code> scopes &mdash; the minimum needed to identify your account. We do <strong>not</strong> request access to read or send Gmail messages on your behalf.</p>
+      <p>Manifest V3 host permissions are limited to <code>https://mail.google.com/*</code> (where the Compose injection happens) and <code>https://geomail.extpilot.com/*</code> (our tracking endpoint).</p>
+
+      <h2>Pro subscription &amp; payment</h2>
+      <p>Pro purchases are processed by Stripe. ExtPilot does not store your credit card number or full billing details &mdash; only the Stripe customer ID returned to us, which is used to verify your subscription status.</p>
+
+      <h2>Data deletion</h2>
+      <p>To delete your account and all associated tracking data, email <a href="mailto:support@extpilot.com">support@extpilot.com</a> from the Google address you signed in with. We will delete all tracking events, tracks, and account records within 30 days of receiving the request.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>We may update this policy as the product evolves. The "Last updated" date at the top will reflect the most recent revision. For material changes affecting how data is collected or used, we will notify users via the Extension's UI or by email.</p>
+
+      <h2>Contact</h2>
+      <p>Questions? Email us at <a href="mailto:support@extpilot.com">support@extpilot.com</a>.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>© 2026 ExtPilot. All rights reserved.</span>
+        <span>
+          <a href="/">Home</a> ·
+          <a href="/geomail-tracker/">GeoMail Tracker</a> ·
+          <a href="mailto:support@extpilot.com">Contact</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

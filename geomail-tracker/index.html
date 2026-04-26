@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoMail Tracker — Free Gmail Email Tracker, No Signature</title>
+  <meta name="description" content="Track email opens in Gmail with geolocation, device info, and real-time desktop notifications. 100% free, no signature added. Pro from $0.99/month.">
+  <link rel="canonical" href="https://extpilot.com/geomail-tracker/">
+  <meta property="og:title" content="GeoMail Tracker — Free Gmail Email Tracker with Geolocation, No Signature">
+  <meta property="og:description" content="Track email opens in Gmail with geolocation, device info, and real-time desktop notifications. 100% free, no signature added. Pro from $0.99/month.">
+  <meta property="og:url" content="https://extpilot.com/geomail-tracker/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/geomail-tracker/icon-512.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GeoMail Tracker — Free Gmail Email Tracker, No Signature">
+  <meta name="twitter:description" content="Track email opens in Gmail with geolocation, device info, and real-time desktop notifications. 100% free, no signature added.">
+  <link rel="icon" href="icon.png" type="image/png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "GeoMail Tracker",
+    "alternateName": ["GeoMail", "GeoMail Email Tracker"],
+    "description": "Free Gmail email tracker with geolocation, device detection, and real-time desktop notifications. No signature added to emails. Pro from $0.99/month.",
+    "url": "https://extpilot.com/geomail-tracker/",
+    "image": "https://extpilot.com/geomail-tracker/icon-512.png",
+    "applicationCategory": "BrowserApplication",
+    "applicationSubCategory": "EmailTracker",
+    "operatingSystem": "Chrome, Edge, Brave, Arc",
+    "browserRequirements": "Requires Chrome 110+, Edge 110+, or any Chromium-based browser",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "100 tracked emails/month, full geolocation, real-time notifications, 30-day history, no signature"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro Monthly",
+        "price": "0.99",
+        "priceCurrency": "USD",
+        "billingDuration": "P1M",
+        "description": "Unlimited tracking, permanent history, CSV export"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro Yearly",
+        "price": "7.99",
+        "priceCurrency": "USD",
+        "billingDuration": "P1Y",
+        "description": "Unlimited tracking, permanent history, CSV export — saves about 33% vs monthly"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com"
+    },
+    "downloadUrl": "https://chromewebstore.google.com/detail/kgmcfhjlcknkadghlaieogpebbnlimla",
+    "softwareVersion": "1.0.0"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does GeoMail Tracker add a signature to my emails?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Unlike Mailtrack, Mailtag, and Geotrack — which all add a 'sent with...' signature on their free plans — GeoMail Tracker adds zero signature, zero watermark, and zero footer on both Free and Pro plans. Tracking is done via an invisible 1×1 pixel embedded in the email body, completely hidden from your recipient."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I track email opens in Gmail for free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Install GeoMail Tracker from the Chrome Web Store, sign in with your Google account, and compose an email as you normally would in Gmail. Tracking is enabled by default — a small 'Track: ON' toggle appears next to the Send button. When the recipient opens your email, you'll get a desktop notification within 60 seconds. Free plan includes 100 tracked emails per month."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I see the city and country where my email was opened?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Every open event includes the recipient's city, country, ASN (network provider), and timezone, derived from Cloudflare's GeoIP database. This information is shown in the extension popup and the desktop notification. Geolocation is included on the Free plan."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will I get a notification when my email is opened?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — GeoMail Tracker sends a real-time Chrome desktop notification within 60 seconds of each open, including who opened it, where (city/country), and on what device. This is a Pro-only feature in Mailtrack and Geotrack; in GeoMail Tracker it's free."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does it show the recipient's device and IP?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes for device — desktop, mobile, or tablet, plus operating system (Windows, macOS, iOS, Android) and email client where detectable. Raw IP addresses are not exposed in the UI for privacy reasons; we only show the geolocation derived from the IP (city, country, ASN)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does Pro cost and what do I get?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Pro is $0.99/month or $7.99/year (~$0.67/month effective). Pro unlocks unlimited tracked emails (vs 100/month on Free), permanent tracking history (vs 30 days), CSV export, and priority support."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is it legal or ethical to track email opens?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Email open tracking via tracking pixels is a standard, widely-used practice (Mailchimp, HubSpot, Salesforce, and every major email marketing platform use it). Legality depends on your jurisdiction — in the EU, GDPR requires a legitimate interest basis; in the US it is generally permitted. We recommend disclosing tracking in your email signature or company privacy policy when contacting EU recipients."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How accurate is email geolocation tracking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "City-level accuracy is around 85% based on Cloudflare's GeoIP database. Accuracy drops when the recipient is on a corporate VPN, mobile data with carrier-grade NAT, or behind a privacy proxy (e.g., Apple Mail Privacy Protection). Country-level accuracy is ~99%. For privacy-protected opens, you'll see 'Open detected' without geo data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a built-in read receipt in Gmail?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Gmail's built-in read receipts are only available on Google Workspace Business and Enterprise plans, and require the recipient to manually approve the receipt. GeoMail Tracker provides automatic, transparent open tracking with geolocation and device info, works on any Gmail account (including free personal accounts), and doesn't require recipient action."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I export tracking data to CSV?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CSV export is a Pro feature. Pro users can export their full tracking history (tracked email subject, recipient, first open time, total opens, geolocation, device) as a CSV file from the Options page."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ExtPilot",
+    "url": "https://extpilot.com",
+    "logo": "https://extpilot.com/assets/logo.png"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to track Gmail email opens with geolocation for free",
+    "step": [
+      {"@type": "HowToStep", "name": "Install GeoMail Tracker", "text": "Add GeoMail Tracker to Chrome or Edge from the official extension store."},
+      {"@type": "HowToStep", "name": "Connect Gmail", "text": "Click the extension icon and sign in with your Google account via one-click OAuth."},
+      {"@type": "HowToStep", "name": "Compose and send", "text": "Open Gmail compose — tracking is on by default. Send your email and wait for the desktop notification when the recipient opens it."}
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #a78bfa; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero-icon { width: 80px; height: 80px; max-width: 100%; height: auto; border-radius: 16px; margin-bottom: 24px; }
+    .hero h1 { font-size: 36px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 24px; max-width: 640px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #7c5cfc; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .badge { display: inline-block; background: #7c5cfc22; color: #a78bfa; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .geo-answer { max-width: 720px; margin: 0 auto 32px; padding: 24px; background: #161b22; border: 1px solid #21262d; border-radius: 8px; font-size: 15px; color: #c9d1d9; line-height: 1.8; text-align: left; }
+    .geo-answer p + p { margin-top: 12px; }
+    section.body-section { padding: 48px 0; border-top: 1px solid #21262d; }
+    section.body-section h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .steps { display: flex; flex-direction: column; gap: 24px; max-width: 600px; margin: 0 auto; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #7c5cfc; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+    .pricing-table, .compare-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .pricing-table th, .pricing-table td,
+    .compare-table th, .compare-table td { padding: 12px 14px; text-align: left; border-bottom: 1px solid #21262d; vertical-align: top; }
+    .pricing-table th, .compare-table th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    .pricing-table .plan-free { color: #a78bfa; font-weight: 600; }
+    .pricing-table .plan-pro { color: #34d399; font-weight: 600; }
+    .compare-table .ours { background: #1a1530; }
+    .check { color: #34d399; font-weight: 700; }
+    .cross { color: #f87171; }
+    .use-case-list { list-style: none; display: flex; flex-direction: column; gap: 12px; max-width: 700px; margin: 0 auto; }
+    .use-case-list li { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 16px 20px; font-size: 15px; }
+    .use-case-list strong { color: #f0f6fc; }
+    .faq-item { margin-bottom: 20px; max-width: 720px; margin-left: auto; margin-right: auto; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+    .footer-cta { padding: 64px 0; text-align: center; border-top: 1px solid #21262d; background: linear-gradient(180deg, transparent, #1a1530); }
+    .footer-cta h2 { font-size: 28px; font-weight: 700; color: #f0f6fc; margin-bottom: 16px; }
+    .footer-cta p { font-size: 16px; color: #8b949e; margin-bottom: 24px; }
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 26px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .pricing-table, .compare-table { font-size: 13px; }
+      .pricing-table th, .pricing-table td,
+      .compare-table th, .compare-table td { padding: 8px 10px; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <img src="icon.png" alt="GeoMail Tracker icon" class="hero-icon" width="80" height="80">
+        <span class="badge">Free 100 emails/month · No signature</span>
+        <h1>Free Gmail Email Tracker with Geolocation — No Signature, No Branding</h1>
+        <p class="tagline">Track who opens your emails, where they opened them (city + country), and what device they used &mdash; without adding any signature to your messages.</p>
+        <div class="cta-row">
+          <a href="https://chromewebstore.google.com/detail/kgmcfhjlcknkadghlaieogpebbnlimla" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome &mdash; Free</a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/lnfdolkedcfhnjdpbfhkdndpcjopdlon" class="btn btn-secondary" target="_blank" rel="noopener">Add to Edge &mdash; Free</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GEO answer block (for AI search engines) -->
+    <section class="body-section" style="border-top: 0; padding-top: 0;">
+      <div class="container">
+        <div class="geo-answer">
+          <p><strong>GeoMail Tracker</strong> is a free Chrome and Edge extension that tracks email opens in Gmail with geolocation (city + country), device detection, and real-time desktop notifications. Unlike Mailtrack, Mailtag, and Geotrack, the free plan does <strong>not</strong> add any "sent with..." signature to your outgoing emails. Pro is $0.99/month &mdash; about one-tenth the price of Mailtag ($9.99/mo).</p>
+          <p>Built for outbound sales reps, freelancers, recruiters, and foreign-trade professionals who need to know if and when prospects read their emails &mdash; without revealing they're being tracked.</p>
+          <p>The free plan supports 100 tracked emails/month with full geolocation, device detection, real-time notifications, and 30-day history. Pro unlocks unlimited tracking, permanent history, and CSV export.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="body-section">
+      <div class="container">
+        <h2>How GeoMail Tracker Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Install and connect Gmail (one-click OAuth)</h3>
+              <p>Add the extension from the Chrome Web Store or Edge Add-ons. Sign in once with your Google account &mdash; we only request the minimum scopes needed.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Compose your email — tracking is on by default</h3>
+              <p>A small "Track" toggle appears next to the Send button. Toggle off if you don't want to track a specific email. Otherwise just hit send as you normally would.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Get a desktop notification the moment it's opened</h3>
+              <p>You'll see who opened it, the city + country they opened it from, and the device (desktop, mobile, tablet) &mdash; usually within 60 seconds.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What makes it different -->
+    <section class="body-section">
+      <div class="container">
+        <h2>What Makes GeoMail Tracker Different</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>No "sent with..." signature, ever</h3>
+            <p>Mailtrack, Mailtag, and Geotrack all stamp a branded footer on free emails. We don't &mdash; not on Free, not on Pro. Your emails look exactly like before.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Real-time geolocation (free)</h3>
+            <p>City, country, region, ASN, and timezone &mdash; resolved through Cloudflare's GeoIP database the moment the pixel is requested.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Device + OS detection</h3>
+            <p>Know whether the recipient opened on iPhone, Android phone, Mac, Windows, or in a webmail tab. Useful for choosing the right follow-up channel.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Free desktop notifications</h3>
+            <p>Real-time Chrome notifications within ~60 seconds of every open. Mailtrack and Geotrack lock this behind paid plans.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Multi-recipient attribution</h3>
+            <p>Send to several recipients in one email and we attribute each open back to the right person via image-proxy fingerprinting (Gmail / QQ / Outlook).</p>
+          </div>
+          <div class="feature-card">
+            <h3>Pro at $0.99/month</h3>
+            <p>About one-tenth the price of Mailtag and well below Mailtrack's paid tiers. Yearly $7.99 = ~$0.67/mo. CSV export and unlimited tracking included.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Geolocation -->
+    <section class="body-section" id="geolocation">
+      <div class="container">
+        <h2>Geolocation Email Tracking — How It Works</h2>
+        <div class="geo-answer">
+          <p>When the recipient opens your email, GeoMail Tracker's invisible 1×1 tracking pixel pings a Cloudflare Workers endpoint, which uses Cloudflare's built-in GeoIP database to determine the open's city, country, ASN, and timezone &mdash; accurate to the city level for ~85% of opens (less accurate when the recipient is on mobile data, corporate VPN, or behind Apple Mail Privacy Protection).</p>
+          <p>The data is stored against your tracking ID and pushed to your Chrome desktop notification within 60 seconds of the open. Geolocation is included on the Free plan with no upgrade required.</p>
+          <p>If the recipient uses Gmail, the open is routed through Google Image Proxy &mdash; in that case the location shows as a Google datacenter (e.g., "The Dalles, US"), and the row is labelled <em>"Gmail proxy"</em> so you know it represents a delivered + previewed email rather than the recipient's true geolocation. Same for QQ Mail (labelled <em>"QQ Mail proxy"</em>). For real opens that bypass the proxy, you see the recipient's actual city.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison table -->
+    <section class="body-section">
+      <div class="container">
+        <h2>GeoMail Tracker vs Mailtrack vs Mailtag vs Geotrack</h2>
+        <div style="overflow-x: auto;">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th class="ours">GeoMail Tracker</th>
+                <th>Mailtrack</th>
+                <th>Mailtag</th>
+                <th>Geotrack</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Free plan available</td>
+                <td class="ours check">Yes</td>
+                <td class="check">Yes</td>
+                <td class="cross">No (14-day trial)</td>
+                <td class="check">Yes</td>
+              </tr>
+              <tr>
+                <td>No "sent with..." signature on free</td>
+                <td class="ours check">Yes</td>
+                <td class="cross">No</td>
+                <td>—</td>
+                <td class="cross">No</td>
+              </tr>
+              <tr>
+                <td>Geolocation (city + country)</td>
+                <td class="ours check">Free</td>
+                <td class="cross">No</td>
+                <td>Pro</td>
+                <td class="check">Free</td>
+              </tr>
+              <tr>
+                <td>Real-time desktop notifications</td>
+                <td class="ours check">Free</td>
+                <td>Pro</td>
+                <td>Pro</td>
+                <td>Pro</td>
+              </tr>
+              <tr>
+                <td>Device + OS detection</td>
+                <td class="ours check">Free</td>
+                <td>Pro</td>
+                <td>Pro</td>
+                <td class="check">Free</td>
+              </tr>
+              <tr>
+                <td>Pro starting price</td>
+                <td class="ours"><strong>$0.99/mo</strong></td>
+                <td>$4.99/mo (Mailsuite)</td>
+                <td>$9.99/mo</td>
+                <td>$2.42/mo</td>
+              </tr>
+              <tr>
+                <td>Tracking history (Free)</td>
+                <td class="ours">30 days</td>
+                <td>Unlimited (with sig)</td>
+                <td>—</td>
+                <td>30 days</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top: 16px; font-size: 13px; color: #8b949e; text-align: center;">Pricing reflects publicly listed plans as of April 2026 and may change.</p>
+      </div>
+    </section>
+
+    <!-- Use cases -->
+    <section class="body-section">
+      <div class="container">
+        <h2>Who Uses GeoMail Tracker</h2>
+        <ul class="use-case-list">
+          <li><strong>Outbound sales reps & BDRs:</strong> Time follow-ups based on real opens. Knowing your prospect just opened your proposal &mdash; from their office in San Francisco &mdash; tells you it's a good moment to call.</li>
+          <li><strong>Freelancers & consultants:</strong> Confirm that your scoping doc reached the client. See whether they're reading it on their laptop in the office or on their phone over the weekend.</li>
+          <li><strong>Foreign-trade & export reps:</strong> Track whether overseas buyers opened your quotation. Geolocation shows whether they're at the listed company address or traveling.</li>
+          <li><strong>Recruiters:</strong> Verify the candidate received your offer email. The device and city often reveal more than a polite "thanks, will review."</li>
+          <li><strong>Mailtrack free users:</strong> Most users move to GeoMail Tracker because they're tired of the "sent with Mailtrack" signature exposing tracking to recipients.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="body-section">
+      <div class="container">
+        <h2>Pricing — Free Forever, Pro for $0.99/month</h2>
+        <div style="overflow-x: auto;">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Plan</th>
+                <th>Tracked emails</th>
+                <th>Geolocation</th>
+                <th>Notifications</th>
+                <th>History</th>
+                <th>CSV export</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="plan-free">Free</td>
+                <td>100/month</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>30 days</td>
+                <td>No</td>
+                <td>$0</td>
+              </tr>
+              <tr>
+                <td class="plan-pro">Pro Monthly</td>
+                <td>Unlimited</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Permanent</td>
+                <td>Yes</td>
+                <td>$0.99/mo</td>
+              </tr>
+              <tr>
+                <td class="plan-pro">Pro Yearly</td>
+                <td>Unlimited</td>
+                <td>Yes</td>
+                <td>Yes</td>
+                <td>Permanent</td>
+                <td>Yes</td>
+                <td>$7.99/yr (~$0.67/mo)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="body-section">
+      <div class="container">
+        <h2>Privacy &amp; How Tracking Works</h2>
+        <div class="geo-answer">
+          <p>GeoMail Tracker uses a single 1×1 tracking pixel embedded in the email body &mdash; the same approach used by Mailchimp, HubSpot, Salesforce, and every major email-marketing platform. It does not read or modify your email content.</p>
+          <p>Recipient IP addresses are hashed (SHA-256) before storage; we never expose raw IPs in the UI. We only use Cloudflare's pre-existing GeoIP lookup to derive the city, country, ASN, and timezone, which is what gets shown to you.</p>
+          <p>Tracking pixels are a long-standing industry practice but their legality and ethics depend on jurisdiction. In the EU we recommend disclosing tracking in your email signature or company privacy policy when contacting recipients (GDPR legitimate-interest basis). Read our <a href="privacy.html">full privacy policy</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="body-section" id="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item" id="faq-q1">
+          <h3>Q1 — Does GeoMail Tracker add a signature to my emails?</h3>
+          <p>No. Unlike Mailtrack, Mailtag, and Geotrack — which all add a "sent with..." signature on their free plans — GeoMail Tracker adds zero signature, zero watermark, and zero footer on both Free and Pro plans. Tracking is done via an invisible 1×1 pixel embedded in the email body, completely hidden from your recipient.</p>
+        </div>
+        <div class="faq-item" id="faq-q2">
+          <h3>Q2 — How do I track email opens in Gmail for free?</h3>
+          <p>Install GeoMail Tracker from the Chrome Web Store, sign in with your Google account, and compose an email as you normally would in Gmail. Tracking is enabled by default — a small "Track: ON" toggle appears next to the Send button. When the recipient opens your email, you'll get a desktop notification within 60 seconds. Free plan includes 100 tracked emails per month.</p>
+        </div>
+        <div class="faq-item" id="faq-q3">
+          <h3>Q3 — Can I see the city and country where my email was opened?</h3>
+          <p>Yes. Every open event includes the recipient's city, country, ASN (network provider), and timezone, derived from Cloudflare's GeoIP database. This information is shown in the extension popup and the desktop notification. Geolocation is included on the Free plan.</p>
+        </div>
+        <div class="faq-item" id="faq-q4">
+          <h3>Q4 — Will I get a notification when my email is opened?</h3>
+          <p>Yes — GeoMail Tracker sends a real-time Chrome desktop notification within 60 seconds of each open, including who opened it, where (city/country), and on what device. This is a Pro-only feature in Mailtrack and Geotrack; in GeoMail Tracker it's free.</p>
+        </div>
+        <div class="faq-item" id="faq-q5">
+          <h3>Q5 — Does it show the recipient's device and IP?</h3>
+          <p>Yes for device — desktop, mobile, or tablet, plus operating system (Windows, macOS, iOS, Android) and email client where detectable. Raw IP addresses are not exposed in the UI for privacy reasons; we only show the geolocation derived from the IP (city, country, ASN).</p>
+        </div>
+        <div class="faq-item" id="faq-q6">
+          <h3>Q6 — How much does Pro cost and what do I get?</h3>
+          <p>Pro is $0.99/month or $7.99/year (~$0.67/month effective). Pro unlocks unlimited tracked emails (vs 100/month on Free), permanent tracking history (vs 30 days), CSV export, and priority support.</p>
+        </div>
+        <div class="faq-item" id="faq-q7">
+          <h3>Q7 — Is it legal or ethical to track email opens?</h3>
+          <p>Email open tracking via tracking pixels is a standard, widely-used practice (Mailchimp, HubSpot, Salesforce, and every major email marketing platform use it). Legality depends on your jurisdiction — in the EU, GDPR requires a legitimate interest basis; in the US it is generally permitted. We recommend disclosing tracking in your email signature or company privacy policy when contacting EU recipients.</p>
+        </div>
+        <div class="faq-item" id="faq-q8">
+          <h3>Q8 — How accurate is the geolocation?</h3>
+          <p>City-level accuracy is around 85% based on Cloudflare's GeoIP database. Accuracy drops when the recipient is on a corporate VPN, mobile data with carrier-grade NAT, or behind a privacy proxy (e.g., Apple Mail Privacy Protection). Country-level accuracy is ~99%. For privacy-protected opens, you'll see "Open detected" without geo data.</p>
+        </div>
+        <div class="faq-item" id="faq-q9">
+          <h3>Q9 — Is there a built-in read receipt in Gmail?</h3>
+          <p>No. Gmail's built-in read receipts are only available on Google Workspace Business and Enterprise plans, and require the recipient to manually approve the receipt. GeoMail Tracker provides automatic, transparent open tracking with geolocation and device info, works on any Gmail account (including free personal accounts), and doesn't require recipient action.</p>
+        </div>
+        <div class="faq-item" id="faq-q10">
+          <h3>Q10 — Can I export tracking data to CSV?</h3>
+          <p>CSV export is a Pro feature. Pro users can export their full tracking history (tracked email subject, recipient, first open time, total opens, geolocation, device) as a CSV file from the Options page.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+      <div class="container">
+        <h2>Start Tracking Your Gmail Emails — Free, No Signature</h2>
+        <p>Install in under 30 seconds. 100 tracked emails per month, free forever.</p>
+        <div class="cta-row" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a href="https://chromewebstore.google.com/detail/kgmcfhjlcknkadghlaieogpebbnlimla" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome &mdash; Free</a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/lnfdolkedcfhnjdpbfhkdndpcjopdlon" class="btn btn-secondary" target="_blank" rel="noopener">Add to Edge &mdash; Free</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>© 2026 ExtPilot. All rights reserved.</span>
+        <span>
+          <a href="/">Home</a> ·
+          <a href="privacy.html">Privacy</a> ·
+          <a href="mailto:support@extpilot.com">Contact</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
