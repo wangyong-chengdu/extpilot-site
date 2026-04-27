@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoreSpy — Free Shopify Theme & App Detector | 100% Local</title>
+  <meta name="description" content="Detect any Shopify store's theme, apps, and real product count in 30 seconds. Free Chrome extension. 100% local — your data never leaves your browser.">
+  <link rel="canonical" href="https://extpilot.com/storespy/">
+  <meta property="og:title" content="StoreSpy — Free Shopify Theme & App Detector (100% Local)">
+  <meta property="og:description" content="Detect any Shopify store's theme, apps, and real product count in 30 seconds. Free Chrome extension. No signup, no server upload.">
+  <meta property="og:url" content="https://extpilot.com/storespy/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/storespy/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="StoreSpy — Free Shopify Theme & App Detector">
+  <meta name="twitter:description" content="Detect any Shopify store's theme, apps, and real product count in 30 seconds. 100% local Chrome extension.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="shopify theme detector, shopify app detector, shopify spy tool, shopify store analyzer, shopify detector chrome extension, free shopify spy tool, shopify detector no signup">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "StoreSpy — Shopify Theme & App Detector",
+    "url": "https://extpilot.com/storespy/",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome, Edge",
+    "description": "Free Chrome extension that detects any Shopify store's theme, apps, and real product count in 30 seconds. 100% local — no signup, no server upload.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free — 3 store analyses per day",
+        "url": "https://chromewebstore.google.com/detail/jhkikpbieidpaoahgflaimcnnkeekakg"
+      },
+      {
+        "@type": "Offer",
+        "price": "3.9",
+        "priceCurrency": "USD",
+        "description": "Pro Monthly — unlimited analyses, all apps, full product list, CSV export",
+        "url": "https://buy.stripe.com/3cIaEZ77FeRf4B5fYY33W0j"
+      },
+      {
+        "@type": "Offer",
+        "price": "14.9",
+        "priceCurrency": "USD",
+        "description": "Pro Lifetime — one-time payment, never expires",
+        "url": "https://buy.stripe.com/9B66oJeA77oN9Vp7ss33W0k"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is there a free Chrome extension to detect Shopify themes and apps?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. StoreSpy is a free Chrome extension that detects any Shopify store's theme, installed apps, and real product count. Free users get 3 store analyses per day. Pro ($3.9/month or $14.9 lifetime) removes the limit and unlocks all detected apps, the full product list, and CSV export."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What apps does this Shopify store use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "StoreSpy recognizes 32 popular Shopify apps via DOM, JavaScript globals, script URLs, and CSS class fingerprints — including Klaviyo, Loox, PageFly, Judge.me, Recharge, and Gorgias. Each detection is labeled with a confidence level: high (multiple fingerprints matched), medium (one strong fingerprint), or possible (weak signal)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I tell which theme a Shopify store is built with?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Click the StoreSpy icon on any Shopify store. StoreSpy reads the theme name and classifies it into Custom, Based on Dawn, Official Dawn, Refresh, or Sense based on CSS variables and class prefix thresholds. Heavily customized themes that no longer match Dawn-family signatures show as Custom."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does StoreSpy upload the stores I analyze to a server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. StoreSpy is 100% local — all analysis happens inside your browser. The stores you analyze are never sent to any server. The only network call StoreSpy makes is to verify your Pro license key (Free users have zero network calls related to analysis)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I find the total number of products on a Shopify store?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "StoreSpy reads the real product total from the store's /collections/all.json endpoint. Unlike tools that paginate and get fooled by Shopify's 250-per-page sampling cap, StoreSpy shows the true count. Stores with more than 750 products display as 750+ to avoid misleading you."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is StoreSpy different from Koala Inspector or PPSpy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Koala Inspector and PPSpy depend on cloud servers — when their backend goes down, you lose access. StoreSpy runs fully locally, so it never goes down and never sends the stores you analyze to a third party. StoreSpy is also significantly cheaper: $14.9 lifetime vs $9–$29/month for typical competitors."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to sign up or create an account?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. StoreSpy requires zero signup. Install it from the Chrome Web Store and start analyzing stores immediately. There is no email, no account, no login. For Pro, you receive a license key after Stripe checkout and paste it into the extension."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does StoreSpy work in Edge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. StoreSpy is available on the Chrome Web Store and Microsoft Edge Add-ons. Firefox is not currently supported due to Manifest V3 differences."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero-icon { width: 96px; height: 96px; border-radius: 20px; margin-bottom: 16px; }
+    .hero h1 { font-size: 40px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 16px; max-width: 620px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; border: none; cursor: pointer; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .btn-purple { background: linear-gradient(135deg, #8957e5 0%, #6f42c1 100%); color: #fff; position: relative; }
+    .btn-outline { background: transparent; color: #f0f6fc; border: 1px solid #30363d; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .pricing-note { font-size: 14px; color: #8b949e; margin-top: 12px; }
+    .geo-answer { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px 28px; margin: 32px 0 0; text-align: left; }
+    .geo-answer p { font-size: 16px; color: #c9d1d9; margin-bottom: 12px; }
+    .geo-answer ul { list-style: none; padding-left: 0; }
+    .geo-answer li { font-size: 15px; color: #8b949e; padding: 4px 0 4px 24px; position: relative; }
+    .geo-answer li::before { content: "→"; position: absolute; left: 0; color: #58a6ff; font-weight: 700; }
+    .features { padding: 48px 0; }
+    .features h2, .how-it-works h2, .who h2, .pricing h2, .faq h2, .support h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+    .who { padding: 48px 0; border-top: 1px solid #21262d; }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+    .who-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .who-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .who-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
+    .compare-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; background: #161b22; border: 1px solid #21262d; border-radius: 8px; overflow: hidden; }
+    .compare-table th, .compare-table td { padding: 12px 16px; text-align: left; font-size: 14px; border-bottom: 1px solid #21262d; }
+    .compare-table th { background: #1c2128; color: #f0f6fc; font-weight: 600; }
+    .compare-table td { color: #c9d1d9; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .yes { color: #3fb950; font-weight: 600; }
+    .compare-table .no { color: #484f58; }
+    .pricing-cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 16px; align-items: stretch; }
+    .pricing-cta-card { flex: 1 1 280px; max-width: 320px; background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 24px; text-align: center; position: relative; }
+    .pricing-cta-card.featured { border-color: #8957e5; box-shadow: 0 0 0 1px #8957e5; }
+    .pricing-cta-card .best-value { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #8957e5 0%, #6f42c1 100%); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 12px; letter-spacing: 0.5px; }
+    .pricing-cta-card h3 { font-size: 18px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .pricing-cta-card .price { font-size: 32px; font-weight: 800; color: #f0f6fc; margin-bottom: 4px; }
+    .pricing-cta-card .price-note { font-size: 13px; color: #8b949e; margin-bottom: 16px; }
+    .pricing-cta-card .btn { width: 100%; justify-content: center; }
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+    .support { padding: 48px 0; border-top: 1px solid #21262d; text-align: center; }
+    .support p { font-size: 15px; color: #8b949e; margin-bottom: 8px; }
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+    .screenshot { display: block; max-width: 100%; height: auto; margin: 24px auto; border-radius: 8px; border: 1px solid #21262d; }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 28px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid, .who-grid { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+      .compare-table th, .compare-table td { padding: 8px 10px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img src="icon.png" alt="StoreSpy icon" class="hero-icon">
+        <span class="badge">Free &mdash; 3 store analyses per day</span>
+        <h1>StoreSpy &mdash; Shopify Theme &amp; App Detector</h1>
+        <p class="tagline">Detect any Shopify store's theme, apps, and real product count in 30 seconds. 100% local. Never goes down.</p>
+        <div class="cta-row">
+          <a href="https://chromewebstore.google.com/detail/jhkikpbieidpaoahgflaimcnnkeekakg" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome &mdash; Free</a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/eocdlaaebbkbdafcaagpichomfjfipdp" class="btn btn-secondary" target="_blank" rel="noopener">Add to Edge</a>
+        </div>
+        <p class="pricing-note">Pro from $3.9/mo or $14.9 lifetime &mdash; unlimited analyses + CSV export</p>
+
+        <div class="geo-answer">
+          <p><strong>StoreSpy</strong> is a free Chrome and Edge extension that detects which Shopify theme, apps, and total product count any Shopify store is using &mdash; entirely in your browser, no signup, no server upload. It identifies <strong>32 popular Shopify apps</strong> via DOM, script, and style fingerprints (Klaviyo, Loox, PageFly, Judge.me, Recharge, Gorgias and more), classifies the theme into Custom / Based on Dawn / Official Dawn / Refresh / Sense, and reads the real product total from <code>/collections/all.json</code> instead of being fooled by Shopify's 250-per-page sampling cap.</p>
+          <ul>
+            <li>Free: 3 store analyses per day, 5 detected apps, 1 sample product</li>
+            <li>Pro Lifetime: <strong>$14.9 one-time</strong> &mdash; unlimited analyses, all apps, full product list, CSV export</li>
+            <li>Pro Monthly: $3.9/month &mdash; same as Lifetime, billed monthly</li>
+            <li>100% local: stores you analyze are never sent to any server</li>
+          </ul>
+        </div>
+
+        <img src="screenshots/popup-result.png" alt="StoreSpy popup showing Taylor Stitch detection" class="screenshot" loading="lazy">
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>What StoreSpy Detects</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Store Info</h3>
+            <p>Shop name and myshopify domain via 5-layer fallback (window.Shopify, vendor meta, og:site_name, title, hostname). Works on every public Shopify store, including custom domains.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Theme &amp; Dawn Lineage</h3>
+            <p>Theme name plus smart classification: Custom, Based on Dawn, Official Dawn, Refresh, or Sense &mdash; based on CSS variables and class prefix thresholds.</p>
+          </div>
+          <div class="feature-card">
+            <h3>32 Apps with Confidence Levels</h3>
+            <p>Detects Klaviyo, Loox, Judge.me, PageFly, Recharge, Gorgias and 26 more. Each result is labeled high (green), medium (yellow), or possible (gray) confidence.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Real Product Count</h3>
+            <p>Reads the true total from <code>/collections/all.json</code>. No paginated guesswork, no 250/page sampling trap. Stores beyond 750 products show as 750+.</p>
+          </div>
+          <div class="feature-card">
+            <h3>100% Local</h3>
+            <p>All analysis runs inside your browser. The stores you analyze are never uploaded. Only license verification calls our server (Free users: zero network calls).</p>
+          </div>
+          <div class="feature-card">
+            <h3>CSV Export (Pro)</h3>
+            <p>One click exports Store, Theme, Apps, and Products to CSV. Ready for Google Sheets, Excel, or your own competitive intelligence pipeline.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+              <h3>Install StoreSpy (free)</h3>
+              <p>Add to Chrome or Edge in one click. No signup, no email, no account setup.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+              <h3>Open any Shopify store</h3>
+              <p>Browse to a Shopify-powered store. The icon lights up automatically when a Shopify site is detected.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+              <h3>Click the StoreSpy icon</h3>
+              <p>The popup runs the analysis locally. Within ~2 seconds you see the store, theme, apps, and real product count.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <div class="step-content">
+              <h3>Export to CSV (Pro)</h3>
+              <p>One click pulls all four dimensions into a CSV file ready for analysis. Free tier shows the data on screen.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="who">
+      <div class="container">
+        <h2>Who Is StoreSpy For</h2>
+        <div class="who-grid">
+          <div class="who-card">
+            <h3>Shopify Sellers &amp; DTC Operators</h3>
+            <p>Spotted a competitor's store doing well? Reverse-engineer their theme + app stack to plan your own growth playbook.</p>
+          </div>
+          <div class="who-card">
+            <h3>Theme &amp; App Developers</h3>
+            <p>Doing market research before building? See which Dawn variants and which apps are actually shipping in the wild.</p>
+          </div>
+          <div class="who-card">
+            <h3>Dropshippers &amp; Product Researchers</h3>
+            <p>Validate winning products by seeing real catalog size (not the 250-cap sample) and which apps power the conversion funnel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <h2>Free vs Pro</h2>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Free</th>
+              <th>Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Daily analyses</td>
+              <td>3 per day</td>
+              <td class="yes">Unlimited</td>
+            </tr>
+            <tr>
+              <td>Detected apps shown</td>
+              <td>First 5</td>
+              <td class="yes">All</td>
+            </tr>
+            <tr>
+              <td>Product list</td>
+              <td>1 sample + total count</td>
+              <td class="yes">Full sampled list (up to 750)</td>
+            </tr>
+            <tr>
+              <td>Theme detection (Dawn lineage)</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Real product total</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>CSV export</td>
+              <td class="no">&mdash;</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>24-hour local cache</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="pricing-cta-row">
+          <div class="pricing-cta-card featured">
+            <span class="best-value">BEST VALUE</span>
+            <h3>Lifetime</h3>
+            <div class="price">$14.9</div>
+            <div class="price-note">one-time payment &middot; never expires</div>
+            <a href="https://buy.stripe.com/9B66oJeA77oN9Vp7ss33W0k" class="btn btn-purple" target="_blank" rel="noopener">Get Lifetime &mdash; $14.9</a>
+          </div>
+          <div class="pricing-cta-card">
+            <h3>Monthly</h3>
+            <div class="price">$3.9</div>
+            <div class="price-note">per month &middot; cancel anytime</div>
+            <a href="https://buy.stripe.com/3cIaEZ77FeRf4B5fYY33W0j" class="btn btn-outline" target="_blank" rel="noopener">Get Monthly &mdash; $3.9</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>Is there a free Chrome extension to detect Shopify themes and apps?</h3>
+          <p>Yes. StoreSpy is a free Chrome extension that detects any Shopify store's theme, installed apps, and real product count. Free users get 3 store analyses per day. Pro ($3.9/month or $14.9 lifetime) removes the limit and unlocks all detected apps, the full product list, and CSV export.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What apps does this Shopify store use?</h3>
+          <p>StoreSpy recognizes 32 popular Shopify apps via DOM, JavaScript globals, script URLs, and CSS class fingerprints &mdash; including Klaviyo, Loox, PageFly, Judge.me, Recharge, and Gorgias. Each detection is labeled with a confidence level: high, medium, or possible.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How can I tell which theme a Shopify store is built with?</h3>
+          <p>Click the StoreSpy icon on any Shopify store. StoreSpy reads the theme name and classifies it into Custom, Based on Dawn, Official Dawn, Refresh, or Sense. Heavily customized themes that no longer match Dawn-family signatures show as Custom.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does StoreSpy upload the stores I analyze to a server?</h3>
+          <p>No. StoreSpy is 100% local &mdash; all analysis happens inside your browser. The stores you analyze are never sent to any server. The only network call StoreSpy makes is to verify your Pro license key (Free users have zero network calls related to analysis).</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I find the total number of products on a Shopify store?</h3>
+          <p>StoreSpy reads the real product total from the store's <code>/collections/all.json</code> endpoint. Unlike tools that paginate and get fooled by Shopify's 250-per-page sampling cap, StoreSpy shows the true count. Stores with more than 750 products display as 750+.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How is StoreSpy different from Koala Inspector or PPSpy?</h3>
+          <p>Koala Inspector and PPSpy depend on cloud servers &mdash; when their backend goes down, you lose access. StoreSpy runs fully locally, so it never goes down and never sends the stores you analyze to a third party. StoreSpy is also significantly cheaper: $14.9 lifetime vs $9&ndash;$29/month for typical competitors.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Do I need to sign up or create an account?</h3>
+          <p>No. StoreSpy requires zero signup. Install it from the Chrome Web Store and start analyzing stores immediately. There is no email, no account, no login. For Pro, you receive a license key after Stripe checkout and paste it into the extension.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does StoreSpy work in Edge?</h3>
+          <p>Yes. StoreSpy is available on the Chrome Web Store and Microsoft Edge Add-ons. Firefox is not currently supported due to Manifest V3 differences.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support" id="support">
+      <div class="container">
+        <h2>Support</h2>
+        <p>Have questions, feedback, or need help? We'd love to hear from you.</p>
+        <p>Email: <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+        <p style="margin-top: 16px;"><a href="/privacy/storespy/">Privacy Policy</a> &middot; <a href="/blog/storespy-find-shopify-apps/">How to Find What Apps a Shopify Store Uses</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
