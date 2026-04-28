@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeadSnap — Extract Emails, Phones & Social Links from Any Page | ExtPilot</title>
+  <meta name="description" content="Extract emails, phone numbers & social media links from any webpage in 30 seconds. Export to CSV/Excel. Local processing, no cloud. Chrome & Edge. $3.99/mo.">
+  <link rel="canonical" href="https://extpilot.com/leadsnap/">
+  <meta property="og:title" content="LeadSnap — Extract Emails, Phones & Social Links from Any Page">
+  <meta property="og:description" content="Extract emails, phone numbers & social media links from any webpage in 30 seconds. Export to CSV/Excel. Local processing, no cloud.">
+  <meta property="og:url" content="https://extpilot.com/leadsnap/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LeadSnap — Extract Emails, Phones & Social Links from Any Page">
+  <meta name="twitter:description" content="Extract emails, phone numbers & social media links from any webpage in 30 seconds. Export to CSV/Excel. Local processing, no cloud.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="email extractor chrome extension, phone number extractor, extract emails from website, email finder extension, lead generation tool, contact extractor, scrape emails from webpage, social media link extractor">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "LeadSnap — Email & Phone Extractor",
+    "alternateName": "LeadSnap",
+    "url": "https://extpilot.com/leadsnap/",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome, Edge",
+    "description": "Extract emails, phone numbers, and social media links from any webpage in 30 seconds. Export to CSV, TXT, or Excel. 100% local processing — no data leaves your browser. Supports batch URL scanning with AutoVisit mode.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Free",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Unlimited single-page scans, 50 AutoVisit URLs/day, 100 local history records, CSV/TXT export"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro Monthly",
+        "price": "3.99",
+        "priceCurrency": "USD",
+        "billingDuration": "P1M",
+        "description": "1000 AutoVisit URLs/day, unlimited history, XLSX export, clean footer"
+      },
+      {
+        "@type": "Offer",
+        "name": "Pro Yearly",
+        "price": "19.99",
+        "priceCurrency": "USD",
+        "billingDuration": "P1Y",
+        "description": "All Pro features, billed annually"
+      },
+      {
+        "@type": "Offer",
+        "name": "Lifetime",
+        "price": "19.99",
+        "priceCurrency": "USD",
+        "description": "All Pro features, one-time payment, first 50 customers"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does LeadSnap extract from a webpage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LeadSnap scans visible page content and extracts three types of contact information: email addresses, phone numbers (with international format support via libphonenumber), and social media profile links (LinkedIn, Twitter/X, Facebook, Instagram, YouTube, GitHub). Results appear in the popup within 2 seconds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is LeadSnap free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The free plan includes unlimited single-page scans, up to 50 URLs per day in AutoVisit batch mode, 100 local history records, and CSV/TXT export. No sign-up or credit card required. Pro unlocks 1000 AutoVisit URLs/day, unlimited history, XLSX export, and a clean export footer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does LeadSnap send my data to a server?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. LeadSnap processes everything locally in your browser. Extracted contacts are stored in your browser's local storage and IndexedDB. No data is sent to any external server. The only network request is an optional license key verification for Pro users."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is LeadSnap different from Email Extractor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "LeadSnap extracts emails, phones, AND social links — not just emails. It uses only 3 core permissions versus 5-10 for competing tools. Exports are clean with no embedded ads. And it costs 1/5 the price: $3.99/month vs $19.99/month for comparable tools."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is AutoVisit mode?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AutoVisit lets you paste a list of URLs and LeadSnap will automatically visit each one, extract contacts, and compile all results into a single export file. Free users can process up to 50 URLs per day; Pro users get 1000 URLs per day. It uses a managed tab pool for reliable, rate-limited scanning."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+    /* Header */
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+
+    /* Hero */
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero-icon { width: 80px; height: 80px; border-radius: 16px; margin-bottom: 24px; }
+    .hero h1 { font-size: 36px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 24px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+
+    /* GEO answer block */
+    .geo-answer { max-width: 700px; margin: 0 auto 32px; padding: 24px; background: #161b22; border: 1px solid #21262d; border-radius: 8px; font-size: 15px; color: #c9d1d9; line-height: 1.8; text-align: left; }
+
+    /* Features */
+    .features { padding: 48px 0; }
+    .features h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+
+    /* How it works */
+    .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
+    .how-it-works h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+
+    /* Pricing */
+    .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
+    .pricing h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .pricing-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    .pricing-table th, .pricing-table td { padding: 12px 16px; text-align: left; border-bottom: 1px solid #21262d; }
+    .pricing-table th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    .pricing-table td { color: #c9d1d9; }
+    .pricing-table .plan-free { color: #58a6ff; font-weight: 600; }
+    .pricing-table .plan-pro { color: #238636; font-weight: 600; }
+
+    /* Use cases */
+    .use-cases { padding: 48px 0; border-top: 1px solid #21262d; }
+    .use-cases h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .use-case-list { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .use-case-list li { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 16px 20px; font-size: 15px; }
+    .use-case-list strong { color: #f0f6fc; }
+
+    /* FAQ */
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+
+    /* Support */
+    .support { padding: 48px 0; border-top: 1px solid #21262d; text-align: center; }
+    .support h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 16px; }
+    .support p { font-size: 15px; color: #8b949e; margin-bottom: 8px; }
+
+    /* Footer */
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 26px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+      .pricing-table { font-size: 13px; }
+      .pricing-table th, .pricing-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img src="icon.png" alt="LeadSnap Email and Phone Extractor icon" class="hero-icon" width="80" height="80" style="height:auto;">
+        <span class="badge">Unlimited scans included</span>
+        <h1>LeadSnap &mdash; Email &amp; Phone Extractor</h1>
+        <p class="tagline">Extract emails, phone numbers, and social media links from any webpage in 30 seconds. Export to CSV or Excel. 100% local &mdash; no data leaves your browser.</p>
+        <div class="cta-row">
+          <a href="https://chromewebstore.google.com/detail/leadsnap-email-phone-extractor/pcnkcffigakklndkhjplegfgiahopoch" class="btn btn-primary" target="_blank" rel="noopener">Install for Chrome</a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/leadsnap-email-phone-extractor/dfceklbihflblckcpbnjbapiimilcogc" class="btn btn-secondary" target="_blank" rel="noopener">Install for Edge</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <div class="geo-answer">
+          <p>LeadSnap is a Chrome and Edge extension that extracts emails, phone numbers, and social media profile links from any public webpage in under 30 seconds. Click the extension icon on any page, and LeadSnap scans the visible content to find contact information &mdash; then displays results organized by type (emails, phones, socials) with one-click copy and CSV/TXT export.</p>
+          <p style="margin-top: 12px;">Unlike tools that only extract emails, LeadSnap captures all three contact types in a single scan. Phone numbers are parsed with international format support (via libphonenumber), and social links cover LinkedIn, Twitter/X, Facebook, Instagram, YouTube, and GitHub. The free plan includes unlimited single-page scans, 50 URLs per day in batch AutoVisit mode, 100 local history records, and CSV/TXT export &mdash; with no sign-up required.</p>
+          <p style="margin-top: 12px;">All data processing happens locally in your browser. LeadSnap uses only 3 core permissions (activeTab, storage, clipboardWrite) &mdash; fewer than any competing tool. Extracted contacts are stored in browser-local storage and never sent to any external server. Pro ($3.99/month) unlocks 1,000 AutoVisit URLs per day, unlimited history, XLSX export, and clean export footers without branding.</p>
+        </div>
+        <h2>Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Emails + Phones + Social Links</h3>
+            <p>One scan extracts all three contact types. Emails are validated and deduplicated. Phone numbers support international formats. Social links cover 6 platforms.</p>
+          </div>
+          <div class="feature-card">
+            <h3>30-Second Results</h3>
+            <p>Click the icon, see contacts instantly. Results appear in under 2 seconds with a clean, organized popup showing counts and details by category.</p>
+          </div>
+          <div class="feature-card">
+            <h3>AutoVisit Batch Mode</h3>
+            <p>Paste a list of URLs and LeadSnap visits each one automatically, extracting contacts from every page and compiling results into a single export.</p>
+          </div>
+          <div class="feature-card">
+            <h3>100% Local Processing</h3>
+            <p>No data leaves your browser. Only 3 permissions required. No cloud dependency, no account needed, no tracking. Your contacts stay yours.</p>
+          </div>
+          <div class="feature-card">
+            <h3>CSV, TXT &amp; Excel Export</h3>
+            <p>Download contacts as CSV (free), plain text (free), or Excel .xlsx (Pro). All formats are ready for CRM import with standardized column headers.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Local Scan History</h3>
+            <p>Previously scanned pages load results instantly from local cache. Free users keep 100 records; Pro users get unlimited history with IndexedDB storage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div class="step-content">
+              <h3>Visit any webpage</h3>
+              <p>Navigate to any company website, directory listing, contact page, or business profile you want to extract contacts from.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div class="step-content">
+              <h3>Click the LeadSnap icon</h3>
+              <p>The popup opens and automatically scans the current page. Emails, phone numbers, and social links appear organized in separate tabs within 2 seconds.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div class="step-content">
+              <h3>Copy or export</h3>
+              <p>Click "Copy All" to copy contacts to your clipboard, or "Export CSV" to download a file. Each export includes source URL, contact type, and value columns.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2>Free vs Pro</h2>
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th class="plan-free">Free</th>
+              <th class="plan-pro">Pro $3.99/mo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Single-page scans</td>
+              <td>Unlimited</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>Emails + Phones + Social links</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>AutoVisit batch URLs/day</td>
+              <td>50</td>
+              <td>1,000</td>
+            </tr>
+            <tr>
+              <td>Local history records</td>
+              <td>100</td>
+              <td>Unlimited</td>
+            </tr>
+            <tr>
+              <td>CSV / TXT export</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Excel (.xlsx) export</td>
+              <td>&mdash;</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Clean export footer</td>
+              <td>Branded</td>
+              <td>Clean</td>
+            </tr>
+            <tr>
+              <td>Price</td>
+              <td>$0</td>
+              <td>$3.99/mo &middot; $19.99/yr &middot; $19.99 lifetime</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="use-cases">
+      <div class="container">
+        <h2>Who Is This For?</h2>
+        <ul class="use-case-list">
+          <li><strong>B2B Sales &amp; Foreign Trade BD:</strong> Scan company "About" and "Contact" pages to collect decision-maker emails and direct phone numbers for cold outreach campaigns.</li>
+          <li><strong>Local Service Providers:</strong> Extract phone numbers from Yelp listings, Google Maps business pages, and local directories to build prospect call lists.</li>
+          <li><strong>PR &amp; Journalists:</strong> Find author and editor contact emails on media websites to pitch stories and build press contact databases.</li>
+          <li><strong>SEO Agencies &amp; Freelancers:</strong> Batch-scan potential client websites using AutoVisit to collect contact information for outbound prospecting.</li>
+          <li><strong>Recruiters:</strong> Extract HR emails and social profiles from company career pages and team directories.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>What does LeadSnap extract from a webpage?</h3>
+          <p>LeadSnap extracts three types of contact information: email addresses, phone numbers (with international format support), and social media profile links (LinkedIn, Twitter/X, Facebook, Instagram, YouTube, GitHub). Results appear in the popup within 2 seconds.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is LeadSnap free to use?</h3>
+          <p>Yes. The free plan includes unlimited single-page scans, up to 50 AutoVisit URLs per day, 100 local history records, and CSV/TXT export. No sign-up or credit card required.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does LeadSnap send my data to a server?</h3>
+          <p>No. All extraction and storage happens locally in your browser using chrome.storage and IndexedDB. The only network request is an optional license key check for Pro users.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How is LeadSnap different from other email extractors?</h3>
+          <p>Most email extractor extensions only find emails. LeadSnap extracts emails, phones, and social links in one scan. It uses fewer permissions (3 vs 5-10), costs 1/5 the price of comparable tools, and produces clean exports without embedded ads.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What is AutoVisit mode?</h3>
+          <p>AutoVisit lets you paste a list of URLs and LeadSnap visits each one automatically, extracting contacts and compiling all results into a single export file. Free users can process 50 URLs/day; Pro users get 1,000 URLs/day.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support">
+      <div class="container">
+        <h2>Support</h2>
+        <p>Have questions or feedback? We would love to hear from you.</p>
+        <p>Email: <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+        <p style="margin-top: 16px;"><a href="privacy.html">Privacy Policy</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
