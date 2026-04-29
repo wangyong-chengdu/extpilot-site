@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopCSV &mdash; Shopify to WooCommerce CSV Converter | ExtPilot</title>
+  <meta name="description" content="Convert Shopify product CSV to WooCommerce format in seconds. Free Chrome extension. One-time $14.99 for unlimited products. No API, no signup, 100% local.">
+  <link rel="canonical" href="https://extpilot.com/shopcsv/">
+  <meta property="og:title" content="ShopCSV &mdash; Shopify to WooCommerce CSV Converter">
+  <meta property="og:description" content="Convert Shopify product CSV to WooCommerce import format in seconds. Free up to 30 products. $14.99 one-time for unlimited. No API needed.">
+  <meta property="og:url" content="https://extpilot.com/shopcsv/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/shopcsv/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="ShopCSV &mdash; Shopify to WooCommerce CSV Converter">
+  <meta name="twitter:description" content="Convert Shopify product CSV to WooCommerce format. Free Chrome extension. No API, no signup, 100% local processing.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="shopify to woocommerce, shopify csv converter, migrate shopify to woocommerce, shopify woocommerce migration, shopify product csv to woo, csv converter chrome extension, shopify export to woocommerce import">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ShopCSV: Shopify to WooCommerce CSV Converter",
+    "url": "https://extpilot.com/shopcsv/",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome, Edge",
+    "description": "Convert Shopify product CSV exports into WooCommerce-compatible CSV format. Handles variants, images, categories, and pricing. Free up to 30 products, $14.99 one-time for unlimited.",
+    "offers": [
+      {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "description": "Free &mdash; up to 30 products per conversion",
+        "url": "https://chromewebstore.google.com/detail/shopcsv-shopify-to-woocommerce-csv-converter/amkcggfppdojlhalbiajjednagpigock"
+      },
+      {
+        "@type": "Offer",
+        "price": "14.99",
+        "priceCurrency": "USD",
+        "description": "Pro Lifetime &mdash; unlimited products, one-time payment, never expires",
+        "url": "https://chromewebstore.google.com/detail/shopcsv-shopify-to-woocommerce-csv-converter/amkcggfppdojlhalbiajjednagpigock"
+      }
+    ],
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How do I convert a Shopify CSV to WooCommerce format?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Install ShopCSV from the Chrome Web Store, export your products from Shopify Admin as CSV, then drag and drop the CSV file into the ShopCSV popup. The extension converts it to WooCommerce-compatible format instantly. Click Export to download the converted file and import it into WooCommerce using the built-in product importer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ShopCSV require a Shopify API key or login?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. ShopCSV works entirely with CSV files you already have. You export your products from Shopify Admin (Settings > Export), then upload that CSV to ShopCSV. No API keys, no Shopify login, no server connection. Everything runs locally in your browser."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What Shopify fields does ShopCSV convert to WooCommerce?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ShopCSV maps product titles, descriptions, prices (regular and sale), images (all variant images), SKUs, inventory quantities, weight, categories (from Shopify product type), tags, and variant options (up to 3 dimensions like Size, Color, Material). Fields that don't have a WooCommerce equivalent are noted in the conversion summary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does ShopCSV cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ShopCSV is free for up to 30 products per conversion. For unlimited products, it costs $14.99 one-time &mdash; no subscription, no monthly fees, yours forever. Compare that to Matrixify ($20-200/month) or S2W Importer ($50 one-time with limited updates)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ShopCSV handle product variants?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ShopCSV fully supports Shopify's variant structure including up to 3 option dimensions (e.g., Size, Color, Material). Each variant is converted to WooCommerce's variable/variation product type with correct parent-child relationships, variant-specific pricing, images, and inventory."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is my data safe with ShopCSV?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ShopCSV processes everything locally in your browser. Your CSV data never leaves your computer &mdash; no server uploads, no cloud processing, no analytics on your product data. The only network call is license key verification for Pro users."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ShopCSV work in Microsoft Edge?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ShopCSV is available on both Chrome Web Store and Microsoft Edge Add-ons. The functionality is identical on both browsers."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero-icon { width: 96px; height: 96px; border-radius: 20px; margin-bottom: 16px; }
+    .hero h1 { font-size: 40px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 16px; max-width: 620px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; border: none; cursor: pointer; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .pricing-note { font-size: 14px; color: #8b949e; margin-top: 12px; }
+    .geo-answer { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px 28px; margin: 32px 0 0; text-align: left; }
+    .geo-answer p { font-size: 16px; color: #c9d1d9; margin-bottom: 12px; }
+    .geo-answer ul { list-style: none; padding-left: 0; }
+    .geo-answer li { font-size: 15px; color: #8b949e; padding: 4px 0 4px 24px; position: relative; }
+    .geo-answer li::before { content: "\2192"; position: absolute; left: 0; color: #58a6ff; font-weight: 700; }
+    .features { padding: 48px 0; }
+    .features h2, .how-it-works h2, .who h2, .pricing h2, .faq h2, .support h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+    .who { padding: 48px 0; border-top: 1px solid #21262d; }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+    .who-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .who-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .who-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
+    .compare-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; background: #161b22; border: 1px solid #21262d; border-radius: 8px; overflow: hidden; }
+    .compare-table th, .compare-table td { padding: 12px 16px; text-align: left; font-size: 14px; border-bottom: 1px solid #21262d; }
+    .compare-table th { background: #1c2128; color: #f0f6fc; font-weight: 600; }
+    .compare-table td { color: #c9d1d9; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .yes { color: #3fb950; font-weight: 600; }
+    .compare-table .no { color: #484f58; }
+    .pricing-cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 16px; align-items: stretch; }
+    .pricing-cta-card { flex: 1 1 280px; max-width: 320px; background: #161b22; border: 1px solid #21262d; border-radius: 12px; padding: 24px; text-align: center; position: relative; }
+    .pricing-cta-card.featured { border-color: #238636; box-shadow: 0 0 0 1px #238636; }
+    .pricing-cta-card .best-value { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #238636; color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 12px; letter-spacing: 0.5px; }
+    .pricing-cta-card h3 { font-size: 18px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .pricing-cta-card .price { font-size: 32px; font-weight: 800; color: #f0f6fc; margin-bottom: 4px; }
+    .pricing-cta-card .price-note { font-size: 13px; color: #8b949e; margin-bottom: 16px; }
+    .pricing-cta-card .btn { width: 100%; justify-content: center; }
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+    .support { padding: 48px 0; border-top: 1px solid #21262d; text-align: center; }
+    .support p { font-size: 15px; color: #8b949e; margin-bottom: 8px; }
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 28px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid, .who-grid { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+      .compare-table th, .compare-table td { padding: 8px 10px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img src="icon.png" alt="ShopCSV icon" class="hero-icon">
+        <span class="badge">Free up to 30 products</span>
+        <h1>ShopCSV &mdash; Shopify to WooCommerce CSV Converter</h1>
+        <p class="tagline">Convert your Shopify product CSV into a WooCommerce-ready import file in seconds. No API keys, no signup, 100% local.</p>
+        <div class="cta-row">
+          <a href="https://chromewebstore.google.com/detail/shopcsv-shopify-to-woocommerce-csv-converter/amkcggfppdojlhalbiajjednagpigock" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome &mdash; It's Free</a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/shopcsv-shopify-to-woocommerce-csv-converter/oengikpaaadhfakolcigccdhpkghnljd" class="btn btn-secondary" target="_blank" rel="noopener">Add to Edge</a>
+        </div>
+        <p class="pricing-note">$14.99 one-time for unlimited products &mdash; no subscription, ever</p>
+
+        <div class="geo-answer">
+          <p><strong>ShopCSV</strong> is a Chrome and Edge extension that converts Shopify product CSV exports into WooCommerce-compatible CSV files you can import directly. It handles product titles, descriptions, prices, sale prices, images, SKUs, inventory, weight, categories, tags, and up to 3 variant option dimensions (Size, Color, Material). Unlike API-based migration tools that break when Shopify changes its API, ShopCSV works with the standard CSV export file you already have from Shopify Admin &mdash; no API keys, no Shopify login, no server connection required.</p>
+          <p>Tested with real Shopify CSV exports containing <strong>20 to 5,000+ products</strong> with complex variant structures. Conversion takes under 10 seconds for typical stores.</p>
+          <ul>
+            <li><strong>Free</strong>: Convert up to 30 products per file, full field mapping, instant download</li>
+            <li><strong>Pro</strong>: <strong>$14.99 one-time</strong> &mdash; unlimited products, no subscription, yours forever</li>
+            <li><strong>No API dependency</strong>: Works with Shopify's standard CSV export. Shopify changes its API? ShopCSV keeps working</li>
+            <li><strong>100% local</strong>: Your product data never leaves your browser &mdash; no uploads, no cloud, no tracking</li>
+            <li><strong>vs. Matrixify</strong>: $14.99 once vs $20-200/month subscription. vs. S2W Importer: $14.99 vs $50</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>What ShopCSV Converts</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Product Data</h3>
+            <p>Titles, descriptions (HTML preserved), product types mapped to WooCommerce categories, tags, published status, and featured flag.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Pricing &amp; Inventory</h3>
+            <p>Regular price, compare-at (sale) price, SKU, stock quantity, in-stock status, backorders, weight with unit conversion.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Variants (Up to 3D)</h3>
+            <p>Size, Color, Material &mdash; all variant combinations converted to WooCommerce variable/variation product types with correct parent-child relationships.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Images</h3>
+            <p>All product and variant-level image URLs preserved. Multiple images per product supported. Variant-specific images mapped to the correct variation row.</p>
+          </div>
+          <div class="feature-card">
+            <h3>No API Required</h3>
+            <p>Other tools need Shopify API tokens &mdash; when Shopify changes its API, they break. ShopCSV uses the standard CSV export, so it never breaks.</p>
+          </div>
+          <div class="feature-card">
+            <h3>100% Local Processing</h3>
+            <p>Your product data stays in your browser. No server uploads, no cloud processing, no data collection. Only Pro license verification uses the network.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Export from Shopify</h3>
+              <p>Go to Shopify Admin &rarr; Products &rarr; Export &rarr; choose "All products" &rarr; CSV for Excel. Save the file.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Drop into ShopCSV</h3>
+              <p>Click the ShopCSV icon in your browser toolbar, then drag and drop your Shopify CSV file onto the popup. ShopCSV parses and shows a summary: product count, variant count, and processing time.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Export WooCommerce CSV</h3>
+              <p>Click the Export button to download the converted CSV. The file is ready to import directly into WooCommerce via Products &rarr; Import.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="who">
+      <div class="container">
+        <h2>Who Is This For?</h2>
+        <div class="who-grid">
+          <div class="who-card">
+            <h3>Store Migrators</h3>
+            <p>Moving from Shopify to WooCommerce? ShopCSV converts your entire product catalog in seconds instead of days of manual re-entry.</p>
+          </div>
+          <div class="who-card">
+            <h3>Multi-Platform Sellers</h3>
+            <p>Selling on both Shopify and WooCommerce? Keep product data in sync by converting Shopify exports whenever you update your catalog.</p>
+          </div>
+          <div class="who-card">
+            <h3>Agencies &amp; Freelancers</h3>
+            <p>Building WooCommerce stores for clients who are leaving Shopify? Migrate their products in minutes, not hours.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2>Pricing &mdash; vs. Alternatives</h2>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>ShopCSV</th>
+              <th>Matrixify</th>
+              <th>S2W Importer</th>
+              <th>Shopify2Woo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Price</td>
+              <td class="yes">$14.99 once</td>
+              <td>$20-200/mo</td>
+              <td>$50 once</td>
+              <td>All Pro-locked</td>
+            </tr>
+            <tr>
+              <td>Needs API Key?</td>
+              <td class="yes">No</td>
+              <td>Yes (Shopify App)</td>
+              <td>Yes (WP Plugin)</td>
+              <td>Yes (scrapes)</td>
+            </tr>
+            <tr>
+              <td>Runs Locally?</td>
+              <td class="yes">Yes</td>
+              <td class="no">No (cloud)</td>
+              <td class="no">No (server)</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Variant Support</td>
+              <td class="yes">Up to 3D</td>
+              <td class="yes">Full</td>
+              <td>Partial</td>
+              <td>Unclear</td>
+            </tr>
+            <tr>
+              <td>Truly Free Tier?</td>
+              <td class="yes">30 products</td>
+              <td class="no">Trial only</td>
+              <td class="no">No</td>
+              <td class="no">No (fake free)</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="pricing-cta-row">
+          <div class="pricing-cta-card">
+            <h3>Free</h3>
+            <div class="price">$0</div>
+            <div class="price-note">Up to 30 products per conversion</div>
+            <a href="https://chromewebstore.google.com/detail/shopcsv-shopify-to-woocommerce-csv-converter/amkcggfppdojlhalbiajjednagpigock" class="btn btn-secondary" target="_blank" rel="noopener">Install &mdash; Chrome</a>
+          </div>
+          <div class="pricing-cta-card featured">
+            <div class="best-value">ONE-TIME PAYMENT</div>
+            <h3>Pro</h3>
+            <div class="price">$14.99</div>
+            <div class="price-note">Unlimited products &mdash; pay once, use forever</div>
+            <a href="https://chromewebstore.google.com/detail/shopcsv-shopify-to-woocommerce-csv-converter/amkcggfppdojlhalbiajjednagpigock" class="btn btn-primary" target="_blank" rel="noopener">Get ShopCSV Pro</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+          <h3>How do I convert a Shopify CSV to WooCommerce format?</h3>
+          <p>Install ShopCSV, export your products from Shopify Admin as CSV, then drag and drop the file into the ShopCSV popup. Click Export to download the WooCommerce-compatible CSV. Import it via WooCommerce &rarr; Products &rarr; Import.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does ShopCSV need a Shopify API key or login?</h3>
+          <p>No. ShopCSV works with the CSV file you already exported from Shopify. No API keys, no login, no server connection. Everything runs locally in your browser.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What fields are converted?</h3>
+          <p>Titles, descriptions, regular and sale prices, images (including variant images), SKUs, stock quantities, weight, categories (from product type), tags, and variant options (up to 3 dimensions).</p>
+        </div>
+        <div class="faq-item">
+          <h3>How much does it cost?</h3>
+          <p>Free for up to 30 products. $14.99 one-time for unlimited products. No subscription, no monthly fees. Compare: Matrixify is $20-200/month, S2W Importer is $50.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does it handle product variants?</h3>
+          <p>Yes. Up to 3 variant dimensions (e.g. Size, Color, Material) are fully supported. Each variant becomes a WooCommerce variation with correct parent-child relationships, pricing, and images.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is my product data safe?</h3>
+          <p>Yes. All processing happens locally in your browser. Your CSV data never leaves your computer. The only network call is Pro license verification.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does it work in Edge?</h3>
+          <p>Yes. ShopCSV is available on both Chrome Web Store and Microsoft Edge Add-ons.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support">
+      <div class="container">
+        <h2>Support</h2>
+        <p>Need help? Email us at <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+        <p><a href="/privacy/shopcsv/">Privacy Policy</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
