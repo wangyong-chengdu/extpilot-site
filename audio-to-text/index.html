@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio to Text Converter - Transcribe Browser Audio</title>
+  <meta name="description" content="Record mic, browser tab audio, YouTube audio, or upload files and convert audio to text with Groq Whisper, live captions, and AI summaries.">
+  <meta name="keywords" content="audio to text converter, transcribe browser audio, YouTube audio to text, tab audio transcription, Groq Whisper transcription, speech to text extension">
+  <link rel="canonical" href="https://extpilot.com/audio-to-text/">
+  <link rel="icon" href="/audio-to-text/icon.png" type="image/png">
+  <meta property="og:title" content="Audio to Text Converter - Transcribe Browser Audio">
+  <meta property="og:description" content="Convert mic, tab, YouTube, and uploaded audio to text in a browser side panel. Free Groq Whisper quota, live Web Speech, and Pro AI summaries.">
+  <meta property="og:url" content="https://extpilot.com/audio-to-text/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/audio-to-text/icon.png">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Audio to Text Converter",
+    "url": "https://extpilot.com/audio-to-text/",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome, Edge",
+    "description": "Audio to Text Converter records microphone audio, browser tab audio, mixed audio, and uploaded audio files, then converts them to text with Groq Whisper or browser Web Speech. Pro unlocks unlimited Groq transcription, unlimited history, and AI summaries with a user-provided API key.",
+    "offers": [
+      {"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "5 Groq transcriptions per day, unlimited Web Speech, and 5 recent history items"},
+      {"@type": "Offer", "name": "Pro", "price": "2.99", "priceCurrency": "USD", "description": "Unlimited Groq transcription, unlimited history, and AI summaries"}
+    ],
+    "publisher": {"@type": "Organization", "name": "ExtPilot", "url": "https://extpilot.com"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "How do I transcribe browser tab audio?", "acceptedAnswer": {"@type": "Answer", "text": "Open the page that is playing audio, open Audio to Text Converter from the extension icon, choose Tab Audio or Mixed Audio, then start recording. The extension keeps browser audio audible while recording and shows transcript text in the side panel."}},
+      {"@type": "Question", "name": "Can it transcribe YouTube audio?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Open a YouTube video, choose Tab Audio, and record the tab audio into text. You can also use Web Speech for live captions or Groq Whisper for higher accuracy."}},
+      {"@type": "Question", "name": "Is Audio to Text Converter free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Free users get 5 Groq Whisper transcriptions per day, unlimited Web Speech transcription, and the 5 most recent history items. Pro unlocks unlimited Groq, unlimited history, and AI summaries."}},
+      {"@type": "Question", "name": "Where is my audio processed?", "acceptedAnswer": {"@type": "Answer", "text": "Web Speech runs in the browser. Groq transcription sends recorded audio to Groq using the Groq API key saved in extension settings. Transcription history is stored locally in the browser."}}
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #111412; color: #dce6dc; line-height: 1.7; }
+    a { color: #4dbd88; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+    header { padding: 24px 0; border-bottom: 1px solid #253029; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { color: #f5fff7; font-weight: 800; font-size: 20px; }
+    .back { color: #92a096; font-size: 14px; }
+    .hero { padding: 58px 0 36px; text-align: center; }
+    .hero-icon { width: 84px; height: 84px; border-radius: 18px; margin-bottom: 22px; }
+    h1 { color: #f5fff7; font-size: 40px; line-height: 1.12; margin-bottom: 14px; }
+    .tagline { color: #a6b4aa; font-size: 19px; max-width: 720px; margin: 0 auto 22px; }
+    .answer { background: #18201b; border: 1px solid #253029; border-radius: 8px; padding: 22px; margin: 28px auto 0; text-align: left; max-width: 780px; }
+    .cta { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
+    .btn { display: inline-flex; align-items: center; padding: 11px 20px; border-radius: 8px; font-weight: 800; }
+    .primary { background: #22a56d; color: #06100b; }
+    .secondary { background: #202821; color: #dce6dc; border: 1px solid #324037; }
+    section { padding: 42px 0; border-top: 1px solid #253029; }
+    h2 { color: #f5fff7; font-size: 24px; margin-bottom: 18px; }
+    h3 { color: #f5fff7; font-size: 16px; margin-bottom: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .card { background: #18201b; border: 1px solid #253029; border-radius: 8px; padding: 20px; }
+    .steps { display: grid; gap: 14px; }
+    .step { display: flex; gap: 14px; align-items: flex-start; }
+    .num { flex: 0 0 auto; width: 32px; height: 32px; border-radius: 50%; background: #22a56d; display: flex; align-items: center; justify-content: center; color: #06100b; font-weight: 900; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { border-bottom: 1px solid #253029; padding: 12px; text-align: left; }
+    th { color: #f5fff7; background: #18201b; }
+    footer { padding: 24px 0; border-top: 1px solid #253029; color: #92a096; font-size: 13px; }
+    @media (max-width: 700px) { h1 { font-size: 30px; } .grid { grid-template-columns: 1fr; } .hero { padding-top: 40px; } }
+  </style>
+</head>
+<body>
+  <header><div class="container header-inner"><a class="logo" href="/">ExtPilot</a><a class="back" href="/">All extensions</a></div></header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img class="hero-icon" src="/audio-to-text/icon.png" alt="Audio to Text Converter icon">
+        <h1>Audio to Text Converter - Transcribe Browser Audio</h1>
+        <p class="tagline">Record microphone audio, browser tab audio, YouTube audio, or uploaded files and turn them into editable text from a browser side panel.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://chromewebstore.google.com/detail/audio-to-text-converter/aophogmiehhkjngchmfdhmcjadkjpobh">Add to Chrome</a>
+          <a class="btn secondary" href="https://microsoftedge.microsoft.com/addons/detail/audio-to-text-converter/edehjfhmpbhhiooplnmchjgbcbiikalj">Add to Edge</a>
+        </div>
+        <p class="answer">Audio to Text Converter is a Chrome and Edge extension for converting browser audio to text. It supports microphone recording, tab audio recording, mixed mic plus tab recording, and audio file upload. Free users get 5 Groq Whisper transcriptions per day, unlimited Web Speech live transcription, and 5 recent history items. Pro unlocks unlimited Groq transcription, unlimited history, and AI summaries with your own AI API key.</p>
+      </div>
+    </section>
+
+    <section><div class="container">
+      <h2>Transcribe the audio already playing in your browser</h2>
+      <div class="grid">
+        <div class="card"><h3>Tab audio recording</h3><p>Capture YouTube, courses, webinars, meetings, and other browser tab audio while keeping your computer audio audible.</p></div>
+        <div class="card"><h3>Live text while recording</h3><p>Use Web Speech for real-time text, or Groq Whisper chunks for fast cloud transcription feedback.</p></div>
+        <div class="card"><h3>Upload audio files</h3><p>Drop MP3, WAV, M4A, WebM, FLAC, or OGG files and convert them to editable text.</p></div>
+        <div class="card"><h3>AI summaries for Pro</h3><p>Turn long transcripts into meeting notes, study notes, or key points with your configured AI model.</p></div>
+      </div>
+    </div></section>
+
+    <section><div class="container">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><div><h3>Choose a source</h3><p>Select microphone, tab audio, mixed audio, or upload an audio file.</p></div></div>
+        <div class="step"><span class="num">2</span><div><h3>Pick an engine</h3><p>Use Groq Whisper for accurate transcription or Web Speech for unlimited live transcription.</p></div></div>
+        <div class="step"><span class="num">3</span><div><h3>Edit, copy, export, or summarize</h3><p>After recording stops, edit the transcript directly, copy it, export TXT, or generate an AI summary.</p></div></div>
+      </div>
+    </div></section>
+
+    <section><div class="container">
+      <h2>Free vs Pro</h2>
+      <table>
+        <tr><th>Feature</th><th>Free</th><th>Pro</th></tr>
+        <tr><td>Groq Whisper transcription</td><td>5 per day</td><td>Unlimited</td></tr>
+        <tr><td>Web Speech live transcription</td><td>Unlimited</td><td>Unlimited</td></tr>
+        <tr><td>History</td><td>5 most recent</td><td>Unlimited</td></tr>
+        <tr><td>AI summaries</td><td>Upgrade prompt</td><td>Included with your AI API key</td></tr>
+        <tr><td>Price</td><td>$0</td><td>$2.99 per month</td></tr>
+      </table>
+      <div class="cta"><a class="btn secondary" href="https://buy.stripe.com/eVq8wR8bJfVj4B59AA33W0o">Buy Pro - $2.99/month</a></div>
+    </div></section>
+
+    <section><div class="container">
+      <h2>FAQ</h2>
+      <div class="grid">
+        <div class="card"><h3>Does tab recording mute my computer?</h3><p>No. The extension reconnects captured tab audio to your output so you can keep listening while transcribing.</p></div>
+        <div class="card"><h3>Can I edit transcript text?</h3><p>Yes. Once recording or upload transcription is done, the transcript box becomes editable before copy, export, or summary.</p></div>
+        <div class="card"><h3>Do I need a Groq key?</h3><p>Yes for Groq transcription. Add your Groq transcription key in Settings. Web Speech can be used without a Groq key.</p></div>
+        <div class="card"><h3>Where do I activate Pro?</h3><p>Open Settings, use Upgrade & Activate Pro, buy a license, paste the license key, and click Activate.</p></div>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container">&copy; 2026 ExtPilot. <a href="/audio-to-text/privacy.html">Privacy Policy</a> · <a href="mailto:support@extpilot.com">support@extpilot.com</a></div></footer>
+</body>
+</html>

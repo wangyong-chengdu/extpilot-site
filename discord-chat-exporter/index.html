@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discord Chat Exporter - Export & Backup Discord Chats</title>
+  <meta name="description" content="Export Discord chat history to CSV, JSON, and HTML. 300 free messages, no login, local processing, and a $1.90 one-time Pro unlock.">
+  <link rel="canonical" href="https://extpilot.com/discord-chat-exporter/">
+  <meta property="og:title" content="Discord Chat Exporter - Export & Backup Discord Chats">
+  <meta property="og:description" content="Export Discord channel or DM messages to CSV, JSON, and HTML. Local processing, no login, 300 free messages.">
+  <meta property="og:url" content="https://extpilot.com/discord-chat-exporter/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/assets/og-image.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Discord Chat Exporter - Export & Backup Discord Chats">
+  <meta name="twitter:description" content="Export Discord chat history to CSV, JSON, and HTML with local-only processing.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="discord chat exporter, export discord chat, discord chat backup, discord message exporter, export discord chat history to csv, discord messages to json">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Discord Chat Exporter - Export & Backup",
+    "url": "https://extpilot.com/discord-chat-exporter/",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome, Edge",
+    "description": "Export Discord channel or DM messages to CSV, JSON, and readable HTML. Free exports include 300 messages per run. Pro unlocks full exports with a one-time $1.90 purchase. Chat data is processed locally in the browser.",
+    "offers": [
+      {"@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "USD", "description": "Export up to 300 Discord messages per run"},
+      {"@type": "Offer", "name": "Pro Lifetime", "price": "1.90", "priceCurrency": "USD", "description": "Unlimited message export and optional clean footer"}
+    ],
+    "publisher": {"@type": "Organization", "name": "ExtPilot", "url": "https://extpilot.com"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "How do I export Discord chat history?", "acceptedAnswer": {"@type": "Answer", "text": "Install Discord Chat Exporter, open Discord in your browser, select a channel or DM, choose CSV, JSON, or HTML, then click Export. The file is generated locally and downloaded by the browser."}},
+      {"@type": "Question", "name": "Does Discord Chat Exporter upload my messages?", "acceptedAnswer": {"@type": "Answer", "text": "No. Chat messages are processed locally in your browser and saved as a local download. The extension does not upload Discord chat history to ExtPilot servers."}},
+      {"@type": "Question", "name": "Is Discord Chat Exporter free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The free version exports up to 300 messages per run. A one-time $1.90 Pro unlock removes the message limit."}},
+      {"@type": "Question", "name": "What formats are supported?", "acceptedAnswer": {"@type": "Answer", "text": "Discord Chat Exporter supports CSV for spreadsheets, JSON for structured data, and readable HTML for long-term archives."}}
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #0f1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px; }
+    header, footer { border-color: #21262d; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { color: #f0f6fc; font-weight: 700; font-size: 20px; }
+    .back { color: #8b949e; font-size: 14px; }
+    .hero { padding: 64px 0 40px; text-align: center; }
+    .hero-icon { width: 80px; height: 80px; border-radius: 16px; margin-bottom: 22px; }
+    h1 { color: #f0f6fc; font-size: 38px; line-height: 1.15; margin-bottom: 14px; }
+    .tagline { color: #8b949e; font-size: 19px; max-width: 690px; margin: 0 auto 22px; }
+    .answer { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 22px; margin: 28px auto 0; text-align: left; max-width: 760px; }
+    .cta { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
+    .btn { display: inline-flex; align-items: center; padding: 11px 20px; border-radius: 8px; font-weight: 700; }
+    .primary { background: #5865f2; color: #fff; }
+    .secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    section { padding: 42px 0; border-top: 1px solid #21262d; }
+    h2 { color: #f0f6fc; font-size: 24px; margin-bottom: 18px; }
+    h3 { color: #f0f6fc; font-size: 16px; margin-bottom: 6px; }
+    .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 20px; }
+    .steps { display: grid; gap: 14px; }
+    .step { display: flex; gap: 14px; align-items: flex-start; }
+    .num { flex: 0 0 auto; width: 32px; height: 32px; border-radius: 50%; background: #5865f2; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { border-bottom: 1px solid #21262d; padding: 12px; text-align: left; }
+    th { color: #f0f6fc; background: #161b22; }
+    ul { margin-left: 20px; }
+    footer { padding: 24px 0; border-top: 1px solid #21262d; color: #8b949e; font-size: 13px; }
+    @media (max-width: 700px) { h1 { font-size: 30px; } .grid { grid-template-columns: 1fr; } .hero { padding-top: 42px; } }
+  </style>
+</head>
+<body>
+  <header><div class="container header-inner"><a class="logo" href="/">ExtPilot</a><a class="back" href="/">All extensions</a></div></header>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img class="hero-icon" src="/discord-chat-exporter/icon.png" alt="Discord Chat Exporter icon">
+        <h1>Discord Chat Exporter - Export & Backup Discord Chats</h1>
+        <p class="tagline">Save Discord channel or DM history as CSV, JSON, or readable HTML. 300 messages free, no account login, local-only processing.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://chromewebstore.google.com/detail/discord-chat-exporter-export-backup/fdbkaffljpphkgbiccklpmkadpkbgbko">Add to Chrome</a>
+          <a class="btn secondary" href="https://microsoftedge.microsoft.com/addons/detail/discord-chat-exporter-export-backup/phlgcmlomfbmfajeeepgpdefjjalaokn">Add to Edge</a>
+        </div>
+        <p class="answer">Discord Chat Exporter is a Chrome and Edge extension for exporting Discord chat history from the current channel or DM. It creates local CSV, JSON, or HTML files, includes 300 messages per free export, and offers a $1.90 one-time Pro unlock for full exports. Discord data is processed in your browser; messages are not uploaded to ExtPilot, and the Discord token is never stored by the extension.</p>
+      </div>
+    </section>
+
+    <section><div class="container">
+      <h2>Export Discord chats in three formats</h2>
+      <div class="grid">
+        <div class="card"><h3>CSV for spreadsheets</h3><p>Open exports in Excel, Google Sheets, Airtable, or analytics workflows.</p></div>
+        <div class="card"><h3>JSON for structured data</h3><p>Keep message metadata in a developer-friendly format for scripts and research.</p></div>
+        <div class="card"><h3>HTML for readable archives</h3><p>Save a clean local copy that is easy to read later.</p></div>
+        <div class="card"><h3>Local-only by design</h3><p>Exports are generated in the browser and downloaded to your computer.</p></div>
+      </div>
+    </div></section>
+
+    <section><div class="container">
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><div><h3>Open Discord in your browser</h3><p>Go to the channel or DM conversation you want to archive.</p></div></div>
+        <div class="step"><span class="num">2</span><div><h3>Choose CSV, JSON, or HTML</h3><p>The popup detects the current Discord page and lets you pick an export format.</p></div></div>
+        <div class="step"><span class="num">3</span><div><h3>Download the local file</h3><p>The extension fetches messages through Discord in your browser and saves the file locally.</p></div></div>
+      </div>
+    </div></section>
+
+    <section><div class="container">
+      <h2>Free vs Pro</h2>
+      <table>
+        <tr><th>Feature</th><th>Free</th><th>Pro</th></tr>
+        <tr><td>Messages per export</td><td>300</td><td>Unlimited</td></tr>
+        <tr><td>Formats</td><td>CSV, JSON, HTML</td><td>CSV, JSON, HTML</td></tr>
+        <tr><td>Price</td><td>$0</td><td>$1.90 one-time</td></tr>
+        <tr><td>Clean export footer</td><td>Brand footer included</td><td>Can be disabled</td></tr>
+      </table>
+      <div class="cta"><a class="btn secondary" href="https://buy.stripe.com/bJefZj0Jh8sRaZt6oo33W0s">Buy Pro - $1.90 one-time</a></div>
+    </div></section>
+
+    <section><div class="container">
+      <h2>FAQ</h2>
+      <div class="grid">
+        <div class="card"><h3>Can it export DMs?</h3><p>Yes. Open the Discord DM in the browser and run the export from the popup.</p></div>
+        <div class="card"><h3>Does it need my Discord login?</h3><p>No separate login is required. The extension runs on the Discord web app you already opened.</p></div>
+        <div class="card"><h3>Does it store my token?</h3><p>No. The token is used only in memory for the active export flow and is not stored by the extension.</p></div>
+        <div class="card"><h3>Where is my file saved?</h3><p>Your browser downloads the generated CSV, JSON, or HTML file to your local downloads folder.</p></div>
+      </div>
+    </div></section>
+  </main>
+  <footer><div class="container">&copy; 2026 ExtPilot. <a href="/discord-chat-exporter/privacy.html">Privacy Policy</a> · <a href="mailto:support@extpilot.com">support@extpilot.com</a></div></footer>
+</body>
+</html>
+
