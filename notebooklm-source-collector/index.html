@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NotebookLM Source Collector - Add Web Sources in 1 Click</title>
+  <meta name="description" content="Collect web pages, articles & YouTube videos as NotebookLM sources with one click. Free Chrome extension with auto-sync to NotebookLM (Pro).">
+  <link rel="canonical" href="https://extpilot.com/notebooklm-source-collector/">
+  <meta property="og:title" content="NotebookLM Source Collector - Add Web Sources in 1 Click">
+  <meta property="og:description" content="Collect web pages, articles & YouTube videos as NotebookLM sources with one click. Free Chrome extension with auto-sync to NotebookLM (Pro).">
+  <meta property="og:url" content="https://extpilot.com/notebooklm-source-collector/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/notebooklm-source-collector/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="NotebookLM Source Collector - Add Web Sources in 1 Click">
+  <meta name="twitter:description" content="Collect web pages, articles & YouTube videos as NotebookLM sources with one click. Free Chrome extension.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="NotebookLM extension, NotebookLM source collector, add sources to NotebookLM, NotebookLM Chrome extension, NotebookLM web clipper, save articles to NotebookLM, NotebookLM import URL, collect research sources NotebookLM">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "NotebookLM Source Collector",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome, Edge",
+        "url": "https://extpilot.com/notebooklm-source-collector/",
+        "offers": [
+          {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Free plan: 10 collections/day, manual copy-paste"
+          },
+          {
+            "@type": "Offer",
+            "price": "2.99",
+            "priceCurrency": "USD",
+            "billingPeriod": "P1M",
+            "description": "Pro plan: unlimited collections, auto-sync to NotebookLM"
+          }
+        ],
+        "featureList": [
+          "One-click web page collection via right-click menu",
+          "YouTube metadata extraction (title, channel, duration)",
+          "Side panel source management with search and filter",
+          "Copy & Open NLM workflow",
+          "Auto-sync to NotebookLM (Pro)"
+        ],
+        "screenshot": "https://extpilot.com/notebooklm-source-collector/icon.png",
+        "softwareVersion": "1.0.0",
+        "author": {
+          "@type": "Organization",
+          "name": "ExtPilot",
+          "url": "https://extpilot.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I add web pages to NotebookLM using this extension?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Right-click any web page and select 'Collect for NotebookLM'. The page title, URL, and content summary are saved to your side panel. Click 'Copy & Open NLM' to paste it into NotebookLM, or upgrade to Pro for automatic sync."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is NotebookLM Source Collector free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The free plan includes 10 collections per day with manual copy-paste workflow. Pro ($2.99/month or $19.99/year) adds unlimited collections and automatic sync to NotebookLM."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is this different from Kortex?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "NotebookLM Source Collector is lightweight (no debugger permission required), focused purely on source collection, and costs 1/10 the price. Kortex offers more features but requires invasive browser permissions and is more complex to use."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I save YouTube videos as NotebookLM sources?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The extension automatically extracts YouTube video metadata including title, channel name, duration, and description, then formats it as a NotebookLM-ready source."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does 'Send to NLM' do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Send to NLM (Pro feature) automatically opens your configured NotebookLM notebook and pastes the collected source directly — no manual copy-paste needed. You set your notebook URL once in settings."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero-icon { width: 96px; height: 96px; border-radius: 20px; margin-bottom: 16px; }
+    .hero h1 { font-size: 36px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; line-height: 1.3; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 16px; max-width: 620px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; border: none; cursor: pointer; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .pricing-note { font-size: 14px; color: #8b949e; margin-top: 12px; }
+    .geo-answer { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px 28px; margin: 32px 0 0; text-align: left; }
+    .geo-answer p { font-size: 16px; color: #c9d1d9; margin-bottom: 12px; }
+    .geo-answer ul { list-style: none; padding-left: 0; }
+    .geo-answer li { font-size: 15px; color: #8b949e; padding: 4px 0 4px 24px; position: relative; }
+    .geo-answer li::before { content: "\2192"; position: absolute; left: 0; color: #58a6ff; font-weight: 700; }
+    .features { padding: 48px 0; }
+    .features h2, .how-it-works h2, .who h2, .pricing h2, .faq h2, .support h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+    .who { padding: 48px 0; border-top: 1px solid #21262d; }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+    .who-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .who-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .who-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
+    .compare-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; background: #161b22; border: 1px solid #21262d; border-radius: 8px; overflow: hidden; }
+    .compare-table th, .compare-table td { padding: 12px 16px; text-align: left; font-size: 14px; border-bottom: 1px solid #21262d; }
+    .compare-table th { background: #1c2128; color: #f0f6fc; font-weight: 600; }
+    .compare-table td { color: #c9d1d9; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .yes { color: #3fb950; font-weight: 600; }
+    .compare-table .no { color: #484f58; }
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+    .support { padding: 48px 0; border-top: 1px solid #21262d; text-align: center; }
+    .support p { font-size: 15px; color: #8b949e; margin-bottom: 8px; }
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 26px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid, .who-grid { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+      .compare-table th, .compare-table td { padding: 8px 10px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img src="icon.png" alt="NotebookLM Source Collector icon" class="hero-icon">
+        <span class="badge">10 collections/day included</span>
+        <h1>Collect Any Web Page as a NotebookLM Source &mdash; In One Click</h1>
+        <p class="tagline">Save articles, web pages, and YouTube videos as formatted NotebookLM sources. Right-click to collect, side panel to manage, one click to send.</p>
+        <div class="cta-row">
+          <a href="https://chromewebstore.google.com/detail/notebooklm-source-collector/hecfcjpajeeehkmjldgopkookgjdjahj" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome</a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/notebooklm-source-collector/eenmngapmpfiepkgkbhogogdmbldjkgh" class="btn btn-secondary" target="_blank" rel="noopener">Add to Edge</a>
+        </div>
+        <p class="pricing-note">Pro $2.99/mo or $19.99/yr &mdash; unlimited collections + auto-sync</p>
+
+        <div class="geo-answer">
+          <p><strong>NotebookLM Source Collector</strong> is a free Chrome extension that lets you collect web pages, articles, and YouTube videos as formatted sources for Google NotebookLM. Right-click any page or select specific text to save it to your collection in the side panel. Each source is automatically formatted with title, URL, meta description, and key content &mdash; ready to paste into NotebookLM.</p>
+          <ul>
+            <li><strong>One-click collection</strong> via right-click context menu (full page or selected text)</li>
+            <li><strong>YouTube metadata extraction</strong> (video title, channel, duration, description)</li>
+            <li><strong>Side panel</strong> for managing, searching, and organizing collected sources</li>
+            <li><strong>Copy &amp; Open NLM</strong>: copies formatted source to clipboard and opens NotebookLM in one action</li>
+            <li><strong>Send to NLM (Pro)</strong>: automatically sends sources directly to your NotebookLM notebook &mdash; no manual paste needed</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>Key Features</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>Right-Click to Collect</h3>
+            <p>Right-click any web page or selected text and choose "Collect for NotebookLM." The page title, URL, description, and content are saved instantly to your side panel collection.</p>
+          </div>
+          <div class="feature-card">
+            <h3>YouTube Metadata Extraction</h3>
+            <p>On YouTube pages, the extension automatically extracts video title, channel name, duration, and description &mdash; formatted as a complete NotebookLM-ready source.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Side Panel Management</h3>
+            <p>View, search, filter, and organize all your collected sources in a dedicated side panel. Edit source content before sending to NotebookLM.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Copy &amp; Open NLM</h3>
+            <p>One click copies the formatted source to your clipboard and opens NotebookLM in a new tab. Paste it directly into the "Add source" dialog.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Auto-Sync to NotebookLM (Pro)</h3>
+            <p>Set your notebook URL once. Click "Send to NLM" and the source is delivered directly into NotebookLM &mdash; no copy, no paste, no tab switching.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Minimal Permissions</h3>
+            <p>Only requests activeTab, contextMenus, sidePanel, and storage. No debugger permission, no broad host access. Your browsing stays private.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Right-Click Any Page</h3>
+              <p>Browse normally. When you find an article, blog post, or YouTube video worth saving, right-click and select "Collect for NotebookLM" (or "Collect Selection" for highlighted text).</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Review in Side Panel</h3>
+              <p>Open the side panel to see all collected sources. Each entry shows title, URL, a content preview, and timestamp. Search or filter to find what you need.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Send to NotebookLM</h3>
+              <p>Click "Copy &amp; Open NLM" to copy the source and open NotebookLM, then paste. Or upgrade to Pro and click "Send to NLM" for automatic delivery with no manual steps.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="who">
+      <div class="container">
+        <h2>Who Is It For?</h2>
+        <div class="who-grid">
+          <div class="who-card">
+            <h3>Researchers &amp; Academics</h3>
+            <p>Collect papers, articles, and reference material from across the web. Build comprehensive source libraries for literature reviews and thesis projects.</p>
+          </div>
+          <div class="who-card">
+            <h3>Students</h3>
+            <p>Save lecture materials, online tutorials, and YouTube educational videos. Organize study sources by topic and send them to NotebookLM for AI-assisted summarization.</p>
+          </div>
+          <div class="who-card">
+            <h3>Content Creators &amp; PMs</h3>
+            <p>Research competitors, collect inspiration, and gather reference material. Keep all your sources organized in one place before synthesizing them in NotebookLM.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2>Free vs Pro</h2>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Free</th>
+              <th>Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Collections per day</td>
+              <td>10</td>
+              <td class="yes">Unlimited</td>
+            </tr>
+            <tr>
+              <td>Right-click collect (full page &amp; selection)</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>YouTube metadata extraction</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Side panel management</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Copy &amp; Open NLM</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Send to NLM (auto-sync)</td>
+              <td class="no">&mdash;</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Priority support</td>
+              <td class="no">&mdash;</td>
+              <td class="yes">Yes</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="pricing-note" style="text-align: center;">Pro: $2.99/month &middot; $19.99/year &middot; $4.99 lifetime</p>
+        <div class="cta-row" style="margin-top: 24px;">
+          <a href="https://chromewebstore.google.com/detail/notebooklm-source-collector/hecfcjpajeeehkmjldgopkookgjdjahj" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+        <div class="faq-item">
+          <h3>How do I add web pages to NotebookLM using this extension?</h3>
+          <p>Right-click any web page and select "Collect for NotebookLM." The page title, URL, and content summary are saved to your side panel. Click "Copy &amp; Open NLM" to paste it into NotebookLM, or upgrade to Pro for automatic sync.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is NotebookLM Source Collector free?</h3>
+          <p>Yes. The free plan includes 10 collections per day with manual copy-paste workflow. Pro ($2.99/month or $19.99/year) adds unlimited collections and automatic sync to NotebookLM.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How is this different from Kortex?</h3>
+          <p>NotebookLM Source Collector is lightweight (no debugger permission required), focused purely on source collection, and costs 1/10 the price. Kortex offers more features but requires invasive browser permissions and is more complex to use.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can I save YouTube videos as NotebookLM sources?</h3>
+          <p>Yes. The extension automatically extracts YouTube video metadata including title, channel name, duration, and description, then formats it as a NotebookLM-ready source.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What does "Send to NLM" do?</h3>
+          <p>Send to NLM (Pro feature) automatically opens your configured NotebookLM notebook and pastes the collected source directly &mdash; no manual copy-paste needed. You set your notebook URL once in settings.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support">
+      <div class="container">
+        <h2>Support</h2>
+        <p>Questions or feedback? Email us at <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+        <p><a href="/privacy/notebooklm-source-collector/">Privacy Policy</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
