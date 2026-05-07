@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Save and Search ChatGPT Conversations (2026 Guide)</title>
+  <meta name="description" content="Three methods to save, search, and organize ChatGPT conversations. Compare ChatGPT's built-in export, AI Conversation Vault, and AI Exporter. Includes Obsidian export walkthrough.">
+  <link rel="canonical" href="https://extpilot.com/blog/how-to-save-and-search-chatgpt-conversations/">
+  <meta property="og:title" content="How to Save and Search ChatGPT Conversations (2026 Guide)">
+  <meta property="og:description" content="Three methods to save and search your ChatGPT conversations. Full comparison with step-by-step Obsidian export guide.">
+  <meta property="og:url" content="https://extpilot.com/blog/how-to-save-and-search-chatgpt-conversations/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://extpilot.com/ai-conversation-vault/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How to Save and Search ChatGPT Conversations (2026 Guide)">
+  <meta name="twitter:description" content="Three methods to save and search ChatGPT conversations. Compare built-in export, AI Conversation Vault, and AI Exporter.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="save chatgpt conversations, search old chatgpt conversations, chatgpt conversation history, save chatgpt to obsidian, export chatgpt conversations, chatgpt conversation backup, search chatgpt history, chatgpt conversation manager">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How to Save and Search ChatGPT Conversations (2026 Guide)",
+    "description": "Three methods to save, search, and organize ChatGPT conversations. Compare ChatGPT's built-in export, AI Conversation Vault, and AI Exporter. Includes Obsidian export walkthrough.",
+    "author": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ExtPilot",
+      "url": "https://extpilot.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://extpilot.com/assets/favicon.svg"
+      }
+    },
+    "datePublished": "2026-05-07",
+    "dateModified": "2026-05-07",
+    "mainEntityOfPage": "https://extpilot.com/blog/how-to-save-and-search-chatgpt-conversations/"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I search old ChatGPT conversations?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ChatGPT has a basic search bar in the sidebar, but it only searches conversation titles — not the full content of messages. To search across the actual text of your conversations, use AI Conversation Vault. It saves conversations locally and provides full-text search across every message, code block, and response."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I export ChatGPT conversations to Obsidian?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Install AI Conversation Vault (Chrome/Edge extension). Save any ChatGPT conversation with one click. Then click 'Export to Obsidian' — it generates a Markdown file with YAML frontmatter containing tags, creation date, source URL, and platform. Drop the file into your Obsidian vault folder. Obsidian export is a Pro feature ($7.9 one-time)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ChatGPT save conversations automatically?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, ChatGPT saves conversations to your account by default (unless you've turned off chat history in Settings). However, these conversations live on OpenAI's servers — you cannot search the full text, tag them by project, or export them to tools like Obsidian without a third-party extension."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between AI Conversation Vault and AI Exporter?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "AI Exporter focuses on exporting conversations to file formats (PDF, Word, Markdown). AI Conversation Vault focuses on managing conversations after saving — full-text search across all saved chats, a tag system for organizing by project, and Obsidian-native export with frontmatter. AI Exporter exports. AI Conversation Vault manages."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is AI Conversation Vault available at no cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The Basic plan includes unlimited search, unlimited tags, and up to 50 saved conversations with Markdown/JSON/TXT export. Pro ($7.9 one-time purchase) unlocks all three platforms (ChatGPT, Claude, Gemini), Obsidian export with frontmatter, batch export, and unlimited saves."
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.8; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+    article { padding: 48px 0 80px; }
+    article h1 { font-size: 36px; font-weight: 800; color: #f0f6fc; letter-spacing: -0.5px; margin-bottom: 12px; line-height: 1.3; }
+    .meta { font-size: 14px; color: #484f58; margin-bottom: 32px; }
+    .tldr { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; margin-bottom: 40px; font-size: 15px; line-height: 1.8; color: #8b949e; }
+    .tldr strong { color: #f0f6fc; }
+    article h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin: 40px 0 16px; }
+    article h3 { font-size: 18px; font-weight: 600; color: #f0f6fc; margin: 24px 0 12px; }
+    article p { font-size: 16px; color: #c9d1d9; margin-bottom: 16px; }
+    article ul, article ol { margin-bottom: 16px; padding-left: 24px; }
+    article li { font-size: 16px; color: #c9d1d9; margin-bottom: 8px; }
+    .cta-box { background: #238636; border-radius: 8px; padding: 20px 24px; text-align: center; margin: 24px 0; }
+    .cta-box a { color: #fff; font-weight: 600; font-size: 16px; }
+    .cta-box a:hover { text-decoration: none; opacity: 0.9; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+    .comparison-table th, .comparison-table td { padding: 10px 14px; border: 1px solid #21262d; text-align: left; }
+    .comparison-table th { background: #161b22; color: #f0f6fc; font-weight: 600; }
+    .comparison-table td { color: #c9d1d9; }
+    .comparison-table tr:nth-child(even) td { background: #161b2288; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+    .step-img { display: block; max-width: 100%; height: auto; margin: 16px 0 24px; border-radius: 8px; border: 1px solid #21262d; }
+    .related-posts { margin-top: 48px; padding-top: 32px; border-top: 1px solid #21262d; }
+    .related-posts h2 { font-size: 20px; margin-bottom: 16px; }
+    .related-link { display: block; background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 16px 20px; margin-bottom: 12px; transition: border-color 0.2s; }
+    .related-link:hover { border-color: #30363d; text-decoration: none; }
+    .related-link h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .related-link p { font-size: 14px; color: #8b949e; margin: 0; }
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+    @media (max-width: 600px) {
+      article h1 { font-size: 26px; }
+      article h2 { font-size: 20px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 8px 10px; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="https://extpilot.com/" class="logo">ExtPilot</a>
+        <a href="/blog/" class="back-link">&larr; Blog</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <div class="container">
+        <h1>How to Save and Search ChatGPT Conversations (2026 Guide)</h1>
+        <p class="meta">Published by ExtPilot Team &middot; May 2026 &middot; 10 min read</p>
+
+        <div class="tldr">
+          <strong>TL;DR:</strong> ChatGPT's built-in export gives you a ZIP of all conversations, but no search, no tags, no Obsidian integration. <a href="https://extpilot.com/ai-conversation-vault/" target="_blank" rel="noopener">AI Conversation Vault</a> (Chrome / Edge) lets you save individual conversations with one click, search across all saved chats instantly, tag by project, and export to Obsidian with YAML frontmatter. Basic plan: 50 saves with unlimited search and tags. Pro: $7.9 one-time for unlimited saves + Obsidian export.
+        </div>
+
+        <!-- Section 1 -->
+        <h2>Why You Need to Save ChatGPT Conversations</h2>
+
+        <p>You had a conversation with ChatGPT three weeks ago that contained the exact solution to a problem you are facing right now. You know it happened. You remember parts of the prompt. But finding it? That is where things fall apart.</p>
+
+        <p>ChatGPT's sidebar shows your conversation history, but the search only matches conversation titles &mdash; not the actual content inside. If you titled your chat "Untitled" (which is most of them), you are scrolling through dozens of chats hoping to recognize the right one.</p>
+
+        <p>The problem gets worse the more you use AI. Power users accumulate hundreds of conversations across ChatGPT, Claude, and Gemini. Each platform has its own history, its own interface, its own limitations. There is no unified way to search across all of them.</p>
+
+        <p>Here are the specific pain points:</p>
+
+        <ul>
+          <li><strong>No full-text search</strong> &mdash; ChatGPT's search bar only matches titles, not message content</li>
+          <li><strong>No organization</strong> &mdash; you cannot tag, categorize, or group conversations by project</li>
+          <li><strong>No cross-platform search</strong> &mdash; ChatGPT, Claude, and Gemini histories are completely siloed</li>
+          <li><strong>No Obsidian integration</strong> &mdash; if your knowledge base lives in Obsidian, there is no native way to get ChatGPT conversations in there</li>
+          <li><strong>Deletion risk</strong> &mdash; OpenAI may delete conversations from accounts that are inactive or exceeding storage limits</li>
+        </ul>
+
+        <p>Below are three methods to solve this, from the most basic to the most complete.</p>
+
+        <!-- Section 2 -->
+        <h2>Method 1 &mdash; ChatGPT's Built-in Export (Limited)</h2>
+
+        <p>ChatGPT does offer a native export option. Here is how to use it:</p>
+
+        <ol>
+          <li>Open <a href="https://chat.openai.com/" target="_blank" rel="noopener">chat.openai.com</a> and log in</li>
+          <li>Click your profile icon in the bottom-left corner</li>
+          <li>Go to <strong>Settings &rarr; Data Controls &rarr; Export Data</strong></li>
+          <li>Click <strong>Export</strong> and confirm via the email link OpenAI sends you</li>
+          <li>Download the ZIP file from the email (arrives within a few minutes to a few hours)</li>
+        </ol>
+
+        <p>The ZIP contains a <code>conversations.json</code> file with all your conversations. You also get a few HTML files for user data and account info.</p>
+
+        <p><strong>The limitations are significant:</strong></p>
+
+        <ul>
+          <li><strong>All or nothing</strong> &mdash; you cannot export a single conversation. It dumps everything into one giant JSON file</li>
+          <li><strong>No search</strong> &mdash; the JSON file is raw data. You would need to write code or use a tool to parse it</li>
+          <li><strong>Delayed delivery</strong> &mdash; the export link arrives by email, sometimes hours later</li>
+          <li><strong>One-time snapshot</strong> &mdash; each export is a point-in-time dump. New conversations after the export are not included</li>
+          <li><strong>No Obsidian format</strong> &mdash; the JSON structure is not compatible with Obsidian's Markdown-based vault system</li>
+        </ul>
+
+        <p>This method works as a backup strategy, but it is not a practical way to find or reuse specific conversations.</p>
+
+        <!-- Section 3 -->
+        <h2>Method 2 &mdash; AI Conversation Vault (Recommended)</h2>
+
+        <p><a href="https://extpilot.com/ai-conversation-vault/" target="_blank" rel="noopener">AI Conversation Vault</a> is a Chrome and Edge extension designed specifically for saving, searching, and organizing AI conversations. Unlike ChatGPT's built-in export, it works at the individual conversation level and provides real search and organization tools.</p>
+
+        <p>Here is the step-by-step setup:</p>
+
+        <h3>Step 1: Install the extension</h3>
+
+        <p>Add AI Conversation Vault from the <a href="https://chromewebstore.google.com/detail/ai-conversation-vault/eonjokcnjkefhldopbibnlmicfpkbdfl" target="_blank" rel="noopener">Chrome Web Store</a> or <a href="https://microsoftedge.microsoft.com/addons/detail/ai-conversation-vault/ghlogbbdpkgibgpbofndoljlkkjehahf" target="_blank" rel="noopener">Edge Add-ons</a>. No account required. No signup form. The extension icon appears in your toolbar immediately.</p>
+
+        <h3>Step 2: Save any conversation with one click</h3>
+
+        <p>Open any ChatGPT conversation (also works on Claude and Gemini). Click the floating save button that appears on the page &mdash; or use the side panel. The extension parses all messages, code blocks, tables, and metadata automatically. The conversation is saved to your local browser storage (IndexedDB). Nothing leaves your device.</p>
+
+        <h3>Step 3: Search across all saved conversations</h3>
+
+        <p>Open the extension's side panel and type any keyword into the search bar. AI Conversation Vault searches the full text of every saved conversation &mdash; not just titles. Find that code snippet, that debugging technique, that product idea from a conversation you had weeks ago. Results appear instantly.</p>
+
+        <h3>Step 4: Tag and organize by project</h3>
+
+        <p>Add tags to any saved conversation. Examples: "project-alpha", "python-debugging", "marketing-copy", "interview-prep". Filter your vault by tags, by platform (ChatGPT / Claude / Gemini), or by date. Tags and search are unlimited on every plan.</p>
+
+        <h3>Step 5: Export to Obsidian with frontmatter (Pro)</h3>
+
+        <p>Click "Export to Obsidian" on any saved conversation. The extension generates a clean Markdown file with YAML frontmatter &mdash; tags, creation date, source URL, and platform. Drop the file into your Obsidian vault folder. The conversation appears as a fully linked note in your knowledge base. Batch export is also available for moving your entire vault at once.</p>
+
+        <div class="cta-box">
+          <a href="https://chromewebstore.google.com/detail/ai-conversation-vault/eonjokcnjkefhldopbibnlmicfpkbdfl" target="_blank" rel="noopener">Install AI Conversation Vault for Chrome</a>
+        </div>
+
+        <!-- Section 4 -->
+        <h2>Method 3 &mdash; AI Exporter (Export Only)</h2>
+
+        <p><a href="https://chromewebstore.google.com/detail/ai-exporter/nkmbpfhbmoikamchlodkipopbmcfglcl" target="_blank" rel="noopener">AI Exporter</a> is a popular Chrome extension focused on exporting ChatGPT conversations to file formats like PDF, Word, and Markdown. It does this job well.</p>
+
+        <p>However, AI Exporter is an export tool, not a management tool. Here is what that means in practice:</p>
+
+        <ul>
+          <li><strong>Export:</strong> Yes &mdash; PDF, DOCX, Markdown, PNG</li>
+          <li><strong>Search across saved conversations:</strong> No &mdash; once exported, the files live on your disk with no unified search</li>
+          <li><strong>Tag and organize:</strong> No &mdash; no tagging, no filtering, no project-based grouping</li>
+          <li><strong>Obsidian frontmatter:</strong> No &mdash; exports are plain files without YAML metadata</li>
+          <li><strong>Cross-platform vault:</strong> No &mdash; each export is a standalone file</li>
+        </ul>
+
+        <p>AI Exporter is a solid choice if you just need to save a conversation as a PDF for a meeting or share a ChatGPT response as a Word document. But if you want to build a searchable knowledge base from your AI conversations, you need something that manages conversations after saving &mdash; not just exports them.</p>
+
+        <!-- Section 5 -->
+        <h2>How to Export ChatGPT Conversations to Obsidian</h2>
+
+        <p>If your personal knowledge base lives in Obsidian, getting ChatGPT conversations in there with proper metadata is the goal. Here is how to do it with AI Conversation Vault Pro ($7.9 one-time):</p>
+
+        <ol>
+          <li><strong>Save the conversation</strong> &mdash; open your ChatGPT conversation and click the save button. The full conversation is parsed and stored locally</li>
+          <li><strong>Add tags</strong> &mdash; tag the conversation with project names, topics, or any label you use in your Obsidian vault (e.g., "python", "api-design", "client-work")</li>
+          <li><strong>Click "Export to Obsidian"</strong> &mdash; the extension generates a <code>.md</code> file with this structure:
+            <ul>
+              <li>YAML frontmatter: tags, creation date, source URL, platform (ChatGPT/Claude/Gemini)</li>
+              <li>Full conversation in Markdown: user prompts and AI responses with code blocks preserved</li>
+            </ul>
+          </li>
+          <li><strong>Drop into your vault</strong> &mdash; save the file to your Obsidian vault folder. It appears immediately as a linked note. Tags from the frontmatter are recognized by Obsidian's tag system</li>
+        </ol>
+
+        <p>For bulk migration, use the batch export feature: select multiple conversations (or all of them) and export as a ZIP of Markdown files. Unzip into your Obsidian vault and you have an instant AI conversation archive with full metadata.</p>
+
+        <p>This workflow also works for Claude and Gemini conversations &mdash; all three platforms export with the same frontmatter structure, so your Obsidian vault stays consistent regardless of which AI tool you used.</p>
+
+        <!-- Section 6 -->
+        <h2>How to Search Across ChatGPT, Claude &amp; Gemini Conversations</h2>
+
+        <p>If you use more than one AI platform, your conversation history is fragmented. ChatGPT has its history. Claude has its own. Gemini is separate. There is no native way to search across all three.</p>
+
+        <p>AI Conversation Vault solves this by saving conversations from all three platforms into a single local vault. Once saved, every conversation is searchable from one search bar &mdash; regardless of which platform it came from.</p>
+
+        <p>Practical example: you discussed a React component architecture on ChatGPT last week and a related CSS approach on Claude yesterday. Search "React component" in AI Conversation Vault and both conversations appear in the results. Filter by platform if you want to narrow it down.</p>
+
+        <p>The search is full-text: it covers your prompts, the AI responses, code blocks, and any other content in the conversation. Not just titles. Not just the first message. Everything.</p>
+
+        <!-- Section 7 -->
+        <h2>Comparison Table: ChatGPT Built-in vs AI Exporter vs AI Conversation Vault</h2>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>ChatGPT Export</th>
+              <th>AI Exporter</th>
+              <th>AI Conversation Vault</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Save individual conversations</td>
+              <td>No (all-or-nothing ZIP)</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Full-text search</td>
+              <td>No</td>
+              <td>No</td>
+              <td>Yes (unlimited)</td>
+            </tr>
+            <tr>
+              <td>Tag &amp; organize by project</td>
+              <td>No</td>
+              <td>No</td>
+              <td>Yes (unlimited)</td>
+            </tr>
+            <tr>
+              <td>Export to PDF / Word</td>
+              <td>No</td>
+              <td>Yes</td>
+              <td>No (Markdown/JSON/TXT)</td>
+            </tr>
+            <tr>
+              <td>Export to Obsidian with frontmatter</td>
+              <td>No</td>
+              <td>No</td>
+              <td>Yes (Pro)</td>
+            </tr>
+            <tr>
+              <td>Batch export</td>
+              <td>Yes (all at once)</td>
+              <td>No</td>
+              <td>Yes (Pro)</td>
+            </tr>
+            <tr>
+              <td>Cross-platform (Claude, Gemini)</td>
+              <td>No</td>
+              <td>Partial</td>
+              <td>Yes (all three)</td>
+            </tr>
+            <tr>
+              <td>Local storage (no cloud upload)</td>
+              <td>N/A (server-side export)</td>
+              <td>Yes</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Pricing</td>
+              <td>Included with ChatGPT</td>
+              <td>Varies by plan</td>
+              <td>Basic included / Pro $7.9 one-time</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p><strong>Summary:</strong> ChatGPT's built-in export is a bulk backup tool. AI Exporter is a file-format converter. AI Conversation Vault is a conversation management system &mdash; save, search, tag, and export to Obsidian from one extension.</p>
+
+        <!-- FAQ -->
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <h3>Can I search old ChatGPT conversations?</h3>
+          <p>ChatGPT's sidebar search only matches conversation titles, not the full content of messages. To search across the actual text of your conversations, use AI Conversation Vault. It saves conversations locally and provides full-text search across every message, code block, and response.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>How do I export ChatGPT conversations to Obsidian?</h3>
+          <p>Install AI Conversation Vault (Chrome/Edge extension). Save any ChatGPT conversation with one click. Then click "Export to Obsidian" &mdash; it generates a Markdown file with YAML frontmatter containing tags, creation date, source URL, and platform. Drop the file into your Obsidian vault folder. Obsidian export is a Pro feature ($7.9 one-time).</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Does ChatGPT save conversations automatically?</h3>
+          <p>Yes, ChatGPT saves conversations to your account by default (unless you have turned off chat history in Settings). However, these conversations live on OpenAI's servers &mdash; you cannot search the full text, tag them by project, or export them to tools like Obsidian without a third-party extension.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>What is the difference between AI Conversation Vault and AI Exporter?</h3>
+          <p>AI Exporter focuses on exporting conversations to file formats (PDF, Word, Markdown). AI Conversation Vault focuses on managing conversations after saving &mdash; full-text search across all saved chats, a tag system for organizing by project, and Obsidian-native export with frontmatter. AI Exporter exports. AI Conversation Vault manages.</p>
+        </div>
+
+        <div class="faq-item">
+          <h3>Is AI Conversation Vault available at no cost?</h3>
+          <p>Yes. The Basic plan includes unlimited search, unlimited tags, and up to 50 saved conversations with Markdown/JSON/TXT export. Pro ($7.9 one-time purchase) unlocks all three platforms (ChatGPT, Claude, Gemini), Obsidian export with frontmatter, batch export, and unlimited saves.</p>
+        </div>
+
+        <!-- Conclusion / CTA -->
+        <h2>Start Building Your AI Conversation Library</h2>
+
+        <p>Every conversation you have with ChatGPT, Claude, or Gemini contains knowledge &mdash; debugging solutions, creative ideas, decision frameworks, code patterns. Without a system to save and search them, that knowledge disappears into an endless scroll of untitled chats.</p>
+
+        <p>AI Conversation Vault gives you that system. Save conversations with one click. Search across everything instantly. Tag by project. Export to Obsidian when you need it in your knowledge base.</p>
+
+        <p>The Basic plan includes 50 saves with unlimited search and tags &mdash; no account, no credit card, no setup. If you need unlimited saves and Obsidian export, Pro is a one-time $7.9 payment.</p>
+
+        <div class="cta-box">
+          <a href="https://chromewebstore.google.com/detail/ai-conversation-vault/eonjokcnjkefhldopbibnlmicfpkbdfl" target="_blank" rel="noopener">Install for Chrome</a>
+          &nbsp;&nbsp;|&nbsp;&nbsp;
+          <a href="https://microsoftedge.microsoft.com/addons/detail/ai-conversation-vault/ghlogbbdpkgibgpbofndoljlkkjehahf" target="_blank" rel="noopener" style="color: #fff;">Get for Edge</a>
+        </div>
+
+        <div class="related-posts">
+          <h2>Related Articles</h2>
+          <a href="/ai-conversation-vault/" class="related-link">
+            <h3>AI Conversation Vault &mdash; Product Page</h3>
+            <p>Full feature overview, pricing, and installation links for Chrome and Edge.</p>
+          </a>
+          <a href="/blog/how-to-add-sources-notebooklm/" class="related-link">
+            <h3>How to Add Any Web Page to NotebookLM in 3 Seconds</h3>
+            <p>Collect web pages, articles, and YouTube videos as NotebookLM sources with one right-click.</p>
+          </a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>Published by ExtPilot Team &middot; May 2026</span>
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

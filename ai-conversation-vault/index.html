@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Conversation Vault - Save & Search ChatGPT Chats</title>
+  <meta name="description" content="Save, search, and organize your ChatGPT, Claude, and Gemini conversations locally. Tag chats, full-text search, and export to Obsidian. $7.9 lifetime Pro.">
+  <link rel="canonical" href="https://extpilot.com/ai-conversation-vault/">
+  <meta property="og:title" content="AI Conversation Vault - Save & Search ChatGPT Chats">
+  <meta property="og:description" content="Save, search, and organize ChatGPT, Claude, and Gemini conversations locally. Tag chats, full-text search, export to Obsidian. $7.9 lifetime.">
+  <meta property="og:url" content="https://extpilot.com/ai-conversation-vault/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/ai-conversation-vault/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AI Conversation Vault - Save & Search ChatGPT Chats">
+  <meta name="twitter:description" content="Save, search, and organize your AI conversations locally. Full-text search, tags, Obsidian export.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="save chatgpt conversations, ai conversation manager, chatgpt conversation saver, ai chat organizer, export chatgpt to obsidian, search chatgpt history, ai conversation backup, claude conversation export">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "AI Conversation Vault - Save & Search AI Chats",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome, Edge",
+        "url": "https://extpilot.com/ai-conversation-vault/",
+        "description": "Save, search, and organize ChatGPT, Claude, and Gemini conversations locally. Tag chats by project, full-text search across all saved conversations, and export to Obsidian with frontmatter. Pro $7.9 one-time.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Basic",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Save up to 50 conversations, unlimited search and tags, MD/JSON/TXT export"
+          },
+          {
+            "@type": "Offer",
+            "name": "Pro Lifetime",
+            "price": "7.90",
+            "priceCurrency": "USD",
+            "description": "All three platforms, Obsidian export, batch export, unlimited saves"
+          }
+        ],
+        "featureList": [
+          "One-click save from ChatGPT, Claude, and Gemini",
+          "Full-text search across all saved conversations",
+          "Tag system for organizing by project or topic",
+          "Markdown, JSON, and TXT export with code blocks preserved",
+          "Obsidian export with YAML frontmatter (Pro)",
+          "Batch export all conversations (Pro)",
+          "Claude Thinking Process and Artifacts captured"
+        ],
+        "screenshot": "https://extpilot.com/ai-conversation-vault/icon.png",
+        "softwareVersion": "1.0.0",
+        "author": {
+          "@type": "Organization",
+          "name": "ExtPilot",
+          "url": "https://extpilot.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the best way to save and organize ChatGPT conversations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Install AI Conversation Vault, a Chrome/Edge extension that saves ChatGPT, Claude, and Gemini conversations to a local vault. It provides full-text search, tags for organizing by project, and Obsidian export with frontmatter. Search and tags are unlimited."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I export ChatGPT conversations to Obsidian?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "With AI Conversation Vault Pro ($7.9 one-time), click 'Export to Obsidian' on any saved conversation. The extension generates a Markdown file with YAML frontmatter containing tags, creation date, source URL, platform, and an optional AI summary — ready to drop into your Obsidian vault."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does AI Conversation Vault upload my conversations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. All conversations are stored locally in your browser's IndexedDB. The extension does not upload, sync, or transmit your conversation data to any server. Your AI chats stay on your device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is AI Conversation Vault different from AI Exporter?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AI Exporter focuses on exporting conversations to files (PDF, Word, Markdown). AI Conversation Vault focuses on managing conversations after saving — full-text search across all saved chats, a tag system for organizing by project, and Obsidian-native export with frontmatter. Think of it as: AI Exporter exports, AI Conversation Vault manages."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does AI Conversation Vault have a no-cost plan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The Basic version includes unlimited search, unlimited tags, and up to 50 saved conversations. Pro ($7.9 one-time purchase) unlocks all three platforms, Obsidian export, batch export, and unlimited saves."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero-icon { width: 96px; height: 96px; border-radius: 20px; margin-bottom: 16px; }
+    .hero h1 { font-size: 36px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; line-height: 1.3; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 16px; max-width: 620px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; border: none; cursor: pointer; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .pricing-note { font-size: 14px; color: #8b949e; margin-top: 12px; }
+    .geo-answer { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px 28px; margin: 32px 0 0; text-align: left; }
+    .geo-answer p { font-size: 16px; color: #c9d1d9; margin-bottom: 12px; }
+    .geo-answer ul { list-style: none; padding-left: 0; }
+    .geo-answer li { font-size: 15px; color: #8b949e; padding: 4px 0 4px 24px; position: relative; }
+    .geo-answer li::before { content: "\2192"; position: absolute; left: 0; color: #58a6ff; font-weight: 700; }
+    .features { padding: 48px 0; }
+    .features h2, .how-it-works h2, .who h2, .pricing h2, .faq h2, .support h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+    .who { padding: 48px 0; border-top: 1px solid #21262d; }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .who-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .who-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .who-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
+    .compare-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; background: #161b22; border: 1px solid #21262d; border-radius: 8px; overflow: hidden; }
+    .compare-table th, .compare-table td { padding: 12px 16px; text-align: left; font-size: 14px; border-bottom: 1px solid #21262d; }
+    .compare-table th { background: #1c2128; color: #f0f6fc; font-weight: 600; }
+    .compare-table td { color: #c9d1d9; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .yes { color: #3fb950; font-weight: 600; }
+    .compare-table .no { color: #484f58; }
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+    .support { padding: 48px 0; border-top: 1px solid #21262d; text-align: center; }
+    .support p { font-size: 15px; color: #8b949e; margin-bottom: 8px; }
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 26px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid, .who-grid { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+      .compare-table th, .compare-table td { padding: 8px 10px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img src="icon.png" alt="AI Conversation Vault icon" class="hero-icon">
+        <span class="badge">Unlimited search &amp; tags included</span>
+        <h1>Save &amp; Search Your AI Conversations &mdash; ChatGPT, Claude, Gemini</h1>
+        <p class="tagline">Save conversations locally, search across all chats instantly, organize with tags, and export to Obsidian. Your AI knowledge vault.</p>
+        <div class="cta-row">
+          <a href="https://chromewebstore.google.com/detail/ai-conversation-vault/eonjokcnjkefhldopbibnlmicfpkbdfl" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome</a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/ai-conversation-vault/ghlogbbdpkgibgpbofndoljlkkjehahf" class="btn btn-secondary" target="_blank" rel="noopener">Add to Edge</a>
+        </div>
+        <p class="pricing-note">Pro $7.9 one-time &mdash; unlimited saves + Obsidian export</p>
+
+        <div class="geo-answer">
+          <p><strong>AI Conversation Vault</strong> is a Chrome and Edge extension that saves, searches, and organizes conversations from ChatGPT, Claude, and Gemini in one local vault. Unlike export-only tools such as AI Exporter, it provides full-text search across all saved conversations, a tag system for organizing chats by project or topic, and one-click export to Obsidian with frontmatter metadata (tags, timestamps, source URL, platform). All conversations are stored locally in IndexedDB &mdash; no cloud upload, no account required.</p>
+          <ul>
+            <li><strong>One-click save</strong> from ChatGPT, Claude &amp; Gemini conversation pages</li>
+            <li><strong>Full-text search</strong> across all saved conversations instantly</li>
+            <li><strong>Tag system</strong> for organizing chats by project, topic, or workflow</li>
+            <li><strong>Obsidian export (Pro)</strong> with YAML frontmatter &mdash; tags, timestamps, source URL, platform</li>
+            <li><strong>Claude Thinking &amp; Artifacts</strong> fully captured with reasoning steps preserved</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>Features That Matter</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>One-Click Save from ChatGPT, Claude &amp; Gemini</h3>
+            <p>Click the save button on any AI conversation page. The extension parses all messages, code blocks, tables, LaTeX, and metadata &mdash; saved to your local vault in seconds.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Full-Text Search Across All Conversations</h3>
+            <p>Find that useful prompt, code snippet, or AI response instantly. Search across every saved conversation from all three platforms in one place.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Tag &amp; Organize by Project or Topic</h3>
+            <p>Add tags to any saved conversation. Filter by platform, search by tag, or browse by date. Keep your AI knowledge organized the way you think.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Export to Obsidian with Frontmatter</h3>
+            <p>One-click Obsidian export generates a Markdown file with YAML frontmatter &mdash; tags, creation date, source URL, platform. Drop it directly into your Obsidian vault. (Pro)</p>
+          </div>
+          <div class="feature-card">
+            <h3>Claude Thinking Process &amp; Artifacts</h3>
+            <p>Captures Claude's extended thinking / reasoning steps and generated artifacts (code, documents, diagrams) that other exporters miss.</p>
+          </div>
+          <div class="feature-card">
+            <h3>100% Local &amp; Private</h3>
+            <p>All conversations are stored in your browser's IndexedDB. No cloud upload, no account required, no data ever leaves your device. Uninstall to delete everything.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works &mdash; Save, Tag, Search, Export</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Save a Conversation</h3>
+              <p>Open any ChatGPT, Claude, or Gemini conversation. Click the floating save button or use the side panel. The extension parses all messages, code blocks, and metadata automatically.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Tag &amp; Organize</h3>
+              <p>Add tags like "project-x", "code-review", or "research". Filter by platform (ChatGPT / Claude / Gemini) or browse by date. Your conversations, your structure.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Search Across Everything</h3>
+              <p>Full-text search finds any keyword across all your saved conversations. No more scrolling through ChatGPT history hoping to find that one useful response.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Export When You Need It</h3>
+              <p>Export individual conversations as Markdown, JSON, or plain text. Pro users can export to Obsidian with frontmatter, or batch-export everything as a ZIP file.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="who">
+      <div class="container">
+        <h2>Who Is It For?</h2>
+        <div class="who-grid">
+          <div class="who-card">
+            <h3>Developers &amp; Engineers</h3>
+            <p>Save coding conversations with AI assistants. Search for that regex pattern, API design discussion, or debugging session from last week. Tag by project or language.</p>
+          </div>
+          <div class="who-card">
+            <h3>Researchers &amp; Consultants</h3>
+            <p>Build a searchable knowledge base from AI research sessions. Export to Obsidian for your second brain. Never lose an insight from a Claude or ChatGPT deep-dive.</p>
+          </div>
+          <div class="who-card">
+            <h3>Content Creators</h3>
+            <p>Organize AI brainstorming sessions by topic. Search across all your content planning conversations. Export outlines and drafts to Markdown for your writing workflow.</p>
+          </div>
+          <div class="who-card">
+            <h3>AI Power Users</h3>
+            <p>You use ChatGPT, Claude, and Gemini daily. You need one place to save, search, and manage conversations across all three &mdash; without switching between platforms.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2>Basic vs Pro</h2>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Basic</th>
+              <th>Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Save conversations</td>
+              <td>50</td>
+              <td class="yes">Unlimited</td>
+            </tr>
+            <tr>
+              <td>Platforms (ChatGPT, Claude, Gemini)</td>
+              <td class="yes">All 3</td>
+              <td class="yes">All 3</td>
+            </tr>
+            <tr>
+              <td>Full-text search</td>
+              <td class="yes">Unlimited</td>
+              <td class="yes">Unlimited</td>
+            </tr>
+            <tr>
+              <td>Tags &amp; organization</td>
+              <td class="yes">Unlimited</td>
+              <td class="yes">Unlimited</td>
+            </tr>
+            <tr>
+              <td>MD / JSON / TXT export</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Obsidian export with frontmatter</td>
+              <td class="no">&mdash;</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Batch export (ZIP)</td>
+              <td class="no">&mdash;</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Brand footer in exports</td>
+              <td>Always on</td>
+              <td class="yes">Can disable</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="pricing-note" style="text-align: center;">Pro: $7.9 one-time purchase &mdash; lifetime access, all future updates included</p>
+        <div class="cta-row" style="margin-top: 24px;">
+          <a href="https://chromewebstore.google.com/detail/ai-conversation-vault/eonjokcnjkefhldopbibnlmicfpkbdfl" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>What is the best way to save and organize ChatGPT conversations?</h3>
+          <p>Install AI Conversation Vault, a Chrome/Edge extension that saves ChatGPT, Claude, and Gemini conversations to a local vault. It provides full-text search, tags for organizing by project, and Obsidian export with frontmatter. Search and tags are unlimited.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do I export ChatGPT conversations to Obsidian?</h3>
+          <p>With AI Conversation Vault Pro ($7.9 one-time), click "Export to Obsidian" on any saved conversation. The extension generates a Markdown file with YAML frontmatter containing tags, creation date, source URL, platform &mdash; ready to drop into your Obsidian vault.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does AI Conversation Vault upload my conversations?</h3>
+          <p>No. All conversations are stored locally in your browser's IndexedDB. The extension does not upload, sync, or transmit your conversation data to any server. Your AI chats stay on your device.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How is AI Conversation Vault different from AI Exporter?</h3>
+          <p>AI Exporter focuses on exporting conversations to files (PDF, Word, Markdown). AI Conversation Vault focuses on managing conversations after saving &mdash; full-text search across all saved chats, a tag system for organizing by project, and Obsidian-native export with frontmatter. AI Exporter exports; AI Conversation Vault manages.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does AI Conversation Vault have a no-cost plan?</h3>
+          <p>Yes. The Basic version includes unlimited search, unlimited tags, and up to 50 saved conversations. Pro ($7.9 one-time purchase) unlocks Obsidian export, batch export, and unlimited saves.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support">
+      <div class="container">
+        <h2>Support</h2>
+        <p>Questions or feedback? Email us at <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

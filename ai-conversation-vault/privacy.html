@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy &mdash; AI Conversation Vault | ExtPilot</title>
+  <meta name="description" content="Privacy policy for AI Conversation Vault. All conversations are stored locally in your browser. We do not collect, store, or transmit your conversation data.">
+  <link rel="canonical" href="https://extpilot.com/ai-conversation-vault/privacy.html">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 700px; margin: 0 auto; padding: 0 24px; width: 100%; }
+
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+
+    .content { padding: 48px 0; }
+    .content h1 { font-size: 28px; font-weight: 700; color: #f0f6fc; margin-bottom: 8px; }
+    .last-updated { font-size: 13px; color: #484f58; margin-bottom: 32px; }
+    .content h2 { font-size: 20px; font-weight: 600; color: #f0f6fc; margin-top: 32px; margin-bottom: 12px; }
+    .content p { font-size: 15px; color: #c9d1d9; margin-bottom: 12px; }
+    .content ul { margin-left: 24px; margin-bottom: 12px; }
+    .content li { font-size: 15px; color: #c9d1d9; margin-bottom: 6px; }
+    .content strong { color: #f0f6fc; }
+    .content table { width: 100%; border-collapse: collapse; margin: 12px 0 24px; font-size: 14px; }
+    .content th, .content td { padding: 10px 14px; border: 1px solid #21262d; text-align: left; }
+    .content th { background: #161b22; color: #f0f6fc; font-weight: 600; }
+    .content td { color: #c9d1d9; }
+
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+
+    @media (max-width: 600px) {
+      .content h1 { font-size: 22px; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/ai-conversation-vault/" class="back-link">&larr; AI Conversation Vault</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="content">
+      <div class="container">
+        <h1>Privacy Policy &mdash; AI Conversation Vault</h1>
+        <p class="last-updated">Last updated: May 7, 2026</p>
+
+        <p><strong>Extension name:</strong> AI Conversation Vault &mdash; Save &amp; Search AI Chats<br>
+        <strong>Developer:</strong> ExtPilot (<a href="https://extpilot.com">extpilot.com</a>)<br>
+        <strong>Contact:</strong> <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+
+        <h2>Overview</h2>
+        <p>AI Conversation Vault is a browser extension that saves, searches, and organizes conversations from ChatGPT, Claude, and Gemini. This privacy policy explains what data the extension accesses, how it is used, and your rights.</p>
+        <p><strong>In short:</strong> AI Conversation Vault works entirely locally on your device. We do not collect, transmit, or sell your conversation data.</p>
+
+        <h2>Data We Access</h2>
+
+        <p><strong>AI Platform Page Content (Required)</strong></p>
+        <p>AI Conversation Vault accesses the following websites to parse conversation content:</p>
+        <ul>
+          <li>chatgpt.com &mdash; to read ChatGPT conversations</li>
+          <li>claude.ai &mdash; to read Claude conversations (including Thinking Process and Artifacts)</li>
+          <li>gemini.google.com &mdash; to read Gemini conversations</li>
+        </ul>
+        <p>The extension reads the page DOM to extract message text, code blocks, tables, LaTeX expressions, and metadata (title, timestamps, platform). This data never leaves your browser. It is saved directly to your local IndexedDB database.</p>
+
+        <p><strong>Local Storage (Required)</strong></p>
+        <p>AI Conversation Vault stores the following data locally on your device using IndexedDB and <code>chrome.storage.local</code>:</p>
+        <ul>
+          <li>Saved conversations (messages, metadata, tags)</li>
+          <li>Conversation metadata index (for search and filtering)</li>
+          <li>User settings and preferences</li>
+          <li>License key (if you purchased Pro)</li>
+          <li>Growth state (review prompt tracking)</li>
+        </ul>
+        <p>This data stays on your device and is never synced to any cloud service.</p>
+
+        <h2>Data We Do NOT Collect</h2>
+        <ul>
+          <li>We do not collect your conversation content</li>
+          <li>We do not collect your browsing history</li>
+          <li>We do not collect personal information (name, email, etc.)</li>
+          <li>We do not use analytics or tracking within the extension</li>
+          <li>We do not transmit any data to third-party services</li>
+        </ul>
+
+        <h2>Network Requests</h2>
+        <p>The extension makes exactly one type of network request:</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Request</th>
+              <th>Destination</th>
+              <th>Data Sent</th>
+              <th>Purpose</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>License verification</td>
+              <td>license-worker.hellopipichong.workers.dev</td>
+              <td>License key + product ID only</td>
+              <td>Verify Pro license status</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>No conversation data, personal information, or browsing activity is ever included in any network request. License verification occurs once every 24 hours for Pro users, with a 7-day offline grace period.</p>
+
+        <h2>Permissions Explained</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Permission</th>
+              <th>Why We Need It</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>activeTab</td>
+              <td>To read AI conversation content from the current tab when you click save</td>
+            </tr>
+            <tr>
+              <td>sidePanel</td>
+              <td>To display the conversation management panel</td>
+            </tr>
+            <tr>
+              <td>storage / unlimitedStorage</td>
+              <td>To store saved conversations locally in IndexedDB</td>
+            </tr>
+            <tr>
+              <td>contextMenus</td>
+              <td>To add "Save to Vault" to the right-click menu on AI platform pages</td>
+            </tr>
+            <tr>
+              <td>Host permissions (chatgpt.com, claude.ai, gemini.google.com)</td>
+              <td>To inject the save button and parse conversation content on these specific sites only</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Data Retention &amp; Deletion</h2>
+        <ul>
+          <li>All data is stored locally and persists until you delete it</li>
+          <li>You can delete individual conversations from the side panel</li>
+          <li>Uninstalling the extension removes all stored data from your browser</li>
+          <li>We have no access to your stored data and cannot delete it remotely</li>
+        </ul>
+
+        <h2>Children's Privacy</h2>
+        <p>AI Conversation Vault is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated "Last updated" date. Continued use of the extension after changes constitutes acceptance of the updated policy.</p>
+
+        <h2>Contact</h2>
+        <p>If you have questions about this privacy policy, contact us at <a href="mailto:support@extpilot.com">support@extpilot.com</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
