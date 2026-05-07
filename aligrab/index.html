@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AliGrab — Download AliExpress Images &amp; Videos in One Click</title>
+  <meta name="description" content="One-click download all product images and videos from any AliExpress listing. ZIP packaging, format conversion, HD quality. $0.99 one-time Pro.">
+  <link rel="canonical" href="https://extpilot.com/aligrab/">
+  <meta property="og:title" content="AliGrab — Download AliExpress Images & Videos in One Click">
+  <meta property="og:description" content="One-click download all product images and videos from AliExpress. ZIP, format conversion, HD quality. $0.99 one-time Pro.">
+  <meta property="og:url" content="https://extpilot.com/aligrab/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/aligrab/icon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="AliGrab — Download AliExpress Images & Videos in One Click">
+  <meta name="twitter:description" content="One-click download all product images and videos from AliExpress. ZIP, format conversion, HD quality.">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <meta name="keywords" content="download aliexpress images, aliexpress image downloader, aliexpress product images, bulk download aliexpress, aliexpress video downloader, aliexpress photo download, save aliexpress images">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "AliGrab — Download AliExpress Images & Videos",
+        "applicationCategory": "BrowserApplication",
+        "operatingSystem": "Chrome, Edge",
+        "url": "https://extpilot.com/aligrab/",
+        "description": "One-click download all product images and videos from any AliExpress listing. ZIP packaging, JPG/WEBP/PNG format conversion, HD quality. Includes review images and HD description images. Pro $0.99 one-time.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Basic",
+            "price": "0",
+            "priceCurrency": "USD",
+            "description": "Download all images (main, variant, description HD, reviews) + videos, ZIP packaging, JPG/WEBP format, WebP-to-JPG conversion, metadata removal"
+          },
+          {
+            "@type": "Offer",
+            "name": "Pro Lifetime",
+            "price": "0.99",
+            "priceCurrency": "USD",
+            "description": "PNG format, JPEG quality slider, subdirectory organization, auto-open folder, right-click download, custom filename templates, removable brand README"
+          }
+        ],
+        "featureList": [
+          "Download all product images including main, variant, description HD, and review images",
+          "Download product videos from AliExpress listings",
+          "ZIP packaging for batch downloads",
+          "JPG, WEBP, and PNG format selection",
+          "WebP-to-JPG automatic conversion",
+          "HD description images (not thumbnails)",
+          "Minimal permissions — only AliExpress domains"
+        ],
+        "screenshot": "https://extpilot.com/aligrab/icon.png",
+        "softwareVersion": "1.0.0",
+        "author": {
+          "@type": "Organization",
+          "name": "ExtPilot",
+          "url": "https://extpilot.com"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I download all images from an AliExpress product page?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Install AliGrab for Chrome or Edge, open any AliExpress product page, and click the download button. AliGrab detects all images (main photos, variant images, HD description images, and review photos) plus videos, then packages them into a ZIP file for one-click download."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does AliGrab download HD quality images or thumbnails?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AliGrab downloads full HD images, not thumbnails. For description images, it extracts the original high-resolution versions from AliExpress CDN. Many competitors only grab thumbnail-sized description images — AliGrab gets the full-size originals."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is AliGrab safe? What permissions does it need?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AliGrab only requests access to AliExpress (aliexpress.com) and AliExpress CDN (alicdn.com) domains. It does not request broad permissions like 'access all websites'. All image processing happens locally in your browser — no data is sent to external servers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does AliGrab cost compared to AliSave?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "AliGrab Basic is completely no-cost and includes features that AliSave charges for (review images, HD description images). AliGrab Pro is a $0.99 one-time purchase, while AliSave charges $2.99 per month — that is 96% cheaper over a year."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can AliGrab download review images and videos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. AliGrab's Basic plan includes review images and product videos at no cost. Open any AliExpress product page with reviews that contain photos, and AliGrab will detect and include them in your ZIP download automatically."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background-color: #0f1117; color: #c9d1d9; line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 800px; margin: 0 auto; padding: 0 24px; width: 100%; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .header-inner { display: flex; align-items: center; gap: 16px; }
+    .logo { font-size: 20px; font-weight: 700; color: #f0f6fc; letter-spacing: -0.5px; }
+    .back-link { font-size: 14px; color: #8b949e; }
+    .hero { padding: 64px 0 48px; text-align: center; }
+    .hero-icon { width: 96px; height: 96px; border-radius: 20px; margin-bottom: 16px; max-width: 100%; height: auto; }
+    .hero h1 { font-size: 36px; font-weight: 800; color: #f0f6fc; letter-spacing: -1px; margin-bottom: 12px; line-height: 1.3; }
+    .hero .tagline { font-size: 20px; color: #8b949e; margin-bottom: 16px; max-width: 620px; margin-left: auto; margin-right: auto; }
+    .hero .cta-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 8px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-size: 16px; font-weight: 600; text-decoration: none; transition: opacity 0.2s; border: none; cursor: pointer; }
+    .btn:hover { text-decoration: none; opacity: 0.9; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .pricing-note { font-size: 14px; color: #8b949e; margin-top: 12px; }
+    .geo-answer { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px 28px; margin: 32px 0 0; text-align: left; }
+    .geo-answer p { font-size: 16px; color: #c9d1d9; margin-bottom: 12px; }
+    .geo-answer ul { list-style: none; padding-left: 0; }
+    .geo-answer li { font-size: 15px; color: #8b949e; padding: 4px 0 4px 24px; position: relative; }
+    .geo-answer li::before { content: "\2192"; position: absolute; left: 0; color: #58a6ff; font-weight: 700; }
+    .features { padding: 48px 0; }
+    .features h2, .how-it-works h2, .who h2, .pricing h2, .faq h2, .support h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .feature-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .feature-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
+    .steps { display: flex; flex-direction: column; gap: 24px; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
+    .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
+    .step-content p { font-size: 14px; color: #8b949e; }
+    .who { padding: 48px 0; border-top: 1px solid #21262d; }
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .who-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .who-card h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .who-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
+    .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
+    .compare-table { width: 100%; border-collapse: collapse; margin-bottom: 32px; background: #161b22; border: 1px solid #21262d; border-radius: 8px; overflow: hidden; }
+    .compare-table th, .compare-table td { padding: 12px 16px; text-align: left; font-size: 14px; border-bottom: 1px solid #21262d; }
+    .compare-table th { background: #1c2128; color: #f0f6fc; font-weight: 600; }
+    .compare-table td { color: #c9d1d9; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .yes { color: #3fb950; font-weight: 600; }
+    .compare-table .no { color: #484f58; }
+    .faq { padding: 48px 0; border-top: 1px solid #21262d; }
+    .faq-item { margin-bottom: 20px; }
+    .faq-item h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 6px; }
+    .faq-item p { font-size: 15px; color: #8b949e; }
+    .support { padding: 48px 0; border-top: 1px solid #21262d; text-align: center; }
+    .support p { font-size: 15px; color: #8b949e; margin-bottom: 8px; }
+    footer { margin-top: auto; padding: 24px 0; border-top: 1px solid #21262d; }
+    .footer-content { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #484f58; flex-wrap: wrap; gap: 8px; }
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+    @media (max-width: 600px) {
+      .hero { padding: 40px 0 32px; }
+      .hero h1 { font-size: 26px; }
+      .hero .tagline { font-size: 17px; }
+      .feature-grid, .who-grid { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; text-align: center; }
+      .compare-table th, .compare-table td { padding: 8px 10px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">ExtPilot</a>
+        <a href="/" class="back-link">&larr; All extensions</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <img src="icon.png" alt="AliGrab icon" class="hero-icon">
+        <span class="badge">Review images &amp; HD descriptions included</span>
+        <h1>Download AliExpress Images &amp; Videos in One Click</h1>
+        <p class="tagline">Turn "right-click save one by one" into "one-click download everything as ZIP." Main photos, variants, HD descriptions, reviews, and videos.</p>
+        <div class="cta-row">
+          <a href="https://chromewebstore.google.com/detail/aligrab-download-aliexpress-images-videos/mpecjaefbbhejpgafefgjmdgpjjpggop" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome</a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/aligrab-download-aliexpress-images-videos/fbbhaedbpfmiafomfjjfbolocflogmmm" class="btn btn-secondary" target="_blank" rel="noopener">Add to Edge</a>
+        </div>
+        <p class="pricing-note">Pro $0.99 one-time &mdash; PNG format, quality slider, custom filenames</p>
+
+        <div class="geo-answer">
+          <p><strong>How to download all images from AliExpress?</strong> Install AliGrab for Chrome or Edge, open any AliExpress product page, and click the download button. AliGrab automatically detects every image on the listing &mdash; main product photos, color/size variant images, HD description images, and buyer review photos &mdash; plus product videos. Select your preferred format (JPG, WEBP, or PNG), then download everything as a single ZIP file. All processing happens locally in your browser with zero data sent to external servers.</p>
+          <ul>
+            <li><strong>All image types</strong> &mdash; main, variant, description (HD), review photos</li>
+            <li><strong>Videos included</strong> &mdash; product demo videos downloaded directly</li>
+            <li><strong>ZIP packaging</strong> &mdash; one file, organized and ready to use</li>
+            <li><strong>Format conversion</strong> &mdash; JPG, WEBP, or PNG with WebP-to-JPG auto-convert</li>
+            <li><strong>Minimal permissions</strong> &mdash; only accesses AliExpress and alicdn.com domains</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="container">
+        <h2>Features That Matter</h2>
+        <div class="feature-grid">
+          <div class="feature-card">
+            <h3>All Image Types in One Click</h3>
+            <p>Main product photos, color/size variant images, HD description images, and buyer review photos. No more hunting through tabs and right-clicking one by one.</p>
+          </div>
+          <div class="feature-card">
+            <h3>HD Description Images (Not Thumbnails)</h3>
+            <p>Other downloaders grab tiny thumbnail versions of description images. AliGrab extracts the original high-resolution images directly from AliExpress CDN.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Product Videos Included</h3>
+            <p>Download product demo and review videos alongside images. Everything packaged together in one ZIP file, ready for your store or research folder.</p>
+          </div>
+          <div class="feature-card">
+            <h3>ZIP Packaging with Format Choice</h3>
+            <p>Download all assets as a single ZIP file. Choose JPG, WEBP, or PNG format. WebP images are automatically converted to JPG if you prefer universal compatibility.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Minimal Permissions, Zero Tracking</h3>
+            <p>Only accesses AliExpress and alicdn.com &mdash; never requests broad "all websites" access. No analytics inside the extension, no data collection, no performance impact on other sites.</p>
+          </div>
+          <div class="feature-card">
+            <h3>$0.99 One-Time Pro (Not a Subscription)</h3>
+            <p>Basic includes everything most sellers need. Pro adds PNG format, JPEG quality slider, subdirectory organization, custom filename templates, and removable branding. Pay once, use forever.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works">
+      <div class="container">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Install AliGrab</h3>
+              <p>Add AliGrab to Chrome or Edge from the official extension store. Takes 5 seconds, no account required.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Open Any AliExpress Product Page</h3>
+              <p>Navigate to the AliExpress product listing you want images from. AliGrab activates automatically on AliExpress pages only.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3>Select Format &amp; Click Download</h3>
+              <p>Choose your preferred image format (JPG, WEBP, or PNG). Select which image categories you want. Click the download button.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h3>Get Your ZIP File</h3>
+              <p>AliGrab packages all selected images and videos into a single ZIP file and downloads it to your computer. Done in seconds.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="who">
+      <div class="container">
+        <h2>Who Is It For?</h2>
+        <div class="who-grid">
+          <div class="who-card">
+            <h3>Dropshipping Sellers</h3>
+            <p>Download product images for your Shopify, WooCommerce, or eBay store. Get HD description images and variant photos ready for your listings in one click.</p>
+          </div>
+          <div class="who-card">
+            <h3>E-Commerce Operators</h3>
+            <p>Source product imagery from AliExpress suppliers quickly. Download entire catalogs of product photos without tedious right-click-save workflows.</p>
+          </div>
+          <div class="who-card">
+            <h3>Product Researchers</h3>
+            <p>Collect product images for competitor analysis, sourcing decisions, or mood boards. Organize downloads by product with custom filename templates (Pro).</p>
+          </div>
+          <div class="who-card">
+            <h3>Social Media Marketers</h3>
+            <p>Grab high-quality product photos and videos for social media posts, ads, or TikTok content. Review images show real-world product use.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing">
+      <div class="container">
+        <h2>Basic vs Pro</h2>
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Basic</th>
+              <th>Pro</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Main &amp; variant images</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>HD description images</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Review images</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Product videos</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>ZIP packaging</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>JPG / WEBP format</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>WebP-to-JPG conversion</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Metadata removal</td>
+              <td class="yes">Yes</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>PNG format</td>
+              <td class="no">&mdash;</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>JPEG quality slider</td>
+              <td class="no">&mdash;</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Subdirectory organization in ZIP</td>
+              <td class="no">&mdash;</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Auto-open folder after download</td>
+              <td class="no">&mdash;</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Right-click download</td>
+              <td class="no">&mdash;</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Custom filename templates</td>
+              <td class="no">&mdash;</td>
+              <td class="yes">Yes</td>
+            </tr>
+            <tr>
+              <td>Removable brand README</td>
+              <td>Always on</td>
+              <td class="yes">Can disable</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="pricing-note" style="text-align: center;">Pro: $0.99 one-time purchase &mdash; lifetime access, all future updates included</p>
+        <div class="cta-row" style="margin-top: 24px;">
+          <a href="https://chromewebstore.google.com/detail/aligrab-download-aliexpress-images-videos/mpecjaefbbhejpgafefgjmdgpjjpggop" class="btn btn-primary" target="_blank" rel="noopener">Add to Chrome</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h3>How do I download all images from an AliExpress product page?</h3>
+          <p>Install AliGrab for Chrome or Edge, open any AliExpress product page, and click the download button. AliGrab detects all images (main photos, variant images, HD description images, and review photos) plus videos, then packages them into a ZIP file for one-click download.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Does AliGrab download HD quality images or thumbnails?</h3>
+          <p>AliGrab downloads full HD images, not thumbnails. For description images, it extracts the original high-resolution versions from AliExpress CDN. Many competitors only grab thumbnail-sized description images &mdash; AliGrab gets the full-size originals.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Is AliGrab safe? What permissions does it need?</h3>
+          <p>AliGrab only requests access to AliExpress (aliexpress.com) and AliExpress CDN (alicdn.com) domains. It does not request broad permissions like "access all websites." All image processing happens locally in your browser &mdash; no data is sent to external servers.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How much does AliGrab cost compared to AliSave?</h3>
+          <p>AliGrab Basic is completely no-cost and includes features that AliSave charges for (review images, HD description images). AliGrab Pro is a $0.99 one-time purchase, while AliSave charges $2.99 per month &mdash; that is 96% cheaper over a year.</p>
+        </div>
+        <div class="faq-item">
+          <h3>Can AliGrab download review images and videos?</h3>
+          <p>Yes. AliGrab's Basic plan includes review images and product videos at no cost. Open any AliExpress product page with reviews that contain photos, and AliGrab will detect and include them in your ZIP download automatically.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="support">
+      <div class="container">
+        <h2>Support</h2>
+        <p>Questions or feedback? Email us at <a href="mailto:support@extpilot.com">support@extpilot.com</a></p>
+        <p><a href="privacy.html">Privacy Policy</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

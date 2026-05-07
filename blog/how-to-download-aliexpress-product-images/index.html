@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Download All Images from an AliExpress Product Page</title>
+  <meta name="description" content="Step-by-step guide to bulk download all product images and videos from AliExpress listings using the AliGrab Chrome/Edge extension. HD quality, ZIP export.">
+  <link rel="canonical" href="https://extpilot.com/blog/how-to-download-aliexpress-product-images/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Download All Images from an AliExpress Product Page",
+    "description": "Use AliGrab to one-click download all product images and videos from any AliExpress listing as a ZIP file.",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Install AliGrab",
+        "text": "Add AliGrab to Chrome or Edge from the official extension store."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Open an AliExpress product page",
+        "text": "Navigate to any AliExpress product listing you want images from."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Select image types and format",
+        "text": "Click the AliGrab icon, choose which image categories to include, and select your preferred format."
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Download ZIP",
+        "text": "Click Download. AliGrab packages all images and videos into a single ZIP file."
+      }
+    ],
+    "tool": {
+      "@type": "SoftwareApplication",
+      "name": "AliGrab",
+      "url": "https://extpilot.com/aligrab/"
+    }
+  }
+  </script>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: #0f1117; color: #c9d1d9; line-height: 1.75; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    header, footer { border-color: #21262d; }
+    header { padding: 24px 0; border-bottom: 1px solid #21262d; }
+    .logo { color: #f0f6fc; font-weight: 700; font-size: 20px; }
+    article { padding: 48px 0; }
+    h1 { color: #f0f6fc; font-size: 34px; line-height: 1.2; margin-bottom: 12px; }
+    h2 { color: #f0f6fc; font-size: 22px; margin-top: 34px; }
+    h3 { color: #f0f6fc; font-size: 18px; margin-top: 24px; }
+    .muted { color: #8b949e; font-size: 14px; margin-bottom: 28px; }
+    .note { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 18px; margin: 16px 0; }
+    .tldr { background: #1f6feb15; border: 1px solid #1f6feb44; border-radius: 8px; padding: 18px; margin-bottom: 28px; }
+    .tldr strong { color: #58a6ff; }
+    code { background: #161b22; padding: 2px 5px; border-radius: 4px; font-size: 14px; }
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+    th, td { padding: 10px 14px; text-align: left; border-bottom: 1px solid #21262d; font-size: 15px; }
+    th { color: #f0f6fc; background: #161b22; font-weight: 600; }
+    td { color: #c9d1d9; }
+    .yes { color: #3fb950; font-weight: 600; }
+    .no { color: #484f58; }
+    .cta { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; border-radius: 8px; background: #238636; color: #fff; font-weight: 600; margin: 8px 8px 8px 0; }
+    .cta:hover { text-decoration: none; opacity: 0.9; }
+    .cta-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    footer { padding: 24px 0; border-top: 1px solid #21262d; color: #8b949e; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header><div class="container"><a class="logo" href="/">ExtPilot</a></div></header>
+  <article><div class="container">
+    <h1>How to Download All Images from an AliExpress Product Page</h1>
+    <p class="muted">Published May 7, 2026 &middot; AliExpress image download guide</p>
+
+    <div class="tldr">
+      <strong>TL;DR:</strong> Install <a href="/aligrab/">AliGrab</a> for Chrome or Edge, open any AliExpress product page, click the download button. All product images (main, variant, description, review) and videos are packaged into a single ZIP file. Done in seconds.
+    </div>
+
+    <h2>Why You Need to Download AliExpress Product Images</h2>
+
+    <p>If you run a dropshipping store on Shopify, WooCommerce, or eBay, you need product images from your AliExpress suppliers. The manual approach &mdash; right-clicking each image and saving one by one &mdash; is painfully slow when a listing has 30+ images across the carousel, variant options, description section, and buyer reviews.</p>
+
+    <p>Common frustrations with manual downloading:</p>
+    <ul>
+      <li><strong>Description images can't be right-click saved</strong> &mdash; AliExpress wraps them in special containers that block normal saving</li>
+      <li><strong>Images are in WebP format</strong> &mdash; many platforms and tools expect JPG or PNG</li>
+      <li><strong>Variant images are tiny thumbnails</strong> &mdash; you need the full-resolution versions</li>
+      <li><strong>Review photos are scattered</strong> &mdash; gathering buyer photos means clicking through each review individually</li>
+      <li><strong>Videos require developer tools</strong> &mdash; there's no right-click save for embedded product videos</li>
+    </ul>
+
+    <p>AliGrab solves all of these in one click.</p>
+
+    <h2>Step-by-Step Guide: Download AliExpress Images with AliGrab</h2>
+
+    <h3>Step 1: Install AliGrab</h3>
+    <p>Add AliGrab to your browser from the official extension store. Takes 5 seconds, no account required:</p>
+    <p>
+      <a href="https://chromewebstore.google.com/detail/aligrab-download-aliexpress-images-videos/mpecjaefbbhejpgafefgjmdgpjjpggop" class="cta" target="_blank" rel="noopener">Add to Chrome</a>
+      <a href="https://microsoftedge.microsoft.com/addons/detail/aligrab-download-aliexpress-images-videos/fbbhaedbpfmiafomfjjfbolocflogmmm" class="cta cta-secondary" target="_blank" rel="noopener">Add to Edge</a>
+    </p>
+
+    <h3>Step 2: Open an AliExpress Product Page</h3>
+    <p>Navigate to any AliExpress product listing. AliGrab activates automatically on AliExpress pages &mdash; you'll see the extension icon become active in your toolbar. The URL should look like <code>aliexpress.com/item/xxxxx.html</code>.</p>
+
+    <h3>Step 3: Click the AliGrab Icon</h3>
+    <p>Click the AliGrab extension icon in your browser toolbar. A popup opens showing all detected image categories with counts:</p>
+    <ul>
+      <li>Main product photos (carousel images)</li>
+      <li>Variant/SKU option images</li>
+      <li>HD description images</li>
+      <li>Buyer review photos</li>
+      <li>Product videos</li>
+    </ul>
+    <p>Select which categories you want to include (all are selected by default).</p>
+
+    <h3>Step 4: Choose Your Format</h3>
+    <p>Select your preferred image format:</p>
+    <ul>
+      <li><strong>JPG</strong> &mdash; Universal compatibility, smaller file size (default)</li>
+      <li><strong>WEBP</strong> &mdash; Original format from AliExpress CDN, smallest size</li>
+      <li><strong>PNG</strong> &mdash; Lossless quality, larger files (Pro feature)</li>
+    </ul>
+    <p>AliGrab automatically converts WebP images to your chosen format.</p>
+
+    <h3>Step 5: Click Download</h3>
+    <p>Hit the download button. AliGrab fetches all selected images from AliExpress CDN, converts formats if needed, packages everything into a single ZIP file, and saves it to your downloads folder. A typical product with 20-30 images downloads in under 10 seconds.</p>
+
+    <h2>Understanding AliExpress Image Types</h2>
+
+    <table>
+      <thead>
+        <tr><th>Image Type</th><th>What It Is</th><th>Typical Count</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Main</strong></td><td>Product carousel photos at the top of the listing</td><td>5-8</td></tr>
+        <tr><td><strong>Variant</strong></td><td>SKU option thumbnails (colors, sizes, styles)</td><td>3-20</td></tr>
+        <tr><td><strong>Description</strong></td><td>HD images in the product description section (often infographics, size charts, detail shots)</td><td>5-30</td></tr>
+        <tr><td><strong>Review</strong></td><td>Photos uploaded by buyers in their reviews</td><td>0-50+</td></tr>
+        <tr><td><strong>Video</strong></td><td>Product demo or promotional video (MP4)</td><td>0-2</td></tr>
+      </tbody>
+    </table>
+
+    <div class="note">
+      <strong>HD Description Images:</strong> Many AliExpress image downloaders only grab thumbnail-sized description images. AliGrab extracts the original high-resolution versions directly from AliExpress CDN, giving you full-quality images ready for your store.
+    </div>
+
+    <h2>Basic vs Pro: Which Do You Need?</h2>
+
+    <table>
+      <thead>
+        <tr><th>Feature</th><th>Basic</th><th>Pro ($0.99)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>All 5 image types</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+        <tr><td>ZIP packaging</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+        <tr><td>JPG / WEBP format</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+        <tr><td>WebP-to-JPG conversion</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+        <tr><td>Metadata removal</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+        <tr><td>PNG format</td><td class="no">&mdash;</td><td class="yes">Yes</td></tr>
+        <tr><td>JPEG quality slider</td><td class="no">&mdash;</td><td class="yes">Yes</td></tr>
+        <tr><td>Subdirectory organization</td><td class="no">&mdash;</td><td class="yes">Yes</td></tr>
+        <tr><td>Custom filename templates</td><td class="no">&mdash;</td><td class="yes">Yes</td></tr>
+        <tr><td>Auto-open download folder</td><td class="no">&mdash;</td><td class="yes">Yes</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>Recommendation:</strong> Basic covers everything most dropshipping sellers need. Upgrade to Pro if you handle large product catalogs and want organized subdirectories or lossless PNG quality.</p>
+
+    <p>Pro is a one-time $0.99 purchase &mdash; no subscription. That's 96% cheaper than AliSave's $2.99/month.</p>
+
+    <h2>Troubleshooting FAQ</h2>
+
+    <h3>Extension icon is grayed out / not detecting the page</h3>
+    <p>Make sure you're on an AliExpress product detail page. The URL should contain <code>/item/</code> (e.g., <code>aliexpress.com/item/1005001234.html</code>). AliGrab only activates on product pages, not search results or store pages. Try refreshing the page.</p>
+
+    <h3>0 images found after clicking download</h3>
+    <p>The page hasn't fully loaded yet. Wait for the product images to appear in the carousel, then try again. If on a slow connection, wait 5-10 seconds after the page visually loads.</p>
+
+    <h3>Description images are missing from the ZIP</h3>
+    <p>AliExpress lazy-loads description images &mdash; they only load when you scroll down. AliGrab handles this automatically by triggering a scroll before capture. If images are still missing, manually scroll to the bottom of the page once before clicking download.</p>
+
+    <h3>Format conversion seems slow</h3>
+    <p>Converting large images (5MB+) to PNG format requires more processing time. This is normal and happens entirely in your browser. For faster downloads, use JPG format. Close unused browser tabs to free up memory.</p>
+
+    <h2>Get Started</h2>
+    <p>Download product images from AliExpress in one click:</p>
+    <p>
+      <a href="https://chromewebstore.google.com/detail/aligrab-download-aliexpress-images-videos/mpecjaefbbhejpgafefgjmdgpjjpggop" class="cta" target="_blank" rel="noopener">Add to Chrome</a>
+      <a href="https://microsoftedge.microsoft.com/addons/detail/aligrab-download-aliexpress-images-videos/fbbhaedbpfmiafomfjjfbolocflogmmm" class="cta cta-secondary" target="_blank" rel="noopener">Add to Edge</a>
+    </p>
+    <p>Or learn more on the <a href="/aligrab/">AliGrab product page</a>.</p>
+
+  </div></article>
+  <footer><div class="container">&copy; 2026 ExtPilot</div></footer>
+</body>
+</html>
