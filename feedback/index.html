@@ -315,7 +315,7 @@
           </div>
 
           <div class="turnstile-row">
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAADLxWxlypW7UFpF0" data-theme="dark"></div>
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAADLxWxlypW7UFpF0" data-theme="dark" data-callback="onTurnstileSuccess" data-expired-callback="onTurnstileExpired" data-error-callback="onTurnstileError"></div>
           </div>
 
           <div class="actions">
@@ -363,6 +363,21 @@
       subjectInput.value = subjectParam.slice(0, 160);
     }
 
+    window.onTurnstileSuccess = () => {
+      statusNode.className = "status";
+      statusNode.textContent = "";
+    };
+
+    window.onTurnstileExpired = () => {
+      statusNode.className = "status error";
+      statusNode.textContent = "Verification expired. Please verify again.";
+    };
+
+    window.onTurnstileError = () => {
+      statusNode.className = "status error";
+      statusNode.textContent = "Verification could not load. Please refresh the page.";
+    };
+
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       statusNode.className = "status";
@@ -373,6 +388,14 @@
       const payload = Object.fromEntries(formData.entries());
       payload.rating = payload.rating ? Number(payload.rating) : null;
       payload.turnstileToken = formData.get("cf-turnstile-response") || "";
+
+      if (!payload.turnstileToken) {
+        statusNode.className = "status error";
+        statusNode.textContent = "Please complete the verification first.";
+        submitButton.disabled = false;
+        return;
+      }
+
       payload.sourceSurface = params.get("source") || "feedback_page";
       payload.extensionVersion = params.get("version") || "";
       payload.extensionId = params.get("extensionId") || "";
@@ -388,7 +411,8 @@
         });
 
         if (!response.ok) {
-          throw new Error("Feedback request failed");
+          const errorPayload = await response.json().catch(() => ({}));
+          throw new Error(errorPayload.error || "feedback_request_failed");
         }
 
         form.reset();
@@ -399,11 +423,40 @@
         statusNode.textContent = "Received. Thank you.";
       } catch (error) {
         statusNode.className = "status error";
-        statusNode.textContent = "Could not send. Please email support@extpilot.com.";
+        statusNode.textContent = getErrorMessage(error);
+        if (window.turnstile) {
+          window.turnstile.reset();
+        }
       } finally {
         submitButton.disabled = false;
       }
     });
+
+    function getErrorMessage(error) {
+      const code = error instanceof Error ? error.message : "";
+
+      if (code === "turnstile_required" || code === "turnstile_invalid") {
+        return "Please complete the verification and try again.";
+      }
+
+      if (code === "rate_limited") {
+        return "Too many submissions. Please try again later.";
+      }
+
+      if (code === "valid_email_required") {
+        return "Please enter a valid email address.";
+      }
+
+      if (code === "subject_required") {
+        return "Please enter a subject.";
+      }
+
+      if (code === "message_required") {
+        return "Please enter your feedback.";
+      }
+
+      return "Could not send. Please email support@extpilot.com.";
+    }
   </script>
 </body>
 </html>
