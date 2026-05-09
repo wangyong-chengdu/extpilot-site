@@ -183,6 +183,10 @@
     button:hover { background: #2ea043; }
     button:disabled { opacity: 0.65; cursor: not-allowed; }
 
+    .is-hidden {
+      display: none !important;
+    }
+
     .status {
       color: #8b949e;
       font-size: 14px;
@@ -319,7 +323,7 @@
           </div>
 
           <div class="actions">
-            <button type="submit" id="submit-button">Send feedback</button>
+            <button type="submit" id="submit-button" class="is-hidden">Send feedback</button>
             <span class="status" id="status" role="status" aria-live="polite"></span>
           </div>
         </form>
@@ -364,16 +368,19 @@
     }
 
     window.onTurnstileSuccess = () => {
+      submitButton.classList.remove("is-hidden");
       statusNode.className = "status";
       statusNode.textContent = "";
     };
 
     window.onTurnstileExpired = () => {
+      submitButton.classList.add("is-hidden");
       statusNode.className = "status error";
       statusNode.textContent = "Verification expired. Please verify again.";
     };
 
     window.onTurnstileError = () => {
+      submitButton.classList.add("is-hidden");
       statusNode.className = "status error";
       statusNode.textContent = "Verification could not load. Please refresh the page.";
     };
@@ -392,6 +399,7 @@
       if (!payload.turnstileToken) {
         statusNode.className = "status error";
         statusNode.textContent = "Please complete the verification first.";
+        submitButton.classList.add("is-hidden");
         submitButton.disabled = false;
         return;
       }
@@ -419,6 +427,7 @@
         if (window.turnstile) {
           window.turnstile.reset();
         }
+        submitButton.classList.add("is-hidden");
         statusNode.className = "status success";
         statusNode.textContent = "Received. Thank you.";
       } catch (error) {
@@ -427,6 +436,7 @@
         if (window.turnstile) {
           window.turnstile.reset();
         }
+        submitButton.classList.add("is-hidden");
       } finally {
         submitButton.disabled = false;
       }
