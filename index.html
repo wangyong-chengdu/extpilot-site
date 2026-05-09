@@ -68,6 +68,13 @@
       width: 100%;
     }
 
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
     /* Header */
     header {
       padding: 24px 0;
@@ -222,10 +229,11 @@
 </head>
 <body>
   <header>
-    <div class="container">
+    <div class="container header-inner">
       <a href="/" class="logo">ExtPilot</a>
       <nav style="margin-left: auto; display: flex; gap: 16px; font-size: 14px;">
         <a href="/blog/" style="color: #8b949e;">Blog</a>
+        <a href="/feedback/" style="color: #8b949e;">Feedback</a>
       </nav>
     </div>
   </header>
@@ -459,7 +467,7 @@
     <div class="container">
       <div class="footer-content">
         <span>&copy; 2026 ExtPilot. All rights reserved.</span>
-        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+        <span><a href="/feedback/">Feedback</a> · Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
       </div>
     </div>
   </footer>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Send Feedback | ExtPilot</title>
+  <meta name="description" content="Send feedback, bug reports, and feature requests to ExtPilot.">
+  <link rel="canonical" href="https://extpilot.com/feedback/">
+  <meta property="og:title" content="Send Feedback | ExtPilot">
+  <meta property="og:description" content="Tell us what is broken, confusing, or worth building next.">
+  <meta property="og:url" content="https://extpilot.com/feedback/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/assets/og-image.png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #0f1117;
+      color: #e1e4e8;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+      width: 100%;
+    }
+
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid #21262d;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 700;
+      color: #f0f6fc;
+      letter-spacing: -0.5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav a { color: #8b949e; }
+
+    main {
+      flex: 1;
+      padding: 64px 0 80px;
+    }
+
+    .intro {
+      margin-bottom: 28px;
+      text-align: left;
+    }
+
+    .intro h1 {
+      color: #f0f6fc;
+      font-size: 40px;
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .intro p {
+      color: #8b949e;
+      font-size: 16px;
+      max-width: 620px;
+    }
+
+    .panel {
+      background: #161b22;
+      border: 1px solid #21262d;
+      border-radius: 8px;
+      padding: 24px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .field.full { grid-column: 1 / -1; }
+
+    label {
+      color: #f0f6fc;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      background: #0d1117;
+      color: #e1e4e8;
+      font: inherit;
+      padding: 11px 12px;
+      min-height: 44px;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 160px;
+      resize: vertical;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #58a6ff;
+      box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.16);
+    }
+
+    .hp {
+      position: absolute;
+      left: -10000px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .turnstile-row {
+      margin: 4px 0 16px;
+      min-height: 65px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 6px;
+      background: #238636;
+      color: #ffffff;
+      font: inherit;
+      font-weight: 700;
+      min-height: 44px;
+      padding: 0 18px;
+      cursor: pointer;
+    }
+
+    button:hover { background: #2ea043; }
+    button:disabled { opacity: 0.65; cursor: not-allowed; }
+
+    .status {
+      color: #8b949e;
+      font-size: 14px;
+    }
+
+    .status.success { color: #7ee787; }
+    .status.error { color: #ff7b72; }
+
+    .fallback {
+      margin-top: 18px;
+      color: #8b949e;
+      font-size: 14px;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 24px 0;
+      border-top: 1px solid #21262d;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: #484f58;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .footer-content a { color: #484f58; }
+    .footer-content a:hover { color: #8b949e; }
+
+    @media (max-width: 640px) {
+      main { padding: 44px 0 56px; }
+      .intro h1 { font-size: 32px; }
+      .grid { grid-template-columns: 1fr; }
+      .panel { padding: 20px; }
+      .footer-content { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="/" class="logo">ExtPilot</a>
+      <nav>
+        <a href="/blog/">Blog</a>
+        <a href="/feedback/" aria-current="page">Feedback</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="intro">
+        <h1>Send Feedback</h1>
+        <p>Tell us what is broken, confusing, or worth building next. Short notes are enough.</p>
+      </section>
+
+      <section class="panel" aria-label="Feedback form">
+        <form id="feedback-form">
+          <div class="grid">
+            <div class="field">
+              <label for="product">Product</label>
+              <select id="product" name="product" required>
+                <option value="general">General / not sure</option>
+                <option value="audio-to-text">Audio to Text Converter</option>
+                <option value="discord-chat-exporter">Discord Chat Exporter</option>
+                <option value="wa-bulk-sender">WhatsApp Bulk Sender</option>
+                <option value="stockkeywords-ai">StockKeywords AI</option>
+                <option value="langtube">LangTube</option>
+                <option value="ali-image-search">AliFind</option>
+                <option value="writetrace">WriteTrace</option>
+                <option value="ig-follower-exporter">IG Follower Exporter</option>
+                <option value="shopify-spy">Shopify Store Scraper</option>
+                <option value="storespy">StoreSpy</option>
+                <option value="tts-audio-downloader">TTS Audio Downloader</option>
+                <option value="leads-exporter">Leads Exporter</option>
+                <option value="slides-timer">Slides Timer</option>
+                <option value="leadsnap">LeadSnap</option>
+                <option value="shopcsv">ShopCSV</option>
+                <option value="subflow">SubFlow</option>
+                <option value="geomail-tracker">GeoMail Tracker</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="feedback-type">Type</label>
+              <select id="feedback-type" name="feedbackType" required>
+                <option value="bug">Bug report</option>
+                <option value="feature">Feature request</option>
+                <option value="confusing">Confusing UX</option>
+                <option value="pricing">Pricing question</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="rating">Rating</label>
+              <select id="rating" name="rating">
+                <option value="">No rating</option>
+                <option value="5">5 - very useful</option>
+                <option value="4">4 - useful</option>
+                <option value="3">3 - okay</option>
+                <option value="2">2 - weak</option>
+                <option value="1">1 - not useful</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            </div>
+
+            <div class="field full">
+              <label for="subject">Subject</label>
+              <input id="subject" name="subject" type="text" required minlength="3" maxlength="160" placeholder="Short summary of your feedback">
+            </div>
+
+            <div class="field full">
+              <label for="message">Feedback</label>
+              <textarea id="message" name="message" required minlength="3" maxlength="4000" placeholder="What happened? What did you expect? What should we build next?"></textarea>
+            </div>
+          </div>
+
+          <div class="hp" aria-hidden="true">
+            <label for="website">Website</label>
+            <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <div class="turnstile-row">
+            <div class="cf-turnstile" data-sitekey="REPLACE_WITH_TURNSTILE_SITE_KEY" data-theme="dark"></div>
+          </div>
+
+          <div class="actions">
+            <button type="submit" id="submit-button">Send feedback</button>
+            <span class="status" id="status" role="status" aria-live="polite"></span>
+          </div>
+        </form>
+
+        <p class="fallback">Prefer email? Write to <a href="mailto:support@extpilot.com">support@extpilot.com</a>.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <span>&copy; 2026 ExtPilot. All rights reserved.</span>
+        <span>Contact: <a href="mailto:support@extpilot.com">support@extpilot.com</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const API_ENDPOINT = "https://feedback-api.extpilot.com/feedback";
+    const form = document.getElementById("feedback-form");
+    const statusNode = document.getElementById("status");
+    const submitButton = document.getElementById("submit-button");
+    const productSelect = document.getElementById("product");
+    const feedbackTypeSelect = document.getElementById("feedback-type");
+    const subjectInput = document.getElementById("subject");
+    const params = new URLSearchParams(window.location.search);
+    const productParam = params.get("product");
+    const typeParam = params.get("type");
+    const subjectParam = params.get("subject");
+
+    if (productParam && [...productSelect.options].some((option) => option.value === productParam)) {
+      productSelect.value = productParam;
+    }
+
+    if (typeParam && [...feedbackTypeSelect.options].some((option) => option.value === typeParam)) {
+      feedbackTypeSelect.value = typeParam;
+    }
+
+    if (subjectParam) {
+      subjectInput.value = subjectParam.slice(0, 160);
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      statusNode.className = "status";
+      statusNode.textContent = "Sending...";
+      submitButton.disabled = true;
+
+      const formData = new FormData(form);
+      const payload = Object.fromEntries(formData.entries());
+      payload.rating = payload.rating ? Number(payload.rating) : null;
+      payload.turnstileToken = formData.get("cf-turnstile-response") || "";
+      payload.sourceSurface = params.get("source") || "feedback_page";
+      payload.extensionVersion = params.get("version") || "";
+      payload.extensionId = params.get("extensionId") || "";
+      payload.browser = params.get("browser") || "";
+      payload.pageUrl = document.referrer || window.location.href;
+      payload.userAgent = navigator.userAgent;
+
+      try {
+        const response = await fetch(API_ENDPOINT, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+          throw new Error("Feedback request failed");
+        }
+
+        form.reset();
+        if (window.turnstile) {
+          window.turnstile.reset();
+        }
+        statusNode.className = "status success";
+        statusNode.textContent = "Received. Thank you.";
+      } catch (error) {
+        statusNode.className = "status error";
+        statusNode.textContent = "Could not send. Please email support@extpilot.com.";
+      } finally {
+        submitButton.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>
