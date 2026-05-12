@@ -11,17 +11,17 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leads Exporter for Google Maps — Free Business Contacts | ExtPilot</title>
-  <meta name="description" content="Export business names, phones, emails & addresses from Google Maps to CSV/Excel. Free 50 leads/day. Pro unlimited + email finder at $4.9/mo. Chrome & Edge.">
+  <title>Leads Exporter for Google Maps — Business Contacts to CSV | ExtPilot</title>
+  <meta name="description" content="Export business names, phones, emails & addresses from Google Maps to CSV/Excel. Edge install and Chrome manual install package available from ExtPilot.">
   <link rel="canonical" href="https://extpilot.com/leads-exporter/">
-  <meta property="og:title" content="Leads Exporter for Google Maps — Free Business Contacts">
-  <meta property="og:description" content="Export business names, phones, emails & addresses from Google Maps to CSV/Excel. Free 50 leads/day. Chrome & Edge.">
+  <meta property="og:title" content="Leads Exporter for Google Maps — Business Contacts to CSV">
+  <meta property="og:description" content="Export business names, phones, emails & addresses from Google Maps to CSV/Excel. Edge install and Chrome manual install package available.">
   <meta property="og:url" content="https://extpilot.com/leads-exporter/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://extpilot.com/assets/og-image.png">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Leads Exporter for Google Maps — Free Business Contacts">
-  <meta name="twitter:description" content="Export business names, phones, emails & addresses from Google Maps to CSV/Excel. Free 50 leads/day.">
+  <meta name="twitter:title" content="Leads Exporter for Google Maps — Business Contacts to CSV">
+  <meta name="twitter:description" content="Export business names, phones, emails & addresses from Google Maps to CSV/Excel.">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <meta name="keywords" content="google maps lead export, export google maps leads, google maps business data, google maps contacts csv, lead generation google maps, business contact finder, google maps to excel">
   <script type="application/ld+json">
@@ -100,7 +100,7 @@
         "name": "Is it safe to use? Will my Google account get banned?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Leads Exporter reads publicly visible information from Google Maps search results. It does not log into your Google account or access private data. The extension uses randomized scrolling intervals to load results naturally. It is officially listed on the Chrome Web Store and complies with Chrome extension policies."
+          "text": "Leads Exporter reads information visible in your browser session and does not log into your Google account or access private account data. Edge users can install from Microsoft Edge Add-ons. Chrome users can download the manual install package from ExtPilot and load it through Developer Mode."
         }
       },
       {
@@ -138,6 +138,8 @@
     .btn-primary { background: #238636; color: #fff; }
     .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
     .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+    .install-note { font-size: 13px; color: #8b949e; margin-top: 14px; }
+    .install-note a { color: #8b949e; text-decoration: underline; }
 
     /* GEO answer block */
     .geo-answer { max-width: 700px; margin: 0 auto 32px; padding: 24px; background: #161b22; border: 1px solid #21262d; border-radius: 8px; font-size: 15px; color: #c9d1d9; line-height: 1.8; text-align: left; }
@@ -158,6 +160,14 @@
     .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
     .step-content h3 { font-size: 16px; font-weight: 600; color: #f0f6fc; margin-bottom: 4px; }
     .step-content p { font-size: 14px; color: #8b949e; }
+    .install-section { padding: 48px 0; border-top: 1px solid #21262d; }
+    .install-section h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 24px; text-align: center; }
+    .install-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .install-card { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; }
+    .install-card h3 { font-size: 18px; color: #f0f6fc; margin-bottom: 10px; }
+    .install-card p { font-size: 14px; color: #8b949e; margin-bottom: 14px; }
+    .install-card ol { padding-left: 20px; color: #c9d1d9; font-size: 14px; line-height: 1.8; }
+    .install-card code { background: #0f1117; border: 1px solid #30363d; border-radius: 4px; padding: 2px 5px; color: #f0f6fc; }
 
     /* Pricing */
     .pricing { padding: 48px 0; border-top: 1px solid #21262d; }
@@ -199,6 +209,7 @@
       .hero h1 { font-size: 26px; }
       .hero .tagline { font-size: 17px; }
       .feature-grid { grid-template-columns: 1fr; }
+      .install-grid { grid-template-columns: 1fr; }
       .footer-content { flex-direction: column; text-align: center; }
       .pricing-table { font-size: 13px; }
       .pricing-table th, .pricing-table td { padding: 8px 10px; }
@@ -223,9 +234,10 @@
         <h1>Leads Exporter for Google Maps</h1>
         <p class="tagline">Export business contacts from Google Maps to CSV or Excel in one click. Names, phones, emails, addresses &mdash; ready for outreach in 30 seconds.</p>
         <div class="cta-row">
-          <a href="https://chromewebstore.google.com/detail/leads-exporter-for-google/knpcamhjlcefaicldefgnnliaedhnkcp" class="btn btn-primary" target="_blank" rel="noopener">Install for Chrome</a>
-          <a href="https://microsoftedge.microsoft.com/addons/detail/cf59b0e9-a662-4858-85c4-92663900a575" class="btn btn-secondary" target="_blank" rel="noopener">Install for Edge</a>
+          <a href="/downloads/leads-exporter-for-maps-1.0.1-manual-install.zip" class="btn btn-primary">Download for Chrome</a>
+          <a href="https://microsoftedge.microsoft.com/addons/detail/cf59b0e9-a662-4858-85c4-92663900a575" class="btn btn-secondary" target="_blank" rel="noopener">Install from Edge Add-ons</a>
         </div>
+        <p class="install-note">Chrome uses manual installation through Developer Mode. See the steps below before installing.</p>
       </div>
     </section>
 
@@ -234,7 +246,7 @@
         <div class="geo-answer">
           <p>Leads Exporter for Google Maps is a free Chrome and Edge extension that lets you export business contact information directly from Google Maps search results. Search for any business type and location on Google Maps, click "Export All Leads," and download a clean CSV file with business names, addresses, phone numbers, websites, ratings, review counts, and categories &mdash; in under 30 seconds.</p>
           <p style="margin-top: 12px;">The free plan includes 50 leads per day with 7 data fields and CSV export. Pro ($4.9/month) unlocks unlimited exports, automatic email extraction from business websites, contact page URLs, social media links (Facebook, Instagram, LinkedIn, Twitter), and Excel export. All exported data is cleaned and standardized &mdash; phone numbers are formatted consistently, addresses are split into street, city, state, and ZIP, and column headers follow a standard naming convention ready for CRM import.</p>
-          <p style="margin-top: 12px;">Unlike most Google Maps lead tools that require sideloading via developer mode, Leads Exporter is officially listed on the Chrome Web Store and Microsoft Edge Add-ons, so you can install it in one click. The free tier offers 50 leads/day &mdash; over 3x more than competing tools that cap at 15 per session.</p>
+          <p style="margin-top: 12px;">Edge users can install Leads Exporter from Microsoft Edge Add-ons. Chrome users can download the ExtPilot manual install package and load it through Chrome Developer Mode. The free tier offers 50 leads/day &mdash; over 3x more than competing tools that cap at 15 per session.</p>
         </div>
         <h2>Features</h2>
         <div class="feature-grid">
@@ -261,6 +273,31 @@
           <div class="feature-card">
             <h3>CSV &amp; Excel Export</h3>
             <p>Download as CSV (free) or Excel .xlsx (Pro). Both formats are compatible with Google Sheets, Microsoft Excel, HubSpot, Salesforce, and other CRMs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="install-section" id="install">
+      <div class="container">
+        <h2>Install</h2>
+        <div class="install-grid">
+          <div class="install-card">
+            <h3>Chrome manual install</h3>
+            <p>Chrome installation is distributed directly from ExtPilot and requires Developer Mode.</p>
+            <ol>
+              <li><a href="/downloads/leads-exporter-for-maps-1.0.1-manual-install.zip">Download the ZIP package</a>.</li>
+              <li>Unzip the file on your computer.</li>
+              <li>Open <code>chrome://extensions</code>.</li>
+              <li>Turn on <strong>Developer mode</strong>.</li>
+              <li>Click <strong>Load unpacked</strong>.</li>
+              <li>Select the unzipped folder that contains <code>manifest.json</code>.</li>
+            </ol>
+          </div>
+          <div class="install-card">
+            <h3>Microsoft Edge</h3>
+            <p>Edge users can install from the Microsoft Edge Add-ons listing.</p>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/cf59b0e9-a662-4858-85c4-92663900a575" class="btn btn-secondary" target="_blank" rel="noopener">Open Edge Add-ons</a>
           </div>
         </div>
       </div>
@@ -401,7 +438,7 @@
         </div>
         <div class="faq-item">
           <h3>Is it safe to use? Will my Google account get banned?</h3>
-          <p>Leads Exporter reads publicly visible information from Google Maps search results. It does not log into your Google account or access private data. The extension uses randomized scrolling intervals to load results naturally and is officially listed on the Chrome Web Store.</p>
+          <p>Leads Exporter reads information visible in your browser session. It does not log into your Google account or access private account data. Edge users can install from Microsoft Edge Add-ons; Chrome users can install the ExtPilot package through Developer Mode.</p>
         </div>
         <div class="faq-item">
           <h3>Can I import the data into my CRM?</h3>
