@@ -65,7 +65,7 @@
       <p>TTS Audio Downloader ("the Extension") is committed to protecting your privacy. This policy explains what data the Extension accesses, how it is used, and what is not collected.</p>
 
       <h2>What the Extension Does</h2>
-      <p>The Extension adds download buttons to text-to-speech demo pages (Google Cloud TTS, Azure Speech Studio, and ChatGPT). When you generate audio on these pages, you can click the download button to save the audio as an MP3 or WAV file.</p>
+      <p>The Extension adds download support to the Google Cloud Text-to-Speech demo page. When you generate audio on that page, the Extension can save the audio as an MP3 or WAV file.</p>
       <p>All audio processing &mdash; including format conversion, long-text splitting, and audio merging &mdash; happens entirely within your browser. No audio data is ever uploaded to any server.</p>
 
       <h2>Data We Do NOT Collect</h2>
@@ -73,7 +73,7 @@
         <li>The text you type into TTS demo pages</li>
         <li>The audio files you download</li>
         <li>Your browsing history</li>
-        <li>Your Google, Microsoft, or OpenAI account credentials</li>
+        <li>Your Google account credentials</li>
         <li>Personally identifiable information (PII)</li>
         <li>Cookies or tracking identifiers</li>
       </ul>
@@ -99,10 +99,8 @@
       <ul>
         <li><strong>storage:</strong> Required to save your preferences (audio format, onboarding status), daily usage quota, and Pro license status locally on your device.</li>
         <li><strong>host_permissions (*://*.gstatic.com/*):</strong> Required to inject the download button into the Google Cloud TTS demo page.</li>
-        <li><strong>host_permissions (*://*.azure.microsoft.com/*):</strong> Required to inject the download button into the Azure Speech Studio demo page.</li>
-        <li><strong>host_permissions (*://chatgpt.com/*, *://*.chatgpt.com/*):</strong> Required to inject download buttons into ChatGPT conversation pages and to capture voice audio responses.</li>
       </ul>
-      <p>The Extension does not request <code>&lt;all_urls&gt;</code> or <code>activeTab</code> permissions. It only accesses the three specific TTS platforms listed above.</p>
+      <p>The Extension does not request <code>&lt;all_urls&gt;</code> or <code>activeTab</code> permissions. It only accesses the Google TTS demo host listed above.</p>
 
       <h2>Third-Party Services</h2>
       <ul>
