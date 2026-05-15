@@ -43,6 +43,16 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "ExtPilot", "item": "https://extpilot.com/"},
+      {"@type": "ListItem", "position": 2, "name": "Discord Chat Exporter", "item": "https://extpilot.com/discord-chat-exporter/"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {"@type": "Question", "name": "How do I export Discord chat history?", "acceptedAnswer": {"@type": "Answer", "text": "Install Discord Chat Exporter, open Discord in your browser, select a channel or DM, choose CSV, JSON, or HTML, then click Export. The file is generated locally and downloaded by the browser."}},
@@ -68,6 +78,7 @@
     h1 { color: #f0f6fc; font-size: 38px; line-height: 1.15; margin-bottom: 14px; }
     .tagline { color: #8b949e; font-size: 19px; max-width: 690px; margin: 0 auto 22px; }
     .answer { background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 22px; margin: 28px auto 0; text-align: left; max-width: 760px; }
+    .trust { color: #8b949e; font-size: 14px; max-width: 760px; margin: 16px auto 0; text-align: left; }
     .cta { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-top: 24px; }
     .btn { display: inline-flex; align-items: center; padding: 11px 20px; border-radius: 8px; font-weight: 700; }
     .primary { background: #5865f2; color: #fff; }
@@ -100,7 +111,8 @@
           <a class="btn primary" href="https://chromewebstore.google.com/detail/discord-chat-exporter-export-backup/fdbkaffljpphkgbiccklpmkadpkbgbko">Add to Chrome</a>
           <a class="btn secondary" href="https://microsoftedge.microsoft.com/addons/detail/discord-chat-exporter-export-backup/phlgcmlomfbmfajeeepgpdefjjalaokn">Add to Edge</a>
         </div>
-        <p class="answer">Discord Chat Exporter is a Chrome and Edge extension for exporting Discord chat history from the current channel or DM. It creates local CSV, JSON, or HTML files, includes 300 messages per free export, and offers a $1.90 one-time Pro unlock for full exports. Discord data is processed in your browser; messages are not uploaded to ExtPilot, and the Discord token is never stored by the extension.</p>
+        <p class="answer">Discord Chat Exporter is a Chrome and Edge extension for exporting Discord chat history from the current channel or DM you can access in Discord Web. It creates local CSV, JSON, or HTML files, includes 300 messages per free export, and offers a $1.90 one-time Pro unlock for full exports. Discord data is processed in your browser; messages are not uploaded to ExtPilot, and the Discord token is never stored by the extension.</p>
+        <p class="trust"><strong>Last updated:</strong> May 15, 2026. <strong>Verified against:</strong> the live Chrome Web Store listing, Edge Add-ons listing, product privacy policy, and current extension workflow. Discord Chat Exporter cannot bypass private servers, deleted messages, or conversations your Discord account cannot access.</p>
       </div>
     </section>
 
@@ -111,6 +123,27 @@
         <div class="card"><h3>JSON for structured data</h3><p>Keep message metadata in a developer-friendly format for scripts and research.</p></div>
         <div class="card"><h3>HTML for readable archives</h3><p>Save a clean local copy that is easy to read later.</p></div>
         <div class="card"><h3>Local-only by design</h3><p>Exports are generated in the browser and downloaded to your computer.</p></div>
+      </div>
+    </div></section>
+
+    <section><div class="container">
+      <h2>What gets exported</h2>
+      <table>
+        <tr><th>Field</th><th>Included when available</th><th>Notes</th></tr>
+        <tr><td>Message text</td><td>Yes</td><td>Exports loaded messages visible in the current channel or DM.</td></tr>
+        <tr><td>Author</td><td>Yes</td><td>Uses the author information visible in Discord Web.</td></tr>
+        <tr><td>Timestamp</td><td>Yes</td><td>Included for spreadsheet sorting and archive review.</td></tr>
+        <tr><td>Attachments or links</td><td>When visible</td><td>Availability depends on what Discord Web exposes in the loaded conversation.</td></tr>
+      </table>
+    </div></section>
+
+    <section><div class="container">
+      <h2>Privacy and limits</h2>
+      <div class="grid">
+        <div class="card"><h3>Local export flow</h3><p>The extension formats messages in the browser and saves the result through the browser download manager.</p></div>
+        <div class="card"><h3>No private access bypass</h3><p>It only works on channels, servers, and DMs your Discord account can already open in Discord Web.</p></div>
+        <div class="card"><h3>Loaded-message boundary</h3><p>Very long conversations may require scrolling or staged exports depending on what is loaded in the browser.</p></div>
+        <div class="card"><h3>Independent tool</h3><p>Discord Chat Exporter is built by ExtPilot and is not affiliated with Discord.</p></div>
       </div>
     </div></section>
 
@@ -144,8 +177,17 @@
         <div class="card"><h3>Where is my file saved?</h3><p>Your browser downloads the generated CSV, JSON, or HTML file to your local downloads folder.</p></div>
       </div>
     </div></section>
+
+    <section><div class="container">
+      <h2>Related resources</h2>
+      <ul>
+        <li><a href="/blog/how-to-export-discord-chat-history/">How to export Discord chat history to CSV, JSON, or HTML</a></li>
+        <li><a href="/discord-chat-exporter/privacy.html">Privacy policy</a></li>
+        <li><a href="https://chromewebstore.google.com/detail/discord-chat-exporter-export-backup/fdbkaffljpphkgbiccklpmkadpkbgbko">Chrome Web Store listing</a></li>
+        <li><a href="https://microsoftedge.microsoft.com/addons/detail/discord-chat-exporter-export-backup/phlgcmlomfbmfajeeepgpdefjjalaokn">Microsoft Edge Add-ons listing</a></li>
+      </ul>
+    </div></section>
   </main>
   <footer><div class="container">&copy; 2026 ExtPilot. <a href="/discord-chat-exporter/privacy.html">Privacy Policy</a> · <a href="mailto:support@extpilot.com">support@extpilot.com</a></div></footer>
 </body>
 </html>
-
