@@ -36,7 +36,7 @@
     .articles h2 { font-size: 14px; font-weight: 600; color: #8b949e; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 24px; text-align: center; }
     .article-card { display: block; background: #161b22; border: 1px solid #21262d; border-radius: 8px; padding: 24px; margin-bottom: 16px; transition: border-color 0.2s; }
     .article-card:hover { border-color: #30363d; text-decoration: none; }
-    .article-card h3 { font-size: 18px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
+    .article-card h2 { font-size: 18px; font-weight: 600; color: #f0f6fc; margin-bottom: 8px; }
     .article-card p { font-size: 14px; color: #8b949e; margin-bottom: 8px; }
     .article-card .meta { font-size: 13px; color: #484f58; }
     .empty-state { text-align: center; padding: 60px 0; color: #484f58; font-size: 16px; }
@@ -48,6 +48,25 @@
       .hero { padding: 40px 0 32px; }
       .hero h1 { font-size: 28px; }
       .footer-content { flex-direction: column; text-align: center; }
+    }
+    /* Accessibility baseline: visible focus, text-link affordance, and contrast-safe muted text. */
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid #ffd166;
+      outline-offset: 3px;
+    }
+    article p a, article li a, article .tldr a, .faq-item p a, .support p a, .fallback a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+    .meta, .article-card .meta, .footer-content, .footer-content a, .empty-state {
+      color: #8b949e !important;
+    }
+    .pricing-card li.disabled, .pricing-card li.disabled::before, .compare-table .no {
+      color: #8b949e !important;
+    }
+    .pricing-table .plan-pro {
+      color: #3fb950 !important;
     }
   </style>
 </head>
@@ -72,109 +91,109 @@
     <section class="articles">
       <div class="container">
         <a href="/blog/how-to-download-aliexpress-product-images/" class="article-card">
-          <h3>How to Download AliExpress Product Images and Videos</h3>
+          <h2>How to Download AliExpress Product Images and Videos</h2>
           <p>Step-by-step guide to save AliExpress product media in bulk with ZIP export, clean filenames, and local processing.</p>
           <span class="meta">May 7, 2026</span>
         </a>
 
         <a href="/blog/how-to-save-and-search-chatgpt-conversations/" class="article-card">
-          <h3>How to Save and Search ChatGPT Conversations</h3>
+          <h2>How to Save and Search ChatGPT Conversations</h2>
           <p>Organize AI conversations from ChatGPT, Claude, and Gemini with local search, tags, and export-friendly archives.</p>
           <span class="meta">May 7, 2026</span>
         </a>
 
         <a href="/blog/how-to-add-sources-notebooklm/" class="article-card">
-          <h3>How to Add Sources to NotebookLM Faster</h3>
+          <h2>How to Add Sources to NotebookLM Faster</h2>
           <p>Collect web pages, articles, and YouTube videos into clean NotebookLM source material with fewer copy-paste steps.</p>
           <span class="meta">May 6, 2026</span>
         </a>
 
         <a href="/blog/how-to-export-discord-chat-history/" class="article-card">
-          <h3>How to Export Discord Chat History</h3>
+          <h2>How to Export Discord Chat History</h2>
           <p>Export Discord channel or DM messages to CSV, JSON, or HTML for backup, moderation, and research workflows.</p>
           <span class="meta">April 30, 2026</span>
         </a>
 
         <a href="/blog/how-to-transcribe-youtube-audio-to-text/" class="article-card">
-          <h3>How to Transcribe YouTube Audio to Text in Chrome</h3>
+          <h2>How to Transcribe YouTube Audio to Text in Chrome</h2>
           <p>Step-by-step guide to record browser tab audio, keep playback audible, edit the transcript, export text, and generate AI summaries.</p>
           <span class="meta">April 30, 2026</span>
         </a>
 
         <a href="/blog/how-to-convert-shopify-csv-to-woocommerce/" class="article-card">
-          <h3>How to Convert Shopify CSV to WooCommerce Import Format (Step-by-Step)</h3>
+          <h2>How to Convert Shopify CSV to WooCommerce Import Format (Step-by-Step)</h2>
           <p>Step-by-step guide to convert Shopify product CSV exports to WooCommerce-compatible format using ShopCSV. No API key, no signup, 100% local.</p>
           <span class="meta">April 29, 2026</span>
         </a>
 
         <a href="/blog/how-to-extract-emails-from-website/" class="article-card">
-          <h3>How to Extract Emails from a Website</h3>
+          <h2>How to Extract Emails from a Website</h2>
           <p>Find emails, phone numbers, and social links on a page, then export clean lead lists without sending page data to a server.</p>
           <span class="meta">April 28, 2026</span>
         </a>
 
         <a href="/blog/storespy-find-shopify-apps/" class="article-card">
-          <h3>How to Find What Apps a Shopify Store Uses</h3>
+          <h2>How to Find What Apps a Shopify Store Uses</h2>
           <p>Use local Shopify app, theme, and product-count detection to understand competitor stores without cloud scraping.</p>
           <span class="meta">April 27, 2026</span>
         </a>
 
         <a href="/blog/mailtrack-alternative-without-signature/" class="article-card">
-          <h3>Mailtrack Alternative Without a Signature</h3>
+          <h2>Mailtrack Alternative Without a Signature</h2>
           <p>Compare email tracking options and see how GeoMail Tracker handles Gmail opens without adding a free-plan signature.</p>
           <span class="meta">April 27, 2026</span>
         </a>
 
         <a href="/blog/how-to-auto-generate-keywords-for-adobe-stock/" class="article-card">
-          <h3>How to Auto-Generate Keywords for Adobe Stock in 10 Seconds</h3>
+          <h2>How to Auto-Generate Keywords for Adobe Stock in 10 Seconds</h2>
           <p>Step-by-step guide to generate Adobe Stock title suggestions and 49 keywords, then fill the form with StockKeywords AI.</p>
           <span class="meta">April 24, 2026</span>
         </a>
 
         <a href="/blog/how-to-add-timer-to-google-slides/" class="article-card">
-          <h3>How to Add a Countdown Timer to Google Slides (2026 Guide)</h3>
+          <h2>How to Add a Countdown Timer to Google Slides (2026 Guide)</h2>
           <p>Step-by-step guide to add a countdown timer, live clock, or date to Google Slides using simple inline tags and presentation mode.</p>
           <span class="meta">April 23, 2026</span>
         </a>
 
         <a href="/blog/wa-bulk-sender-vs-wawebsender/" class="article-card">
-          <h3>WA Bulk Sender vs WAWebSender (2026 Comparison)</h3>
+          <h2>WA Bulk Sender vs WAWebSender (2026 Comparison)</h2>
           <p>Compare price, free-plan generosity, privacy features, and interface tradeoffs for two WhatsApp Web bulk messaging tools.</p>
           <span class="meta">April 23, 2026</span>
         </a>
 
         <a href="/blog/how-to-send-whatsapp-bulk-messages/" class="article-card">
-          <h3>How to Send WhatsApp Bulk Messages from WhatsApp Web (2026 Guide)</h3>
+          <h2>How to Send WhatsApp Bulk Messages from WhatsApp Web (2026 Guide)</h2>
           <p>Step-by-step workflow for batch sending on WhatsApp Web with free Excel import, privacy blur, and send history export.</p>
           <span class="meta">April 23, 2026</span>
         </a>
 
         <a href="/blog/how-to-organize-youtube-subscriptions/" class="article-card">
-          <h3>How to Organize YouTube Subscriptions with Groups (2026 Guide)</h3>
+          <h2>How to Organize YouTube Subscriptions with Groups (2026 Guide)</h2>
           <p>Learn how to organize YouTube subscriptions into topic groups using SubFlow. Filter your feed, hide watched videos, and tame 200+ channels.</p>
           <span class="meta">April 22, 2026</span>
         </a>
 
         <a href="/blog/how-to-download-google-tts-audio/" class="article-card">
-          <h3>How to Download Google TTS Audio as MP3 (Step-by-Step Guide 2026)</h3>
+          <h2>How to Download Google TTS Audio as MP3 (Step-by-Step Guide 2026)</h2>
           <p>3 methods to download audio from Google Cloud TTS demo as MP3: browser extension, developer console, and API compared.</p>
           <span class="meta">April 21, 2026</span>
         </a>
 
         <a href="/blog/how-to-export-google-maps-leads/" class="article-card">
-          <h3>How to Export Google Maps Business Data to CSV (Free Guide 2026)</h3>
+          <h2>How to Export Google Maps Business Data to CSV (Free Guide 2026)</h2>
           <p>Step-by-step guide to export business names, phones, emails, and addresses from Google Maps to CSV or Excel using a free Chrome extension.</p>
           <span class="meta">April 21, 2026</span>
         </a>
 
         <a href="/blog/ig-follower-exporter-vs-exporter-for-followers/" class="article-card">
-          <h3>IG Follower Exporter vs Exporter for Followers (2026 Comparison)</h3>
+          <h2>IG Follower Exporter vs Exporter for Followers (2026 Comparison)</h2>
           <p>Side-by-side comparison of price, payment methods, data fields, and features. Find the best Instagram follower export tool for your needs.</p>
           <span class="meta">April 16, 2026</span>
         </a>
 
         <a href="/blog/how-to-export-instagram-followers-csv/" class="article-card">
-          <h3>How to Export Instagram Followers to CSV</h3>
+          <h2>How to Export Instagram Followers to CSV</h2>
           <p>Step-by-step guide to export Instagram followers to CSV with fields, limits, privacy notes, and browser-based workflow screenshots.</p>
           <span class="meta">Updated May 14, 2026</span>
         </a>

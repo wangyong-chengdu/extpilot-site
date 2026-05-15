@@ -77,6 +77,25 @@
     .cta:hover { text-decoration: none; opacity: 0.9; }
     .cta-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
     footer { padding: 24px 0; border-top: 1px solid #21262d; color: #8b949e; font-size: 13px; }
+    /* Accessibility baseline: visible focus, text-link affordance, and contrast-safe muted text. */
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid #ffd166;
+      outline-offset: 3px;
+    }
+    article p a, article li a, article .tldr a, .faq-item p a, .support p a, .fallback a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+    .meta, .article-card .meta, .footer-content, .footer-content a, .empty-state {
+      color: #8b949e !important;
+    }
+    .pricing-card li.disabled, .pricing-card li.disabled::before, .compare-table .no {
+      color: #8b949e !important;
+    }
+    .pricing-table .plan-pro {
+      color: #3fb950 !important;
+    }
   </style>
 </head>
 <body>

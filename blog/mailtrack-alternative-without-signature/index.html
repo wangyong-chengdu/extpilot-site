@@ -151,6 +151,25 @@
       .comparison-table th, .comparison-table td { padding: 8px 10px; }
       .footer-content { flex-direction: column; text-align: center; }
     }
+    /* Accessibility baseline: visible focus, text-link affordance, and contrast-safe muted text. */
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+      outline: 3px solid #ffd166;
+      outline-offset: 3px;
+    }
+    article p a, article li a, article .tldr a, .faq-item p a, .support p a, .fallback a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+    .meta, .article-card .meta, .footer-content, .footer-content a, .empty-state {
+      color: #8b949e !important;
+    }
+    .pricing-card li.disabled, .pricing-card li.disabled::before, .compare-table .no {
+      color: #8b949e !important;
+    }
+    .pricing-table .plan-pro {
+      color: #3fb950 !important;
+    }
   </style>
 </head>
 <body>
