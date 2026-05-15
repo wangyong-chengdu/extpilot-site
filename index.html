@@ -44,8 +44,8 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: #0f1117;
-      color: #e1e4e8;
+      background-color: #111111;
+      color: #e8e8e8;
       line-height: 1.6;
       min-height: 100vh;
       display: flex;
@@ -53,7 +53,7 @@
     }
 
     a {
-      color: #58a6ff;
+      color: #6aa7ff;
       text-decoration: none;
     }
 
@@ -62,7 +62,7 @@
     }
 
     .container {
-      max-width: 800px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 0 24px;
       width: 100%;
@@ -77,109 +77,158 @@
 
     /* Header */
     header {
-      padding: 24px 0;
-      border-bottom: 1px solid #21262d;
+      padding: 22px 0;
+      border-bottom: 1px solid #282828;
+      background: #111111;
     }
 
     .logo {
       font-size: 20px;
       font-weight: 700;
-      color: #f0f6fc;
-      letter-spacing: -0.5px;
+      color: #f7f7f7;
+      letter-spacing: 0;
+    }
+
+    .top-nav {
+      margin-left: auto;
+      display: flex;
+      gap: 18px;
+      font-size: 14px;
+    }
+
+    .top-nav a {
+      color: #a0a0a0;
+    }
+
+    .top-nav a:hover {
+      color: #f0f0f0;
     }
 
     /* Hero */
     .hero {
-      padding: 80px 0 60px;
+      padding: 78px 0 52px;
       text-align: center;
     }
 
     .hero h1 {
       font-size: 48px;
       font-weight: 800;
-      color: #f0f6fc;
-      letter-spacing: -1px;
+      color: #f7f7f7;
+      letter-spacing: 0;
       margin-bottom: 16px;
     }
 
     .hero .tagline {
       font-size: 20px;
-      color: #8b949e;
+      color: #b2b2b2;
       margin-bottom: 12px;
     }
 
     .hero .description {
       font-size: 16px;
-      color: #8b949e;
+      color: #9a9a9a;
       max-width: 480px;
       margin: 0 auto;
     }
 
     /* Extensions */
     .extensions {
-      padding: 40px 0 80px;
+      padding: 28px 0 88px;
     }
 
     .extensions h2 {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 600;
-      color: #8b949e;
+      color: #9a9a9a;
       text-transform: uppercase;
       letter-spacing: 1px;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       text-align: center;
     }
 
     .extension-card {
-      background-color: #161b22;
-      border: 1px solid #21262d;
+      background-color: #181818;
+      border: 1px solid #2a2a2a;
       border-radius: 8px;
-      padding: 24px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      transition: border-color 0.2s;
+      padding: 22px;
+      display: grid;
+      grid-template-columns: 56px minmax(0, 1fr);
+      gap: 16px 18px;
+      align-items: start;
+      transition: border-color 0.2s, background-color 0.2s;
     }
 
     .extension-card .ext-icon {
-      width: 48px;
-      height: 48px;
+      width: 52px;
+      height: 52px;
       border-radius: 8px;
       flex-shrink: 0;
+      object-fit: cover;
     }
 
     .extension-card .ext-right {
-      margin-left: auto;
-      flex-shrink: 0;
+      grid-column: 2;
+      margin-left: 0;
+      min-width: 0;
     }
 
     .extension-card:hover {
-      border-color: #30363d;
+      background-color: #1c1c1c;
+      border-color: #3a3a3a;
+    }
+
+    .extension-info {
+      min-width: 0;
     }
 
     .extension-info h3 {
       font-size: 18px;
       font-weight: 600;
-      color: #f0f6fc;
-      margin-bottom: 4px;
+      color: #f4f4f4;
+      margin-bottom: 6px;
+      line-height: 1.35;
     }
 
     .extension-info p {
       font-size: 14px;
-      color: #8b949e;
+      color: #a0a0a0;
+      max-width: 680px;
     }
 
     .extension-links {
       display: flex;
-      gap: 16px;
+      gap: 8px;
+      flex-wrap: wrap;
       font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .extension-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 30px;
+      padding: 5px 9px;
+      border: 1px solid #303030;
+      border-radius: 6px;
+      color: #9cc8ff;
+      background-color: #131313;
+    }
+
+    .extension-links a:hover {
+      border-color: #4a4a4a;
+      color: #cfe5ff;
+      text-decoration: none;
+    }
+
+    .extension-links a[href*="privacy"] {
+      color: #b5b5b5;
     }
 
     /* Footer */
     footer {
       margin-top: auto;
       padding: 24px 0;
-      border-top: 1px solid #21262d;
+      border-top: 1px solid #282828;
     }
 
     .footer-content {
@@ -187,21 +236,25 @@
       justify-content: space-between;
       align-items: center;
       font-size: 13px;
-      color: #484f58;
+      color: #757575;
       flex-wrap: wrap;
       gap: 8px;
     }
 
     .footer-content a {
-      color: #484f58;
+      color: #757575;
     }
 
     .footer-content a:hover {
-      color: #8b949e;
+      color: #b5b5b5;
     }
 
     /* Responsive */
-    @media (max-width: 600px) {
+    @media (max-width: 760px) {
+      .container {
+        padding: 0 18px;
+      }
+
       .hero {
         padding: 48px 0 40px;
       }
@@ -215,9 +268,22 @@
       }
 
       .extension-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
+        grid-template-columns: 44px minmax(0, 1fr);
+        padding: 18px;
+        gap: 12px 14px;
+      }
+
+      .extension-card .ext-icon {
+        width: 44px;
+        height: 44px;
+      }
+
+      .extension-card .ext-right {
+        grid-column: 1 / -1;
+      }
+
+      .extension-links a {
+        min-height: 32px;
       }
 
       .footer-content {
@@ -231,9 +297,9 @@
   <header>
     <div class="container header-inner">
       <a href="/" class="logo">ExtPilot</a>
-      <nav style="margin-left: auto; display: flex; gap: 16px; font-size: 14px;">
-        <a href="/blog/" style="color: #8b949e;">Blog</a>
-        <a href="/feedback/" style="color: #8b949e;">Feedback</a>
+      <nav class="top-nav">
+        <a href="/blog/">Blog</a>
+        <a href="/feedback/">Feedback</a>
       </nav>
     </div>
   </header>
@@ -251,7 +317,7 @@
       <div class="container">
         <h2>Our Extensions</h2>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/aligrab/icon.png" alt="AliGrab" class="ext-icon">
+          <img src="/aligrab/icon.png" alt="AliGrab" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>AliGrab &mdash; Download AliExpress Images &amp; Videos</h3>
             <p>One-click download all product images and videos from AliExpress. ZIP, format conversion, HD quality. $0.99 one-time Pro.</p>
@@ -263,7 +329,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/ai-conversation-vault/icon.png" alt="AI Conversation Vault" class="ext-icon">
+          <img src="/ai-conversation-vault/icon.png" alt="AI Conversation Vault" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>AI Conversation Vault &mdash; Save &amp; Search AI Chats</h3>
             <p>Save, search, and organize ChatGPT, Claude &amp; Gemini conversations locally. Tag by project, full-text search, Obsidian export. $7.9 lifetime Pro.</p>
@@ -274,7 +340,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/geomail-tracker/icon.png" alt="GeoMail Tracker" class="ext-icon">
+          <img src="/geomail-tracker/icon.png" alt="GeoMail Tracker" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>GeoMail Tracker &mdash; Gmail Email Tracker, No Signature</h3>
             <p>Track Gmail opens with geolocation, device info, and real-time desktop notifications. Free plan adds no signature or watermark.</p>
@@ -286,7 +352,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/notebooklm-source-collector/icon.png" alt="NotebookLM Source Collector" class="ext-icon">
+          <img src="/notebooklm-source-collector/icon.png" alt="NotebookLM Source Collector" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>NotebookLM Source Collector &mdash; Web Clipper for NLM</h3>
             <p>Collect web pages, articles &amp; YouTube videos as formatted NotebookLM sources with one right-click. Auto-sync to NLM (Pro). 10 collections/day included.</p>
@@ -298,7 +364,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/audio-to-text/icon.png" alt="Audio to Text Converter" class="ext-icon">
+          <img src="/audio-to-text/icon.png" alt="Audio to Text Converter" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>Audio to Text Converter &mdash; Browser Audio Transcription</h3>
             <p>Record mic, tab audio, YouTube audio, or upload files and convert them to editable text. Free Groq quota, live Web Speech, and Pro AI summaries.</p>
@@ -309,7 +375,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/discord-chat-exporter/icon.png" alt="Discord Chat Exporter" class="ext-icon">
+          <img src="/discord-chat-exporter/icon.png" alt="Discord Chat Exporter" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>Discord Chat Exporter &mdash; Export &amp; Backup</h3>
             <p>Export Discord channel or DM messages to CSV, JSON, and HTML. 300 free messages, local processing, $1.90 one-time Pro unlock.</p>
@@ -321,7 +387,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/wa-bulk-sender/icon.png" alt="WhatsApp Bulk Sender & Privacy Guard" class="ext-icon">
+          <img src="/wa-bulk-sender/icon.png" alt="WhatsApp Bulk Sender &amp; Privacy Guard" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>WhatsApp Bulk Sender &mdash; Excel Import + Privacy Blur</h3>
             <p>Batch send WhatsApp Web messages with free Excel import, privacy blur, templates, and send history export. Pro starts at $1.9/mo.</p>
@@ -333,7 +399,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/stockkeywords-ai/icon.png" alt="StockKeywords AI" class="ext-icon">
+          <img src="/stockkeywords-ai/icon.png" alt="StockKeywords AI" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>StockKeywords AI &mdash; Auto Tag for Adobe Stock</h3>
             <p>Generate Adobe Stock titles and 49 AI keywords in seconds. Bring your own OpenAI/Gemini API key. Free during launch.</p>
@@ -345,10 +411,10 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/langtube/icon.png" alt="LangTube" class="ext-icon">
+          <img src="/langtube/icon.png" alt="LangTube" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>LangTube &mdash; Learn English with YouTube</h3>
-            <p>Bilingual subtitles, click-to-lookup dictionary, vocabulary book & Anki export.</p>
+            <p>Bilingual subtitles, click-to-lookup dictionary, vocabulary book &amp; Anki export.</p>
           </div>
           <div class="ext-right extension-links">
             <a href="/langtube/">YouTube language learning extension</a>
@@ -356,7 +422,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/ali-image-search/icon.png" alt="AliFind" class="ext-icon">
+          <img src="/ali-image-search/icon.png" alt="AliFind" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>AliFind &mdash; Image Search for AliExpress</h3>
             <p>Find any product on AliExpress instantly. Right-click any image or enter keywords to search.</p>
@@ -367,7 +433,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/writetrace/icon.png" alt="WriteTrace" class="ext-icon">
+          <img src="/writetrace/icon.png" alt="WriteTrace" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>WriteTrace &mdash; Google Docs Writing Replay</h3>
             <p>Replay the writing history of any Google Doc. Detect paste events and AI-generated content.</p>
@@ -378,7 +444,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/ig-follower-exporter/icon.png" alt="IG Follower Exporter" class="ext-icon">
+          <img src="/ig-follower-exporter/icon.png" alt="IG Follower Exporter" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>IG Follower Exporter</h3>
             <p>Export any Instagram account's followers and following list to CSV or Excel.</p>
@@ -390,7 +456,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/shopify-spy/icon.png" alt="Shopify Store Scraper" class="ext-icon">
+          <img src="/shopify-spy/icon.png" alt="Shopify Store Scraper" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>Shopify Store Scraper</h3>
             <p>Discover winning products by analyzing any Shopify store's catalog in seconds.</p>
@@ -401,7 +467,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/storespy/icon.png" alt="StoreSpy" class="ext-icon">
+          <img src="/storespy/icon.png" alt="StoreSpy" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>StoreSpy &mdash; Shopify Theme &amp; App Detector</h3>
             <p>Detect any Shopify store's theme, apps, and real product count in 30 seconds. 100% local.</p>
@@ -412,7 +478,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/tts-audio-downloader/icon.svg" alt="TTS Audio Downloader" class="ext-icon">
+          <img src="/tts-audio-downloader/icon.svg" alt="TTS Audio Downloader" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>Google TTS Audio Downloader</h3>
             <p>Download Google Cloud text-to-speech audio as MP3 or WAV. No server upload, no sign-up.</p>
@@ -424,7 +490,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/leads-exporter/icon.png" alt="Leads Exporter for Google Maps" class="ext-icon">
+          <img src="/leads-exporter/icon.png" alt="Leads Exporter for Google Maps" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>Leads Exporter for Google Maps</h3>
             <p>Export business leads from Google Maps search results. Get names, phones, emails, addresses in CSV. 50 leads per day included.</p>
@@ -435,7 +501,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/slides-timer/icon.png" alt="Slides Timer for Google Slides" class="ext-icon">
+          <img src="/slides-timer/icon.png" alt="Slides Timer for Google Slides" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>Slides Timer for Google Slides</h3>
             <p>Add countdown timers, clocks, and dates directly into Google Slides presentations with simple inline tags and no account setup.</p>
@@ -446,7 +512,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/leadsnap/icon.png" alt="LeadSnap Email and Phone Extractor" class="ext-icon">
+          <img src="/leadsnap/icon.png" alt="LeadSnap Email and Phone Extractor" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>LeadSnap &mdash; Email &amp; Phone Extractor</h3>
             <p>Extract emails, phone numbers, and social media links from any webpage in 30 seconds. Export to CSV/Excel. 100% local processing. Pro starts at $3.99/mo.</p>
@@ -457,7 +523,7 @@
           </div>
         </div>
         <div class="extension-card" style="margin-bottom: 16px;">
-          <img src="/shopcsv/icon.png" alt="ShopCSV" class="ext-icon">
+          <img src="/shopcsv/icon.png" alt="ShopCSV" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>ShopCSV &mdash; Shopify to WooCommerce CSV Converter</h3>
             <p>Convert Shopify product CSV to WooCommerce format in seconds. No API needed. $14.99 one-time for unlimited products.</p>
@@ -469,7 +535,7 @@
           </div>
         </div>
         <div class="extension-card">
-          <img src="/subflow/icon.png" alt="SubFlow" class="ext-icon">
+          <img src="/subflow/icon.png" alt="SubFlow" class="ext-icon" width="52" height="52" loading="lazy">
           <div class="extension-info">
             <h3>SubFlow &mdash; YouTube Subscription Manager</h3>
             <p>Organize YouTube subscriptions into groups. Filter your feed by topic, hide watched videos. $2.99 one-time purchase.</p>
