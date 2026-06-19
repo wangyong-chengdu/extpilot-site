@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>如何把电子发票 PDF 转成 OFD、XML 压缩包和 PDF</title>
+  <meta name="description" content="用本地浏览器插件把中国大陆电子发票 PDF 转成同名 OFD、XML 压缩包和 PDF，含步骤、隐私、保真和限制说明。">
+  <link rel="canonical" href="https://extpilot.com/blog/how-to-convert-invoice-pdf-to-ofd-xml-pdf/">
+  <meta property="og:title" content="如何把电子发票 PDF 转成 OFD、XML 压缩包和 PDF">
+  <meta property="og:description" content="电子发票 PDF 转 OFD/XML/PDF 的本地转换教程，适合报销、归档和系统导入。">
+  <meta property="og:url" content="https://extpilot.com/blog/how-to-convert-invoice-pdf-to-ofd-xml-pdf/">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://extpilot.com/invoice-format-converter/icon.png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Article","headline":"如何把电子发票 PDF 转成 OFD、XML 压缩包和 PDF","datePublished":"2026-06-19","dateModified":"2026-06-19","author":{"@type":"Organization","name":"ExtPilot"},"publisher":{"@type":"Organization","name":"ExtPilot","url":"https://extpilot.com"},"mainEntityOfPage":"https://extpilot.com/blog/how-to-convert-invoice-pdf-to-ofd-xml-pdf/"}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"HowTo","name":"如何把电子发票 PDF 转成 OFD、XML 压缩包和 PDF","totalTime":"PT2M","tool":[{"@type":"HowToTool","name":"发票格式转换器"}],"step":[{"@type":"HowToStep","name":"上传电子发票 PDF","text":"打开插件 Popup，拖入或选择电子发票 PDF。"},{"@type":"HowToStep","name":"选择 OFD 清晰度","text":"默认使用高清 288 DPI，也可以选择 216 或 360 DPI。"},{"@type":"HowToStep","name":"下载三种文件","text":"转换完成后分别下载 OFD、XML 压缩包和 PDF。"}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"PDF 转 OFD 会空白吗？","acceptedAnswer":{"@type":"Answer","text":"当前版本会为 OFD 图片对象写入显式 CTM，并已通过真实样本回归测试。仍建议上架前用常用 OFD 阅读器做一次肉眼确认。"}},{"@type":"Question","name":"XML 是原文还是压缩包？","acceptedAnswer":{"@type":"Answer","text":"下载的是 zip 文件，内部包含同名 XML，更接近常见电子发票下载习惯。"}},{"@type":"Question","name":"可以处理扫描件吗？","acceptedAnswer":{"@type":"Answer","text":"不可以。扫描件需要 OCR，不属于当前版本范围。"}}]}
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ExtPilot","item":"https://extpilot.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://extpilot.com/blog/"},{"@type":"ListItem","position":3,"name":"发票 PDF 转 OFD/XML/PDF","item":"https://extpilot.com/blog/how-to-convert-invoice-pdf-to-ofd-xml-pdf/"}]}
+  </script>
+  <style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",Arial,sans-serif;background:#0f1117;color:#c9d1d9;line-height:1.85;margin:0}a{color:#58a6ff}.container{max-width:760px;margin:0 auto;padding:0 24px}header,footer{border-bottom:1px solid #21262d;padding:22px 0}footer{border-top:1px solid #21262d;border-bottom:0;margin-top:56px}article{padding:46px 0}h1{font-size:36px;line-height:1.28;color:#f0f6fc}h2{font-size:25px;color:#f0f6fc;margin:42px 0 14px}.meta,.note{color:#8b949e}.tldr{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:20px;margin:24px 0}.step-img{max-width:100%;height:auto;border-radius:8px;border:1px solid #21262d;margin:16px 0 24px}.cta{background:#1f6feb;border-radius:8px;padding:18px;margin:28px 0}.cta a{color:white;font-weight:800}.faq{background:#161b22;border:1px solid #21262d;border-radius:8px;padding:18px;margin-bottom:14px}</style>
+</head>
+<body>
+  <header><div class="container"><a href="/" class="logo">ExtPilot</a> · <a href="/blog/">Blog</a></div></header>
+  <article class="container">
+    <h1>如何把电子发票 PDF 转成 OFD、XML 压缩包和 PDF</h1>
+    <p class="meta">Last updated: 2026-06-19 · 测试样本：中国大陆电子发票 PDF</p>
+    <div class="tldr"><strong>快速答案：</strong>安装发票格式转换器后，在 Popup 上传电子发票 PDF，选择 288 DPI，转换完成后即可下载同名 OFD、XML 压缩包和 PDF。转换在本地浏览器完成，不上传发票文件。</div>
+    <h2>为什么需要转换</h2>
+    <p>很多报销、归档和系统导入流程不只接受 PDF。财务人员可能需要 OFD 用于归档，需要 XML 压缩包用于导入或校验，也需要保留原 PDF。手动整理文件名和格式很容易出错，所以这个插件把三种输出集中在一个本地流程中。</p>
+    <h2>步骤 1：上传电子发票 PDF</h2>
+    <p>打开插件 Popup，拖入或选择电子发票 PDF。Popup 只保留转换操作界面，不显示免费次数统计。</p>
+    <img class="step-img" src="images/step-1-upload.png" alt="在发票格式转换器中上传电子发票 PDF" width="1280" height="800" loading="lazy">
+    <h2>步骤 2：选择 OFD 清晰度</h2>
+    <p>默认选择高清 288 DPI。一般单张电子发票使用 288 DPI 即可；如果你对阅读器显示效果要求更高，可以选择 360 DPI，但文件会更大。</p>
+    <img class="step-img" src="images/step-2-ofd-fidelity.png" alt="选择高保真 OFD 清晰度" width="1280" height="800" loading="lazy">
+    <h2>步骤 3：下载 OFD、XML 压缩包和 PDF</h2>
+    <p>转换完成后，插件会生成同名 OFD、同名 XML ZIP 和同名 PDF。XML 压缩包内部包含同名 XML 文件，方便后续导入或字段检查。</p>
+    <img class="step-img" src="images/step-3-downloads.png" alt="下载同名 OFD XML 压缩包和 PDF" width="1280" height="800" loading="lazy">
+    <h2>Basic 和 Pro 怎么区分</h2>
+    <p>Basic 用户可下载 3 次。转换完成不扣次数，只有成功下载才扣减。Pro 为 $1.90 一次性买断，激活后解除下载次数限制。</p>
+    <img class="step-img" src="images/step-4-plan.png" alt="Basic 使用统计和 Pro 买断入口" width="1280" height="800" loading="lazy">
+    <h2>隐私和限制</h2>
+    <p>插件在本地浏览器处理发票，不上传 PDF、OFD 或 XML 内容。当前版本不支持扫描件 OCR。生成的 OFD 是视觉转换副本，不是税局原始签章件。</p>
+    <img class="step-img" src="images/step-5-privacy.png" alt="发票文件留在本机浏览器处理" width="1280" height="800" loading="lazy">
+    <div class="cta"><a href="/invoice-format-converter/">打开发票格式转换器产品页</a></div>
+    <h2>FAQ</h2>
+    <div class="faq"><strong>PDF 转 OFD 会空白吗？</strong><p>当前版本会为 OFD 图片对象写入显式 CTM，并已通过真实样本回归测试。仍建议上架前用你的常用 OFD 阅读器做一次肉眼确认。</p></div>
+    <div class="faq"><strong>XML 是原文还是压缩包？</strong><p>下载的是 `.zip`，内部包含同名 `.xml`，更接近常见电子发票下载习惯。</p></div>
+    <div class="faq"><strong>可以处理扫描件吗？</strong><p>不可以。扫描件需要 OCR，不属于当前 V1 范围。</p></div>
+  </article>
+  <footer><div class="container">© 2026 ExtPilot · <a href="/invoice-format-converter/privacy.html">Privacy</a></div></footer>
+</body>
+</html>
