@@ -12,7 +12,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>发票 PDF 转 OFD/XML/PDF - 发票格式转换器</title>
-  <meta name="description" content="本地将中国大陆电子发票 PDF 转换为同名 OFD、XML 压缩包和 PDF。Basic 可下载 3 次，Pro $1.90 买断。">
+  <meta name="description" content="本地将中国大陆电子发票 PDF 转换为同名 OFD、XML 压缩包和 PDF，不上传发票文件，适合财务报销、归档、发票整理和系统导入。">
   <link rel="canonical" href="https://extpilot.com/invoice-format-converter/">
   <meta property="og:title" content="发票格式转换器 - PDF 转 OFD/XML/PDF">
   <meta property="og:description" content="本地转换电子发票 PDF，输出同名 OFD、XML 压缩包和 PDF，适合报销、归档和系统导入。">
@@ -91,12 +91,33 @@
       </div>
     </section>
     <section>
+      <h2>转换结果</h2>
+      <div class="grid">
+        <div class="card"><h3>OFD 视觉副本</h3><p>插件会把 PDF 页面按设定 DPI 渲染为整页图片，再写入 OFD 文件。这个方式优先保证版式、金额、抬头、二维码和页面比例接近原始 PDF，适合归档、流转和人工核对。</p></div>
+        <div class="card"><h3>XML 压缩包</h3><p>插件会从 PDF 文本中提取发票代码、发票号码、购买方、销售方、金额等核心字段，并生成同名 XML 后打包为 ZIP。字段解析失败时会提示具体缺失项。</p></div>
+        <div class="card"><h3>PDF 副本</h3><p>插件会保留一份同名 PDF 副本，方便和 OFD、XML ZIP 一起交付给财务或归档系统，减少手动改名和分拣。</p></div>
+        <div class="card"><h3>文件命名</h3><p>三个输出文件都沿用原始 PDF 的 basename，仅替换扩展名，避免批量处理发票时出现无法追溯来源的问题。</p></div>
+      </div>
+    </section>
+    <section>
+      <h2>保真和边界</h2>
+      <div class="answer">
+        <p>发票格式转换器的 OFD 目标是“视觉上基本一致”，不是把 PDF 还原成税局签发的原始矢量 OFD。默认 288 DPI 已能覆盖大多数电子发票归档场景；如果用户发现细字或二维码边缘不够清晰，可以切换到 360 DPI。更高 DPI 会增加 OFD 文件大小，但能降低明显模糊、裁切和空白页风险。</p>
+      </div>
+    </section>
+    <section>
       <h2>适合谁</h2>
       <div class="grid">
         <div class="card"><h3>财务和报销专员</h3><p>整理员工提交的电子发票材料，统一归档格式。</p></div>
         <div class="card"><h3>行政和人事</h3><p>处理日常报销、福利采购、差旅票据和供应商发票。</p></div>
         <div class="card"><h3>个体工商户</h3><p>把店铺、采购和服务类发票整理为常见格式。</p></div>
         <div class="card"><h3>需要导入系统的团队</h3><p>生成 XML ZIP 以配合财务、报销或归档系统。</p></div>
+      </div>
+    </section>
+    <section>
+      <h2>隐私边界</h2>
+      <div class="answer">
+        <p>插件只处理用户主动选择的 PDF 文件。PDF 渲染、XML 生成、OFD 打包和下载都在浏览器本地完成，不把发票文件上传到 ExtPilot 服务器。Pro 激活会访问授权服务校验 License，付款由 Stripe 处理；授权请求不包含发票 PDF、XML、OFD 内容，也不读取网页上的其他票据数据。</p>
       </div>
     </section>
     <section>
