@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrandBatch 隐私政策</title>
+  <meta name="description" content="BrandBatch 在本地处理视频素材，不上传任何媒体文件。了解权限、授权验证、可选遥测和数据边界。">
+  <link rel="canonical" href="https://extpilot.com/brandbatch/privacy.html">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",Arial,sans-serif;background:#f6f7f3;color:#17201b;line-height:1.75;margin:0}.container{max-width:760px;margin:0 auto;padding:32px 22px}a{color:#17633f}h1{font-size:34px}h2{margin-top:34px}.box{background:#fff;border:1px solid #dfe5dd;border-radius:8px;padding:20px;margin:18px 0}</style>
+</head>
+<body>
+  <main class="container">
+    <a href="/brandbatch/">&larr; 返回 BrandBatch</a>
+    <h1>BrandBatch 隐私政策</h1>
+    <p>Last updated: 2026-09-16</p>
+    <div class="box">
+      <p>BrandBatch 用于在浏览器本地批量为视频添加 LOGO、水印、尾帧、转场和背景音乐。插件不上传用户的任何视频、图片或音频文件。</p>
+    </div>
+    <h2>留在本机的数据</h2>
+    <p>用户导入的视频与素材、渲染成品、标识套装配置和队列记录，全部保存在浏览器本地（chrome.storage.local 与本地下载），不经过任何服务器。</p>
+    <h2>权限说明</h2>
+    <p>插件仅申请 <code>storage</code> 权限，用于保存标识套装配置与偏好设置。无 host 权限、无内容脚本、无远程代码。</p>
+    <h2>网络请求（均为可选，不含个人标识）</h2>
+    <p><strong>功能配置与匿名心跳</strong>：启动时从 license.extpilot.com 拉取一份功能配置 JSON，请求仅携带匿名随机安装 ID 前 8 位与插件版本号，用于灰度开关与匿名活跃统计。</p>
+    <p><strong>Pro 授权验证</strong>：购买 Pro 并输入激活码后，激活码字符串发送到授权服务校验；不发送其他任何内容。验证结果本地缓存，14 天宽限期内断网不掉 Pro。</p>
+    <p><strong>可选遥测</strong>：默认关闭。用户在页脚手动开启后，上报匿名使用事件（如「批次提交」「成品下载」），不含文件名、页面内容或个人标识，可随时关闭。</p>
+    <h2>我们绝不会做的事</h2>
+    <p>不会收集或上传用户的视频、素材、成品；不会收集浏览历史或个人身份信息；不会出售或与第三方共享数据用于营销；不要求注册账号。</p>
+    <h2>支付</h2>
+    <p>Pro 由 Stripe 处理支付，我们不经手、不存储银行卡信息；Stripe 仅向你返回激活码。</p>
+    <h2>数据删除</h2>
+    <p>随时可通过移除浏览器插件删除全部本地数据（套装、队列记录、安装 ID）。可选遥测可在插件页脚随时关闭。</p>
+    <h2>联系</h2>
+    <p>疑问请联系 support@extpilot.com。English version: <a href="/privacy/brandbatch/">/privacy/brandbatch/</a></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9FDXR5QTF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N9FDXR5QTF');
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrandBatch - 短剧短视频批量打标机（水印/LOGO/尾帧/转场/BGM）</title>
+  <meta name="description" content="浏览器本地批量给短剧、短视频素材添加 LOGO、水印、尾帧、转场和背景音乐。一次拖入整批出片，预览即成品，素材不上传。">
+  <link rel="canonical" href="https://extpilot.com/brandbatch/">
+  <meta property="og:title" content="BrandBatch - 短剧短视频批量打标机">
+  <meta property="og:description" content="本地批量添加 LOGO、水印、尾帧、转场与背景音乐，一次拖入整批出片，素材不出本机。">
+  <meta property="og:url" content="https://extpilot.com/brandbatch/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://extpilot.com/brandbatch/icon.png">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BrandBatch",
+    "url": "https://extpilot.com/brandbatch/",
+    "applicationCategory": "BrowserApplication",
+    "operatingSystem": "Chrome, Edge",
+    "description": "在浏览器本地批量给短剧、短视频素材添加 LOGO、水印、尾帧、转场和背景音乐。",
+    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD", "description": "Basic at no cost; optional Pro $2.9/month or $29/year"},
+    "publisher": {"@type": "Organization", "name": "ExtPilot", "url": "https://extpilot.com"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "怎么批量给视频加水印？", "acceptedAnswer": {"@type": "Answer", "text": "安装 BrandBatch 后，把整批视频拖入插件，配置水印套装（全屏水印、滚动水印、LOGO），点击提交批次即可一次性输出全部带水印的视频。"}},
+      {"@type": "Question", "name": "视频会上传到服务器吗？", "acceptedAnswer": {"@type": "Answer", "text": "不会。所有解码、合成和编码都在浏览器本地完成（WebCodecs），素材不出本机。"}},
+      {"@type": "Question", "name": "一个视频能同时套多种标识吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。批量矩阵支持 N 个视频 × M 个套装 = N×M 条成品，勾选多个套装一次提交即可。"}},
+      {"@type": "Question", "name": "黑底水印视频怎么只留水印本体？", "acceptedAnswer": {"@type": "Answer", "text": "BrandBatch 内置暗背景抠像：自动识别黑底水印视频的亮区包围盒，只叠加水印本体，不蒙画面。"}}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"ExtPilot","item":"https://extpilot.com/"},{"@type":"ListItem","position":2,"name":"BrandBatch","item":"https://extpilot.com/brandbatch/"}]}
+  </script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",Arial,sans-serif;background:#f6f7f3;color:#17201b;line-height:1.7}a{color:#17633f;text-decoration:none}a:hover{text-decoration:underline}.container{max-width:960px;margin:0 auto;padding:0 22px}header,footer{border-bottom:1px solid #dfe5dd;background:#fff}footer{border-top:1px solid #dfe5dd;border-bottom:0;margin-top:56px}.nav,.footer{display:flex;justify-content:space-between;gap:16px;padding:20px 0;align-items:center}.logo{font-weight:850;color:#17201b}.hero{padding:64px 0 44px}.hero-grid{display:grid;grid-template-columns:120px 1fr;gap:28px;align-items:center}.hero img{width:104px;height:104px;border-radius:22px}.eyebrow{display:inline-block;background:#dff3e6;color:#24583a;border-radius:999px;padding:4px 12px;font-size:13px;font-weight:800;margin-bottom:12px}h1{font-size:42px;line-height:1.16;margin-bottom:14px}h2{font-size:25px;margin:44px 0 16px}.lead{font-size:18px;color:#44524a;max-width:760px}.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.btn{display:inline-flex;align-items:center;border-radius:8px;padding:11px 16px;font-weight:800;background:#24583a;color:#fff}.btn.secondary{background:#fff;color:#24583a;border:1px solid #cdd8ca}.notice{margin-top:14px;color:#59635d;font-size:14px}.answer,.card,.table-wrap{background:#fff;border:1px solid #dfe5dd;border-radius:8px;padding:22px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card h3{margin-bottom:8px}.steps{display:grid;gap:14px}.step{display:grid;grid-template-columns:42px 1fr;gap:14px;background:#fff;border:1px solid #dfe5dd;border-radius:8px;padding:18px}.num{width:36px;height:36px;border-radius:50%;background:#24583a;color:#fff;display:grid;place-items:center;font-weight:850}table{width:100%;border-collapse:collapse}th,td{border-bottom:1px solid #dfe5dd;padding:12px;text-align:left}th{background:#eef4eb}.faq .card{margin-bottom:12px}.updated{font-size:13px;color:#66716b;margin-top:18px}@media(max-width:720px){.hero-grid,.grid{grid-template-columns:1fr}h1{font-size:31px}.nav,.footer{flex-direction:column;align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <header><div class="container nav"><a class="logo" href="/">ExtPilot</a><a href="/brandbatch/privacy.html">隐私政策</a></div></header>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <img src="/brandbatch/icon.png" alt="BrandBatch 图标" width="104" height="104">
+        <div>
+          <span class="eyebrow">短剧 · 短视频批量打标</span>
+          <h1>BrandBatch — 批量加水印、LOGO、尾帧、转场和背景音乐</h1>
+          <p class="lead">BrandBatch 是一款全程本地处理的浏览器插件。把整批短剧切片或投放素材拖进来，勾选标识套装，一次提交就输出全部成品——预览即成品，素材不出本机。</p>
+          <div class="cta" id="store-links">
+            <a class="btn" href="#">安装 Chrome 版</a>
+            <a class="btn secondary" href="#">安装 Edge 版</a>
+            <a class="btn secondary" href="/brandbatch/privacy.html">隐私政策</a>
+          </div>
+          <p class="notice">商店链接待上架公开后生效。Basic 全功能可用；Pro 为 $2.9/月 或 $29/年（不限批量、最高 4K、BGM 混音）。</p>
+        </div>
+      </div>
+    </section>
+    <section class="answer">
+      <p><strong>这个工具解决什么问题？</strong> 短剧出海和投放团队每天要给几十条素材重复套同一套标识：加水印、贴 LOGO、接尾帧、叠转场、换背景音乐。BrandBatch 把这套动作变成「拖入 → 勾选套装 → 提交」，批量矩阵一次产出 N 个视频 × M 个套装的全部组合，全部在浏览器本地渲染。</p>
+    </section>
+    <section>
+      <h2>核心能力</h2>
+      <div class="grid">
+        <div class="card"><h3>真正的批处理</h3><p>N 个视频 × M 个标识套装 = N×M 条成品，一次提交全部渲染；支持多批次连投，边生成边配置下一批。</p></div>
+        <div class="card"><h3>完整标识体系</h3><p>全屏水印（内置黑底抠像，只留水印本体不蒙画面）、滚动水印、九宫格 LOGO、图片/视频尾帧、尾部转场、BGM 保留/替换/混音。</p></div>
+        <div class="card"><h3>预览即成品</h3><p>关键帧标记（正片开头/末尾/转场瞬间/尾帧画面）+ 播放预览，画面分层与混音和导出走同一条渲染路径。</p></div>
+        <div class="card"><h3>100% 本地处理</h3><p>解码、合成、编码全部使用浏览器内置 WebCodecs，素材不上传、不排队、没有服务器处理队列。</p></div>
+      </div>
+    </section>
+    <section>
+      <h2>如何使用</h2>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><p>把整批素材（或整个文件夹）拖入插件。</p></div>
+        <div class="step"><span class="num">2</span><p>新建标识套装：按需组合水印、LOGO、尾帧、转场和背景音乐；可同时勾选多个套装形成批量矩阵。</p></div>
+        <div class="step"><span class="num">3</span><p>预览确认后点击「提交批次」，队列实时显示每条成品的进度，完成后一键下载全部。</p></div>
+      </div>
+    </section>
+    <section>
+      <h2>适合谁</h2>
+      <div class="grid">
+        <div class="card"><h3>短剧出海团队</h3><p>给发行切片批量叠加频道水印和 LOGO，适配多平台投放。</p></div>
+        <div class="card"><h3>自媒体 / 短视频创作者</h3><p>批量加滚动水印防盗搬，统一片尾帧引导关注。</p></div>
+        <div class="card"><h3>剪辑师</h3><p>把重复套版工作交给批处理，本地渲染速度约为实时的多倍。</p></div>
+        <div class="card"><h3>素材分发运营</h3><p>同一批素材输出多套标识版本，按渠道分发。</p></div>
+      </div>
+    </section>
+    <section>
+      <h2>隐私边界</h2>
+      <div class="answer">
+        <p>插件只处理用户主动导入的视频和素材文件。全部渲染在浏览器本地完成，不上传任何媒体内容。插件仅申请 storage 权限保存套装配置；Pro 激活只发送激活码字符串到授权服务；可选遥测默认关闭，需手动开启。详见<a href="/brandbatch/privacy.html">隐私政策</a>。</p>
+      </div>
+    </section>
+    <section>
+      <h2>Basic 与 Pro</h2>
+      <div class="table-wrap">
+        <table><thead><tr><th>能力</th><th>Basic</th><th>Pro</th></tr></thead><tbody>
+          <tr><td>全部标识功能 + 本地批处理</td><td>支持</td><td>支持</td></tr>
+          <tr><td>单批成品数量</td><td>受限（付费策略启用时）</td><td>不限</td></tr>
+          <tr><td>输出分辨率 / BGM 混音</td><td>受限（付费策略启用时）</td><td>最高 4K / 支持</td></tr>
+          <tr><td>价格</td><td>0</td><td>$2.9/月 · $29/年</td></tr>
+        </tbody></table>
+      </div>
+    </section>
+    <section class="faq">
+      <h2>FAQ</h2>
+      <div class="card"><h3>支持哪些视频格式？</h3><p>凡是浏览器能解码的格式都支持：MP4（H.264）、WebM、MOV 等，取决于浏览器解码器。</p></div>
+      <div class="card"><h3>黑底水印视频会不会蒙住画面？</h3><p>不会。内置暗背景抠像只提取水印本体叠加，原画面保持清晰。</p></div>
+      <div class="card"><h3>渲染速度怎么样？</h3><p>使用 WebCodecs 硬件编解码，实测吞吐约为实时速度的数倍，且多任务连续处理无衰减。</p></div>
+      <div class="card"><h3>部分任务失败了怎么办？</h3><p>批次结束会停在队列页，失败项可单独或一键重试，也可以直接查看并下载已成功的成品。</p></div>
+    </section>
+    <p class="updated">Last updated: 2026-09-16 · Tested with full E2E suites (watermark layering, audio chunking, queue, payment gate).</p>
+  </main>
+  <footer><div class="container footer"><span>&copy; 2026 ExtPilot</span><span><a href="/feedback/">Feedback</a> · <a href="/blog/">Blog</a></span></div></footer>
+</body>
+</html>
