@@ -12,7 +12,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IG Follower Exporter — Export Instagram Followers to CSV | ExtPilot</title>
-  <meta name="description" content="Export Instagram followers & following to CSV or Excel in one click. 600 free exports, Pro from $3.9/mo. Checkpoint resume, no data uploaded. Install now.">
+  <meta name="description" content="Export Instagram followers & following to CSV or Excel in one click. 600 free exports, Pro from $3.9/mo. Checkpoint resume, no data uploaded. Edge install and Chrome manual install package available from ExtPilot.">
   <link rel="canonical" href="https://extpilot.com/ig-follower-exporter/">
   <meta property="og:title" content="IG Follower Exporter — Export Instagram Followers to CSV/Excel Free">
   <meta property="og:description" content="Export Instagram followers & following to CSV or Excel. 600 free exports, Pro $3.9/mo. Checkpoint resume, credit card payment.">
@@ -83,7 +83,7 @@
         "name": "How to export Instagram followers to CSV for free?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Install IG Follower Exporter from Chrome Web Store or Edge Add-ons. Navigate to an Instagram profile you can access, click the extension icon, choose Quick mode, and click Start Export. Download the CSV file when complete. Free plan exports up to 600 followers per session in Quick mode."
+          "text": "Install IG Follower Exporter from Microsoft Edge Add-ons, or on Chrome download the manual install package from ExtPilot and load it through Developer Mode. Navigate to an Instagram profile you can access, click the extension icon, choose Quick mode, and click Start Export. Download the CSV file when complete. Free plan exports up to 600 followers per session in Quick mode."
         }
       },
       {
@@ -143,6 +143,8 @@
     .btn:hover { text-decoration: none; opacity: 0.9; }
     .btn-primary { background: #238636; color: #fff; }
     .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .install-note { font-size: 13px; color: #8b949e; margin-top: 14px; }
+    .install-note a { color: #8b949e; text-decoration: underline; }
     .badge { display: inline-block; background: #1f6feb22; color: #58a6ff; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
     .pricing-note { font-size: 14px; color: #8b949e; margin-top: 12px; }
     .geo-answer { font-size: 15px; color: #8b949e; line-height: 1.8; max-width: 700px; margin: 32px auto 0; text-align: left; }
@@ -155,6 +157,13 @@
     .feature-card p { font-size: 14px; color: #8b949e; line-height: 1.6; }
     .how-it-works { padding: 48px 0; border-top: 1px solid #21262d; }
     .how-it-works h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 32px; text-align: center; }
+    .install { padding: 48px 0; border-top: 1px solid #21262d; }
+    .install h2 { font-size: 24px; font-weight: 700; color: #f0f6fc; margin-bottom: 16px; text-align: center; }
+    .install-intro { text-align: center; color: #8b949e; margin-bottom: 24px; }
+    .install-steps { color: #c9d1d9; line-height: 1.8; max-width: 720px; margin: 0 auto; padding-left: 20px; }
+    .install-steps li { margin-bottom: 6px; }
+    .install-steps strong { color: #f0f6fc; }
+    code { background: #21262d; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; color: #f0f6fc; }
     .steps { display: flex; flex-direction: column; gap: 24px; }
     .step { display: flex; gap: 20px; align-items: flex-start; }
     .step-number { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: #1f6feb; color: #fff; font-weight: 700; font-size: 16px; display: flex; align-items: center; justify-content: center; }
@@ -236,12 +245,30 @@
         <h1>IG Follower Exporter</h1>
         <p class="tagline">Export Instagram followers and following lists you can access to CSV or Excel. Quick mode for names, Detailed mode for public profile fields.</p>
         <div class="cta-row">
-          <a href="https://chromewebstore.google.com/detail/_/ahpldplpeolnpbibbaknbmbalmnnkmbn" class="btn btn-primary" id="chrome-link" target="_blank" rel="noopener">Install for Chrome</a>
+          <a href="/downloads/ig-follower-exporter.zip" class="btn btn-primary" id="chrome-link" download>Download for Chrome (ZIP)</a>
           <a href="https://microsoftedge.microsoft.com/addons/detail/ig-follower-exporter/dlmbbkoaofoigijinoifpkjonpbohldb" class="btn btn-secondary" id="edge-link" target="_blank" rel="noopener">Install for Edge</a>
         </div>
+        <p class="install-note">The Chrome Web Store listing is under review. Chrome users: download the ZIP and follow the <a href="#install">Developer Mode install steps</a>. Edge users can install directly from Edge Add-ons.</p>
         <p class="pricing-note">Pro from $3.9/mo &mdash; unlimited exports with full profile details. Pay with credit card.</p>
         <p class="geo-answer">IG Follower Exporter is a Chrome and Edge extension that exports Instagram followers and following lists you can already access to CSV or Excel. It captures usernames, display names, profile URLs, and verification status in Quick mode (up to 600 records free), or public profile fields such as email, phone, bio, follower count, business category, city, and WhatsApp number in Detailed mode when those fields are visible. Pro starts at $3.9 per month or $29/year and uses Stripe credit card checkout. Rate limiting and checkpoint resume help long exports recover from interruptions. Export processing runs locally in your browser; exported data is not uploaded to ExtPilot servers.</p>
-        <p class="trust-note"><strong>Last updated:</strong> May 15, 2026. <strong>Verified against:</strong> the live Chrome Web Store listing, Edge Add-ons listing, product privacy policy, and the current extension workflow. IG Follower Exporter cannot bypass Instagram privacy restrictions or export private follower lists you cannot already view.</p>
+        <p class="trust-note"><strong>Last updated:</strong> September 18, 2026. <strong>Verified against:</strong> the live Edge Add-ons listing, the manual install package (v1.0.4), product privacy policy, and the current extension workflow. IG Follower Exporter cannot bypass Instagram privacy restrictions or export private follower lists you cannot already view.</p>
+      </div>
+    </section>
+
+    <section class="install" id="install">
+      <div class="container">
+        <h2>Install on Chrome (Manual, ~2 Minutes)</h2>
+        <p class="install-intro">Our Chrome Web Store listing is temporarily under review. Until it returns, install the exact same extension from our official package:</p>
+        <ol class="install-steps">
+          <li><a href="/downloads/ig-follower-exporter.zip" download>Download the extension ZIP file (v1.0.4)</a> and save it to your computer.</li>
+          <li>Unzip it: right-click the file and choose <strong>Extract All...</strong> (Windows), or double-click it (Mac). Remember the folder it creates.</li>
+          <li>Open Chrome, paste <code>chrome://extensions/</code> into the address bar, and press Enter.</li>
+          <li>Turn on the <strong>Developer mode</strong> switch in the top-right corner.</li>
+          <li>Click <strong>Load unpacked</strong> (appears at the top-left).</li>
+          <li>Select the folder you extracted in step 2 &mdash; the one containing <code>manifest.json</code> &mdash; and confirm. Do not select the ZIP file itself.</li>
+          <li>Done. Click the puzzle-piece icon in Chrome&rsquo;s toolbar to pin IG Follower Exporter. If you have a Pro license, open the extension &rarr; <strong>Settings</strong> &rarr; paste your <strong>License Key</strong> &rarr; click <strong>Activate</strong>.</li>
+        </ol>
+        <p class="install-note">Keep Developer mode switched on &mdash; turning it off disables manually installed extensions. Edge users can install directly from <a href="https://microsoftedge.microsoft.com/addons/detail/ig-follower-exporter/dlmbbkoaofoigijinoifpkjonpbohldb" target="_blank" rel="noopener">Microsoft Edge Add-ons</a>.</p>
       </div>
     </section>
 
@@ -370,7 +397,7 @@
         </div>
         <div class="faq-item">
           <h3>How to export Instagram followers to CSV for free?</h3>
-          <p>Install IG Follower Exporter from Chrome Web Store or Edge Add-ons. Navigate to an Instagram profile you can access, click the extension icon, choose Quick mode, and click Start Export. Download the CSV file when complete. Free plan exports up to 600 followers per session in Quick mode.</p>
+          <p>Install IG Follower Exporter from Microsoft Edge Add-ons, or on Chrome download the manual install package from ExtPilot and load it through Developer Mode. Navigate to an Instagram profile you can access, click the extension icon, choose Quick mode, and click Start Export. Download the CSV file when complete. Free plan exports up to 600 followers per session in Quick mode.</p>
         </div>
         <div class="faq-item">
           <h3>Is it free to export Instagram followers?</h3>
@@ -392,7 +419,7 @@
         <h2>Related Resources</h2>
         <p><a href="/blog/how-to-export-instagram-followers-csv/">Step-by-step guide: export Instagram followers to CSV</a></p>
         <p><a href="/blog/ig-follower-exporter-vs-exporter-for-followers/">Comparison: IG Follower Exporter vs Exporter for Followers</a></p>
-        <p><a href="/privacy/ig-follower-exporter/">Privacy policy</a> &middot; <a href="https://chromewebstore.google.com/detail/_/ahpldplpeolnpbibbaknbmbalmnnkmbn" target="_blank" rel="noopener">Chrome Web Store</a> &middot; <a href="https://microsoftedge.microsoft.com/addons/detail/ig-follower-exporter/dlmbbkoaofoigijinoifpkjonpbohldb" target="_blank" rel="noopener">Edge Add-ons</a></p>
+        <p><a href="/privacy/ig-follower-exporter/">Privacy policy</a> &middot; <a href="/downloads/ig-follower-exporter.zip" download>Chrome download (ZIP)</a> &middot; <a href="https://microsoftedge.microsoft.com/addons/detail/ig-follower-exporter/dlmbbkoaofoigijinoifpkjonpbohldb" target="_blank" rel="noopener">Edge Add-ons</a></p>
       </div>
     </section>
 
